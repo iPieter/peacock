@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>{{post_title}} | {{title}}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{base}}/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom fonts for this template -->
+    <link href="{{base}}/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:100italic,300italic,700italic,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:700,700i,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="{{base}}/css/clean-blog.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    {{{navbar}}}
+
+    <!-- Page Header -->
+    <header class="masthead" style="background: {{background}};">
+      <div class="container">
+        <div class="row">
+          {{#img}}
+          <div class="col-9 col-sm-8 col-md-4 col-xl-4">
+            <img
+              src="{{img}}"
+              style="width: 100%;margin-top: 300px;"
+            />
+          </div>
+          <div class="col-12 col-md-8 col-xl-8">
+          {{/img}}
+          {{^img}}
+          <div class="col-12 col-md-11 col-xl-11">
+          {{/img}}
+          
+            <div class="post-heading">
+              <h1>{{post_title}}</h1>
+              {{#post_subtitle}}
+                <h2>{{post_subtitle}}</h2>
+              {{/post_subtitle}}
+              <i class="">{{author}}</i>
+              <h3 class="subheading">
+                {{{abstract}}}
+              </h3>
+              <span class="meta text-muted"
+                >
+                {{#pdf}}
+                <a class="btn btn-outline-primary" href="{{pdf}}" role="button"><i class="fas fa-file-pdf"></i> pdf</a>
+                {{/pdf}}
+                {{#bibtex}}
+                <a class="btn btn-outline-primary" href="{{bibtex}}" role="button">BibTex</a>
+                {{/bibtex}}
+                {{#code}}
+                <a class="btn btn-outline-primary" href="{{code}}" role="button"><i class="fas fa-code"></i>Code</a>
+                {{/code}}
+                {{#resource}}
+                <a class="btn btn-outline-primary" href="{{resource}}" role="button"><i class="fas fa-project-diagram"></i>Resource</a>
+                {{/resource}}
+                Posted on {{date}}</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+          {{{text}}}
+          </div>
+        </div>
+      </article>
+
+    <hr />
+
+    <!-- Footer -->
+    {{{footer}}}
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{base}}/js/jquery.min.js"></script>
+    <script src="{{base}}/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{{base}}/js/clean-blog.min.js"></script>
+  </body>
+</html>

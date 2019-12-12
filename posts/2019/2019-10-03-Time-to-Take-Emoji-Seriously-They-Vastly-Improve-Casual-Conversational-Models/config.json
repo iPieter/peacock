@@ -1,0 +1,15 @@
+{
+  "post_title": "Time to Take Emoji Seriously",
+  "post_subtitle": "They Vastly Improve Casual Conversational Models",
+  "abstract": "Graphical emoji are ubiquitous in modern-day online conversations. So is a single thumbs-up emoji able to signify an agreement, without any words. Current state-of-the-art systems are ill-equipped to correctly interpret these emoji, especially in a conversational context. However, in a casual context, the benefits might be high: a better understanding of users’ utterances and more natural, emoji-rich responses.<br/>With this in mind, we modify BERT to fully support emoji, both from the Unicode Standard and custom emoji. This modified BERT is then trained on a corpus of question-answer (QA) tuples with a high number of emoji.",
+  "type": "md",
+  "banner": true,
+  "theme": "dark",
+  "img": "https://people.cs.kuleuven.be/~pieter.delobelle/2019/10/03/Time-to-Take-Emoji-Seriously-They-Vastly-Improve-Casual-Conversational-Models/conv_ai_messages.png",
+  "author": "Pieter Delobelle and Bettina Berendt",
+  "date": "2019-10-03",
+  "background": "linear-gradient(135deg, rgba(235, 242, 249, 1), rgba(245, 245, 245, 1), rgba(235, 246, 246, 1))",
+  "pdf": "https://arxiv.org/abs/1910.13793",
+  "bibtex": "",
+  "resource": ""
+}

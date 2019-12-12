@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- Generator: DataGraph - https://www.visualdatatools.com/DataGraph/index.html  --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="288" height="360" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g>
+  <!-- Background -->
+  <g id="Background">
+    <defs>
+      <clipPath id="clipPath">
+        <rect x="50.5" y="19.5" width="222" height="271"/>
+      </clipPath>
+    </defs>
+    <!-- Grid -->
+    <g id="Grid" clip-path="url(#clipPath)">
+      <path d="M 90.8636 290.5 L 90.8636 19.5 M 131.227 290.5 L 131.227 19.5 M 171.591 290.5 L 171.591 19.5 
+               M 211.955 290.5 L 211.955 19.5 M 252.318 290.5 L 252.318 19.5 "
+        stroke="black" stroke-dasharray="0.010012,4.0048" stroke-dashoffset="0.005006" stroke-linecap="round" fill="none" stroke-width="0.5"/>
+      <path d="M 50.5 254.367 L 272.5 254.367 M 50.5 218.233 L 272.5 218.233 M 50.5 182.1 L 272.5 182.1 
+               M 50.5 145.967 L 272.5 145.967 M 50.5 109.833 L 272.5 109.833 M 50.5 73.7 L 272.5 73.7 
+               M 50.5 37.5667 L 272.5 37.5667 "
+        stroke="black" stroke-dasharray="0.0100657,4.0263" stroke-dashoffset="0.00503287" stroke-linecap="round" fill="none" stroke-width="0.5"/>
+    </g>
+  </g>
+  <!-- Commands -->
+  <g id="Commands">
+    <!-- Baseline -->
+    <g id="Baseline">
+      <path d="M 50.5 50.5747 L 252.318 50.5747 "
+        stroke="rgb(228,28,28)" stroke-dasharray="5,3" stroke-linecap="butt" fill="none" stroke-width="2"/>
+    </g>
+    <!-- Observed GI coefficient -->
+    <g id="Observed_GI_coefficient">
+      <defs>
+        <clipPath id="clipPath2">
+          <rect x="50.5" y="19.5" width="222" height="271"/>
+        </clipPath>
+      </defs>
+      <g clip-path="url(#clipPath2)">
+        <path d="M 50.5 50.553 L 70.6818 56.575 L 90.8636 62.0012 L 111.045 79.1986 L 131.227 66.89 L 151.409 65.6575 
+                 L 171.591 69.3843 L 191.773 46.7941 L 211.955 45.3126 L 232.136 48.3912 L 252.318 49.7906 "
+          stroke="rgb(228,28,28)" fill="none" stroke-width="2"/>
+      </g>
+      <g>
+        <g transform="translate(45,56.053)">>
+          <circle cx="5.5" cy="-5.5" r="2.5" fill="white" stroke="none"/>
+          <circle cx="5.5" cy="-5.5" r="2.5" stroke="rgb(228,28,28)" fill="none" stroke-width="2"/>
+        </g>
+        <g transform="translate(65.1818,62.075)">>
+          <circle cx="5.5" cy="-5.5" r="2.5" fill="white" stroke="none"/>
+          <circle cx="5.5" cy="-5.5" r="2.5" stroke="rgb(228,28,28)" fill="none" stroke-width="2"/>
+        </g>
+        <g transform="translate(85.3636,67.5012)">>
+          <circle cx="5.5" cy="-5.5" r="2.5" fill="white" stroke="none"/>
+          <circle cx="5.5" cy="-5.5" r="2.5" stroke="rgb(228,28,28)" fill="none" stroke-width="2"/>
+        </g>
+        <g transform="translate(105.545,84.6986)">>
+          <circle cx="5.5" cy="-5.5" r="2.5" fill="white" stroke="none"/>
+          <circle cx="5.5" cy="-5.5" r="2.5" stroke="rgb(228,28,28)" fill="none" stroke-width="2"/>
+        </g>
+        <g transform="translate(125.727,72.39)">>
+          <circle cx="5.5" cy="-5.5" r="2.5" fill="white" stroke="none"/>
+          <circle cx="5.5" cy="-5.5" r="2.5" stroke="rgb(228,28,28)" fill="none" stroke-width="2"/>
+        </g>
+        <g transform="translate(145.909,71.1575)">>
+          <circle cx="5.5" cy="-5.5" r="2.5" fill="white" stroke="none"/>
+          <circle cx="5.5" cy="-5.5" r="2.5" stroke="rgb(228,28,28)" fill="none" stroke-width="2"/>
+        </g>
+        <g transform="translate(166.091,74.8843)">>
+          <circle cx="5.5" cy="-5.5" r="2.5" fill="white" stroke="none"/>
+          <circle cx="5.5" cy="-5.5" r="2.5" stroke="rgb(228,28,28)" fill="none" stroke-width="2"/>
+        </g>
+        <g transform="translate(186.273,52.2941)">>
+          <circle cx="5.5" cy="-5.5" r="2.5" fill="white" stroke="none"/>
+          <circle cx="5.5" cy="-5.5" r="2.5" stroke="rgb(228,28,28)" fill="none" stroke-width="2"/>
+        </g>
+        <g transform="translate(206.455,50.8126)">>
+          <circle cx="5.5" cy="-5.5" r="2.5" fill="white" stroke="none"/>
+          <circle cx="5.5" cy="-5.5" r="2.5" stroke="rgb(228,28,28)" fill="none" stroke-width="2"/>
+        </g>
+        <g transform="translate(226.636,53.8912)">>
+          <circle cx="5.5" cy="-5.5" r="2.5" fill="white" stroke="none"/>
+          <circle cx="5.5" cy="-5.5" r="2.5" stroke="rgb(228,28,28)" fill="none" stroke-width="2"/>
+        </g>
+        <g transform="translate(246.818,55.2906)">>
+          <circle cx="5.5" cy="-5.5" r="2.5" fill="white" stroke="none"/>
+          <circle cx="5.5" cy="-5.5" r="2.5" stroke="rgb(228,28,28)" fill="none" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+    <!-- Legend -->
+    <g id="Legend">
+      <g>
+        <defs>
+          <clipPath id="clipPath3">
+            <rect x="55.5" y="337.38" width="14" height="12.24"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#clipPath3)">
+          <path d="M 55.5 343.5 L 69.5 343.5 "
+            stroke="rgb(228,28,28)" stroke-dasharray="5,3" stroke-dashoffset="3.5" stroke-linecap="butt" fill="none" stroke-width="2"/>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="74.5" y="347.804">Baseline</text>
+        </g>
+        <g>
+          <path d="M 132.5 343.5 L 146.5 343.5 "
+            stroke="rgb(228,28,28)" fill="none" stroke-width="2"/>
+          <g>
+            <circle cx="139.5" cy="343.5" r="2.5" fill="white" stroke="none"/>
+            <circle cx="139.5" cy="343.5" r="2.5" stroke="rgb(228,28,28)" fill="none" stroke-width="2"/>
+          </g>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="151.5" y="347.804">Observed GI coefficient</text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <!-- Foreground -->
+  <g id="Foreground">
+    <!-- Y Axis -->
+    <g id="Y_Axis">
+      <g transform="translate(14.0188,155) rotate(-90) translate(-14.0188,-155)" font-family="Helvetica" font-size="12" fill="black">
+        <text x="-26.9998" y="155">Gini coefficient </text>
+      </g>
+      <!-- Y Labels -->
+      <g id="Y_Labels">
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="33.4262" y="294.804">0</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="23.4184" y="258.67">0,1</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="23.4184" y="222.537">0,2</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="23.4184" y="186.404">0,3</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="23.4184" y="150.27">0,4</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="23.4184" y="114.137">0,5</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="23.4184" y="78.0037">0,6</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="23.4184" y="41.8704">0,7</text>
+        </g>
+      </g>
+      <path d="M 42.5 290.5 L 50.5 290.5 M 46.5 272.433 L 50.5 272.433 M 42.5 254.367 L 50.5 254.367 
+               M 46.5 236.3 L 50.5 236.3 M 42.5 218.233 L 50.5 218.233 M 46.5 200.167 L 50.5 200.167 
+               M 42.5 182.1 L 50.5 182.1 M 46.5 164.033 L 50.5 164.033 M 42.5 145.967 L 50.5 145.967 
+               M 46.5 127.9 L 50.5 127.9 M 42.5 109.833 L 50.5 109.833 M 46.5 91.7667 L 50.5 91.7667 
+               M 42.5 73.7 L 50.5 73.7 M 46.5 55.6333 L 50.5 55.6333 M 42.5 37.5667 L 50.5 37.5667 M 46.5 19.5 L 50.5 19.5 "
+        stroke="black" fill="none" stroke-width="0.5"/>
+    </g>
+    <!-- X Axis -->
+    <g id="X_Axis">
+      <g font-family="Helvetica" font-size="12" fill="black">
+        <text x="108.624" y="328">Labeled paragraphs</text>
+      </g>
+      <g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="47.1631" y="309.69">0</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="87.5267" y="309.69">2</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="127.89" y="309.69">4</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="168.254" y="309.69">6</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="208.618" y="309.69">8</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="245.644" y="309.69">10</text>
+        </g>
+      </g>
+      <path d="M 50.5 298.5 L 50.5 290.5 M 90.8636 298.5 L 90.8636 290.5 M 131.227 298.5 L 131.227 290.5 
+               M 171.591 298.5 L 171.591 290.5 M 211.955 298.5 L 211.955 290.5 M 252.318 298.5 L 252.318 290.5 
+               M 70.6818 294.5 L 70.6818 290.5 M 111.045 294.5 L 111.045 290.5 M 151.409 294.5 L 151.409 290.5 
+               M 191.773 294.5 L 191.773 290.5 M 232.136 294.5 L 232.136 290.5 M 272.5 294.5 L 272.5 290.5 "
+        stroke="black" fill="none" stroke-width="0.5"/>
+    </g>
+    <g font-family="Helvetica-Bold" font-size="13" fill="black">
+      <text x="112.744" y="14.639">Gini coefficient </text>
+    </g>
+    <path d="M 272.5 290.5 L 272.5 19.5 L 50.5 19.5 L 50.5 290.5 L 272.5 290.5 z "
+      stroke="black" stroke-linecap="square" fill="none" stroke-width="0.5"/>
+  </g>
+</g>
+</svg>
