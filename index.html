@@ -6,10 +6,20 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
 
     <title>{{title}}</title>
+    <meta name="generator" content="{{PHEASANT_VERSION}}" />
+    <meta property="og:title" content="{{title}}" />
+    <meta name="author" content="{{title}}" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="{{RSS_subtitle}}" />
+    <meta property="og:description" content={{RSS_subtitle}}" />
+    <link rel="canonical" href="{{RSS_link}}" />
+    <meta property="og:url" content="{{RSS_link}}" />
+    <meta property="og:site_name" content="{{title}}" />
+    <meta name="twitter:card" content="{{RSS_subtitle}}" />
+    <meta name="twitter:site" content="{{META_twitter}}" />
+    <meta name="twitter:creator" content="{{META_twitter}}" />
 
     <!-- Bootstrap core CSS -->
     <link href="{{base}}/css/bootstrap.min.css" rel="stylesheet" />

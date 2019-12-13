@@ -67,13 +67,13 @@ def build_post(path, post, destination_file, config_data):
     post_config = config_data
     post_config.update(post)
 
-    if "index.md" in post['files']:
+    if "index.md" in post["files"]:
         logging.debug("Rendering markdown file for this post.")
         with open(os.path.join(post["path"], "index.md"), mode="r") as f:
             doc = pandoc.Document()
             doc.markdown_github = f.read().encode("utf-8")
             post_config["text"] = doc.html.decode()
-    elif "index.html" in post['files']:
+    elif "index.html" in post["files"]:
         logging.debug("Using html file for this post.")
         with open(os.path.join(post["path"], "index.html"), mode="r") as f:
             post_config["html"] = f.read()
@@ -115,6 +115,7 @@ def generate_feeds(config_data, output_path, drafts=False):
 def build_site(config_data, path, output_path, drafts=False):
     logging.info("Exporting site to folder {}/".format(output_path))
 
+    config_data["PHEASANT_VERSION"] = "0.2.0"
     config_data["last_updated"] = datetime.now().strftime("%m/%d/%Y")
 
     # First render the nav bar and footer components

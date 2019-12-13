@@ -15,5 +15,6 @@
   "RSS_link": "https://ipieter.github.io/blog/",
   "RSS_logo": "",
   "RSS_subtitle": "My blog about my research on AI, verification and NLP. Currently working at DTAI lab in the KU Leuven.",
-  "RSS_language": "en"
+  "RSS_language": "en",
+  "META_twitter": "@pieterdelobelle"
 }
