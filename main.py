@@ -67,10 +67,16 @@ def build_post(path, post, destination_file, config_data):
     post_config = config_data
     post_config.update(post)
 
-    with open(os.path.join(post["path"], "index.md"), mode="r") as f:
-        doc = pandoc.Document()
-        doc.markdown_github = f.read().encode("utf-8")
-        post_config["text"] = doc.html.decode()
+    if "index.md" in post['files']:
+        logging.debug("Rendering markdown file for this post.")
+        with open(os.path.join(post["path"], "index.md"), mode="r") as f:
+            doc = pandoc.Document()
+            doc.markdown_github = f.read().encode("utf-8")
+            post_config["text"] = doc.html.decode()
+    elif "index.html" in post['files']:
+        logging.debug("Using html file for this post.")
+        with open(os.path.join(post["path"], "index.html"), mode="r") as f:
+            post_config["html"] = f.read()
 
     rendered = parse_file(os.path.join(path, "_post.html"), config_data)
 

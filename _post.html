@@ -88,6 +88,7 @@
     </header>
 
     <!-- Post Content -->
+    {{#text}}
     <article>
       <div class="container">
         <div class="row">
@@ -96,7 +97,10 @@
           </div>
         </div>
       </article>
-
+    {{/text}}
+    {{#html}}
+      {{{html}}}
+    {{/html}}
     <hr />
 
     <!-- Footer -->
