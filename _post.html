@@ -6,13 +6,23 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
 
     <title>{{post_title}} | {{title}}</title>
-
+    <meta name="generator" content="{{PHEASANT_VERSION}}" />
+    <meta property="og:title" content="{{post_title}}" />
+    <meta name="author" content="{{RSS_author_name}}" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="{{post_subtitle}}" />
+    <meta property="og:description" content="{{post_subtitle}}" />
+    <link rel="canonical" href="{{RSS_link}}" />
+    <meta property="og:url" content="{{RSS_link}}" />
+    <meta property="og:site_name" content="{{RSS_title}}" />
+    <meta name="twitter:card" content="{{RSS_subtitle}}" />
+    <meta name="twitter:creator" content="{{META_twitter}}" />
     <!-- Bootstrap core CSS -->
     <link href="{{base}}/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
     <!-- Custom fonts for this template -->
     <link href="{{base}}/css/all.min.css" rel="stylesheet" type="text/css" />
@@ -107,10 +117,10 @@
     {{{footer}}}
 
     <!-- Bootstrap core JavaScript -->
-    <script src="{{base}}/js/jquery.min.js"></script>
-    <script src="{{base}}/js/bootstrap.bundle.min.js"></script>
+    <script src="{{base}}/js/jquery.min.js" async></script>
+    <script src="{{base}}/js/bootstrap.bundle.min.js" async></script>
 
     <!-- Custom scripts for this template -->
-    <script src="{{base}}/js/clean-blog.min.js"></script>
+    <script src="{{base}}/js/clean-blog.min.js" async></script>
   </body>
 </html>
