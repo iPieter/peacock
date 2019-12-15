@@ -1,5 +1,5 @@
 <p align="center"> 
-    <img src="pheasant_icon.png" alt="Pheasant logo" width="60%">
+    <img src="peacock_icon.png" alt="Pheasant logo" width="60%">
  </p>
 
 ![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
