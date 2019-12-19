@@ -1,7 +1,7 @@
 #!/bin/sh
 
 rm -rf ./build
-git clone git@github.com:iPieter/blog.git ../blog/build/
+git clone git@github.com:iPieter/blog.git ./build/
 
 rm -rf ./build/*
 
