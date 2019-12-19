@@ -1,13 +1,13 @@
 #!/bin/sh
 
-rm -rf ../blog/build
+rm -rf ./build
 git clone git@github.com:iPieter/blog.git ../blog/build/
 
-rm -rf ../blog/build/*
+rm -rf ./build/*
 
-pipenv run python main.py ../blog -v --base "/blog"
+pipenv run python main.py . -v --base "/blog"
 
-cd ../blog/build
+cd .build
 git add --all
 git commit -m "Updated blog"
 git push
