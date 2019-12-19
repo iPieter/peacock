@@ -116,7 +116,7 @@ def build_site(config_data, path, output_path, drafts=False):
     logging.info("Exporting site to folder {}/".format(output_path))
 
     config_data["PHEASANT_VERSION"] = "0.2.0"
-    config_data["last_updated"] = datetime.now().strftime("%m/%d/%Y")
+    config_data["last_updated"] = datetime.now().strftime("%B %d, %Y")
 
     # First render the nav bar and footer components
     config_data["navbar"] = parse_file(os.path.join(path, "_navbar.html"), config_data)
