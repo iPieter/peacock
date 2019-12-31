@@ -41,3 +41,5 @@ The layout is based on the [Start Bootstrap - Clean Blog](https://startbootstrap
 ## Copyright and License
 
 Code released under the MIT license.
+
+Content of my blog is also in this repo (for example in the `posts/` directory), but is not released under MIT. For the time being, the content's copyright remains with me.
