@@ -7,7 +7,7 @@ rm -rf ./build/*
 
 pipenv run python main.py . -v --base "/blog"
 
-cd .build
+cd ./build
 git add --all
 git commit -m "Updated blog"
 git push

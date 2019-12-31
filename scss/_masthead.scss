@@ -14,7 +14,22 @@ header.masthead-small {
     display: block;
     margin: 10px 0 0;
     @include sans-serif-font;
+
+    a {
+      text-decoration: none;
+      background-color: transparent;
+      border-bottom-style: solid;
+      border-bottom-color: #007bffaa;
+      border-bottom-width: 5px;
+
+      &:hover {
+        color: #007bff;
+        border-bottom-width: 7px;
+      }
+  
+    }
   }
+
   @media only screen and (min-width: 768px) {
     h1 {
       font-size: 80px;
