@@ -73,13 +73,13 @@ blockquote {
 
 ::-moz-selection {
   color: $white;
-  background: $primary;
+  background: rgba($primary,70%);
   text-shadow: none;
 }
 
 ::selection {
   color: $white;
-  background: $primary;
+  background: rgba($primary,70%);
   text-shadow: none;
 }
 
