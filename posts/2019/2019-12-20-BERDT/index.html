@@ -1,10 +1,95 @@
 <article>
-  <div class="container">
+  <div class="container-fluid" id="app">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        another test
+        intro on RobBERT
+
+      </div>   
+    </div>
+    <div class="row text-white bg-dark" id="get-started">
+      <div class="col-lg-8 col-md-10 mx-auto py-4">
+        <h1>Get started with our models</h1>
+        <p>We release our pretrained models for both <a href="https://github.com/huggingface/transformers">Hugging Face's transformers</a> and <a href="https://github.com/pytorch/fairseq">Facebook's Fairseq</a>. For some downstream tasks, we also have models in either or both formats. 
+        <div class="d-flex justify-content-center">
+
+          <button class="btn btn-outline-light mx-3" href="#" 
+            v-bind:class="library=='transformers'? 'active' : ''"
+            v-on:click="library='transformers'">I'm using 🤗 Transformers</button>
+          <button class="btn btn-outline-light mx-3" href="#" 
+            v-bind:class="library=='fairseq'? 'active' : ''"
+            v-on:click="library='fairseq'">I'm using Facebook's Fairseq</button>
+        </div>
+
+        <div v-if="library=='transformers'">
+          <p>Awesome that you're using 🤗 Transformers. You can import our models directly using: </p>
+
+          <code class="small d-block my-2">
+            from transformers import AutoTokenizer, AutoModelForSequenceClassification
+          </code>
+
+          <code class="small d-block my-2">
+            tokenizer = AutoTokenizer.from_pretrained("kul-cs/RobBERT-base")
+          </code>
+            
+          <code class="small d-block my-2">
+            model = AutoModelForSequenceClassification.from_pretrained("kul-cs/RobBERT-base") 
+          </code>
+
+          <p>With the pretrained model being either the base model, that was trained on language modeling (LM) or a finetuned model that we provide.</p>
+          <table class="table mt-3">
+            <thead>
+            <tr>
+              <th>Model</th>
+              <th>Task</th>
+              <th>Accuracy (%)</th>
+              <th>F1 (%)</th>
+            </tr>
+            </thead>
+            <tr>
+              <td><span class="text-monospace">kul-cs/RobBERT-base</span></td>
+              <td>LM</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td><span class="text-monospace">kul-cs/RobBERT-diedat</span></td>
+              <td><i>Die</i> vs <i>dat</i></td>
+              <td>98.4%</td>
+              <td>98.1%</td>
+            </tr>
+            <tr>
+              <td><span class="text-monospace">kul-cs/RobBERT-dbrd</span></td>
+              <td>DBRD</td>
+              <td>98.4%</td>
+              <td>98.1%</td>
+            </tr>
+          </table>
+        </div>
+
+        text on {{library}}
+      </div>
+
+
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h1>Downstream tasks</h1>
+        <h2>Anaphora resolution with <i>die</i> and <i>dat</i></h2>
+
+        <h2>High-level sentiment analysis</h2>
+
       </div>   
     </div>
   </div>
 </article>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    library: 'transformers'
+  }
+})
+</script>
 

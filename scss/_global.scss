@@ -49,6 +49,38 @@ a {
   }
 }
 
+.bg-dark {
+
+  a {
+    color: $gray-100;
+    @include transition-all;
+  
+    &:focus,
+    &:hover {
+      color: lighten($primary,20%);
+    }
+  }
+
+  .table {
+    color: $gray_100;
+    border-block-start: solid 2px $gray_200;
+    border-block-end: solid 2px $gray_200;
+    
+    td {
+      border-top: none;
+    }
+
+    thead {
+      th {
+        border-bottom: 2px solid $gray_200;
+
+      }
+
+    }
+
+  }
+}
+
 blockquote {
   font-style: italic;
   color: $gray-600;
