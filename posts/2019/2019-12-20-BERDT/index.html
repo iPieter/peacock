@@ -23,17 +23,10 @@
         <div v-if="library=='transformers'">
           <p>Awesome that you're using 🤗 Transformers. You can import our models directly using: </p>
 
-          <code class="small d-block my-2">
-            from transformers import AutoTokenizer, AutoModelForSequenceClassification
-          </code>
-
-          <code class="small d-block my-2">
-            tokenizer = AutoTokenizer.from_pretrained("kul-cs/RobBERT-base")
-          </code>
-            
-          <code class="small d-block my-2">
-            model = AutoModelForSequenceClassification.from_pretrained("kul-cs/RobBERT-base") 
-          </code>
+<pre class="small pl-2" style="margin: 0px; line-height: 125%;"><span style="color: rgb(249, 38, 114);">from</span> <span style="color: rgb(248, 248, 242);">transformers</span> <span style="color: rgb(249, 38, 114);">import</span> <span style="color: rgb(248, 248, 242);">AutoTokenizer,</span> <span style="color: rgb(248, 248, 242);">AutoModelForSequenceClassification</span>
+<span style="color: rgb(248, 248, 242);">tokenizer</span> <span style="color: rgb(249, 38, 114);">=</span> <span style="color: rgb(248, 248, 242);">AutoTokenizer</span><span style="color: rgb(249, 38, 114);">.</span><span style="color: rgb(248, 248, 242);">from_pretrained(</span><span style="color: rgb(230, 219, 116);">"kul-cs/RobBERT-base"</span><span style="color: rgb(248, 248, 242);">)</span>
+<span style="color: rgb(248, 248, 242);">model</span> <span style="color: rgb(249, 38, 114);">=</span> <span style="color: rgb(248, 248, 242);">AutoModelForSequenceClassification</span><span style="color: rgb(249, 38, 114);">.</span><span style="color: rgb(248, 248, 242);">from_pretrained(</span><span style="color: rgb(230, 219, 116);">"kul-cs/RobBERT-base"</span><span style="color: rgb(248, 248, 242);">)</span>
+</pre>
 
           <p>With the pretrained model being either the base model, that was trained on language modeling (LM) or a finetuned model that we provide.</p>
           <table class="table mt-3">
@@ -46,13 +39,20 @@
             </tr>
             </thead>
             <tr>
-              <td><span class="text-monospace">kul-cs/RobBERT-base</span></td>
+              <td>
+                <span class="text-monospace">kul-cs/RobBERT-base</span>
+                <button type="button" class="btn btn-outline-light"
+                  v-on:click="copyTextToClipboard('kul-cs/RobBERT-base')"><i class="fas fa-copy"></i> Copy</button>
+              </td>
               <td>LM</td>
               <td>—</td>
               <td>—</td>
             </tr>
             <tr>
-              <td><span class="text-monospace">kul-cs/RobBERT-diedat</span></td>
+              <td><span class="text-monospace">kul-cs/RobBERT-diedat</span>
+                <button type="button" class="btn btn-outline-light"
+                  v-on:click="copyTextToClipboard('kul-cs/RobBERT-diedat')"><i class="fas fa-copy"></i> Copy</button>
+              </td>
               <td><i>Die</i> vs <i>dat</i></td>
               <td>98.4%</td>
               <td>98.1%</td>
@@ -60,14 +60,23 @@
             <tr>
               <td><span class="text-monospace">kul-cs/RobBERT-dbrd</span></td>
               <td>DBRD</td>
-              <td>98.4%</td>
-              <td>98.1%</td>
+              <td>94.4%</td>
+              <td>94.4%</td>
             </tr>
           </table>
         </div>
 
-        text on {{library}}
+        <div v-else-if="library=='fairseq'">
+          <p>
+          Great that you're using Fairseq! We pre-trained our model with this library. You can import this pre-trained version of RobBERT by downloading it 
+          </p>
+        </div>
+      <h2 class="mt-4 mb-0">A note on copyright</h2>
+      <p>We're releasing all our models under <a href="#">X</a>.</p>
+
+
       </div>
+
 
 
     </div>
@@ -78,6 +87,10 @@
 
         <h2>High-level sentiment analysis</h2>
 
+        <h1>Finally, a note on the name and the logo</h1>
+        <p>We named our model RobBERT, or to be more precise: our model named itself RobBERT. When we used word masking in a sentence to introduce itself, it picked `RobBERT` as the most likely name. In an serendipitous way, this also highlighted the link to RoBERTa, so that name was perfect!</p>
+
+        <p>The word `rob` also means `seal` in Dutch, hence our logo is a seal being dressed up as Bert.</p>
       </div>   
     </div>
   </div>
@@ -89,6 +102,37 @@ var app = new Vue({
   el: '#app',
   data: {
     library: 'transformers'
+  },
+  methods: {
+  fallbackCopyTextToClipboard(text) {
+  var textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.position="fixed";  //avoid scrolling to bottom
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Fallback: Copying text command was ' + msg);
+  } catch (err) {
+    console.error('Fallback: Oops, unable to copy', err);
+  }
+
+  document.body.removeChild(textArea);
+},
+copyTextToClipboard(text) {
+  if (!navigator.clipboard) {
+    this.fallbackCopyTextToClipboard(text);
+    return;
+  }
+  navigator.clipboard.writeText(text).then(function() {
+    console.log('Async: Copying to clipboard was successful!');
+  }, function(err) {
+    console.error('Async: Could not copy text: ', err);
+  });
+}
   }
 })
 </script>
