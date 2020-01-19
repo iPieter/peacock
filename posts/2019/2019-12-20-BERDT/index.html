@@ -8,13 +8,19 @@
         (LSTMs) initially dominated the field, recent models started
         incorporating attention mechanisms and then later dropped the recurrent
         part and just kept the attention mechanisms in so-called transformer
-        models. This latter type of model caused a
-        new revolution in NLP and led to popular language models like <a href="https://openai.com/blog/better-language-models/">GPT-2</a> and <a href="https://allennlp.org/elmo">ELMo</a>.
-        <a href="https://github.com/google-research/bert">BERT</a> improved over previous transformer models
-        and recurrent networks by allowing the system to learn from input text
-        in a bidirectional way, rather than only from left-to-right or the other
-        way around. This model was later re-implemented, critically evaluated
-        and improved in the <a href="https://github.com/pytorch/fairseq/blob/master/examples/roberta/README.md">RoBERTa model</a>.
+        models. This latter type of model caused a new revolution in NLP and led
+        to popular language models like
+        <a href="https://openai.com/blog/better-language-models/">GPT-2</a> and
+        <a href="https://allennlp.org/elmo">ELMo</a>.
+        <a href="https://github.com/google-research/bert">BERT</a> improved over
+        previous transformer models and recurrent networks by allowing the
+        system to learn from input text in a bidirectional way, rather than only
+        from left-to-right or the other way around. This model was later
+        re-implemented, critically evaluated and improved in the
+        <a
+          href="https://github.com/pytorch/fairseq/blob/master/examples/roberta/README.md"
+          >RoBERTa model</a
+        >.
 
         <h2 class="mt-3">The benefits of pre-training</h2>
         These large-scale transformer models provide the advantage of being able
@@ -29,13 +35,12 @@
         While language models are usually trained on English data, some
         multilingual models also exist. These are usually trained on a large
         quantity of text in different languages. For example, Multilingual-BERT
-        is trained on a collection of corpora in 104 different languages and generalizes language components well across
-        languages. However, models trained on data
-        from one specific language usually improve the performance of
-        multilingual models for this particular language. Training a RoBERTa
-        model on a Dutch dataset thus has a lot of
-        potential for increasing performance for many downstream Dutch NLP
-        tasks.
+        is trained on a collection of corpora in 104 different languages and
+        generalizes language components well across languages. However, models
+        trained on data from one specific language usually improve the
+        performance of multilingual models for this particular language.
+        Training a RoBERTa model on a Dutch dataset thus has a lot of potential
+        for increasing performance for many downstream Dutch NLP tasks.
       </div>
     </div>
     <div class="row text-white bg-dark" id="get-started">
@@ -113,9 +118,10 @@
               <td>—</td>
               <td>—</td>
             </tr>
+
             <tr>
               <td>
-                <span class="text-monospace">kul-cs/RobBERT-diedat</span>
+                <span class="text-monospace">kul-cs/RobBERT-dbrd</span>
                 <button
                   type="button"
                   class="btn btn-outline-light"
@@ -124,12 +130,6 @@
                   <i class="fas fa-copy"></i> Copy
                 </button>
               </td>
-              <td><i>Die</i> vs <i>dat</i></td>
-              <td>98.4%</td>
-              <td>98.1%</td>
-            </tr>
-            <tr>
-              <td><span class="text-monospace">kul-cs/RobBERT-dbrd</span></td>
               <td>DBRD</td>
               <td>94.4%</td>
               <td>94.4%</td>
@@ -141,8 +141,49 @@
           <p>
             Great that you're using Fairseq! We pre-trained our model with this
             library. You can import this pre-trained version of RobBERT by
-            downloading it
+            downloading it directly.
           </p>
+
+          <table class="table mt-3">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Task</th>
+                <th>Accuracy (%)</th>
+                <th>F1 (%)</th>
+              </tr>
+            </thead>
+            <tr>
+              <td>
+                <span class="text-monospace">RobBERT-base</span>
+                <button
+                  type="button"
+                  class="btn btn-outline-light"
+                  v-on:click="copyTextToClipboard('kul-cs/RobBERT-base')"
+                >
+                  <i class="fas fa-download"></i> Download (1.5 GB)
+                </button>
+              </td>
+              <td>LM</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="text-monospace">RobBERT-diedat</span>
+                <button
+                  type="button"
+                  class="btn btn-outline-light"
+                  v-on:click="copyTextToClipboard('kul-cs/RobBERT-diedat')"
+                >
+                  <i class="fas fa-download"></i> Download (1.5 GB)
+                </button>
+              </td>
+              <td><i>Die</i> vs <i>dat</i></td>
+              <td>98.4%</td>
+              <td>98.1%</td>
+            </tr>
+          </table>
         </div>
         <h2 class="mt-4 mb-0">A note on copyright</h2>
         <p>We're releasing all our models under <a href="#">X</a>.</p>
@@ -153,26 +194,68 @@
         <div class="col-lg-8 col-md-10 mx-auto mt-5">
           <h1>Downstream tasks</h1>
           <h2>Anaphora resolution with <i>die</i> and <i>dat</i></h2>
-We evaluated RobBERT's performance on a task that is specific to Dutch, namely disambiguating <i>"die"</i> and <i>"dat"</i> (= <i>"that"</i> in English).
-In Dutch, depending on the sentence, both terms can be either demonstrative or relative pronouns; in addition they can also be used in a subordinating conjunction, i.e. to introduce a clause.
-The use of either of these words depends on the gender of the word it refers to.
-Distinguishing these words is a task introduced by <a href="https://arxiv.org/abs/2001.02943">Allein <i>et al.</i> (2020)</a>, who presented multiple models trained on the Europarl and SoNaR corpora.
-Their results ranged from an accuracy of 75.03% on Europarl to 84.56% on SoNaR.
-        </p>
-        <p></p>
-For this task, we use the Dutch version of the Europarl corpus, which we split in 1.3M utterances for training, 319k for validation, and 399k for testing. 
-We then process every sentence by checking if it contains <i>"die"</i> and <i>"dat"</i>, and if so, add a training example for every occurrence of this word in the sentence, where a single occurrence is masked.
-For the test set for example, this resulted in about 289k masked sentences.
-We then test two different approaches for solving this task on this dataset.
-The first approach is making the BERT models use their MLM task and guess which word should be filled in this spot, and check if it has more confidence in either  <i>"die"</i> and <i>"dat"</i> (by checking the first 2,048 guesses at most, as this seemed sufficiently large).
-This allows us to compare the zero-shot BERT models, i.e. without any fine-tuning after pre-training..
-The second approach uses the same data, but creates two sentences by filling in the mask with both <i>"die"</i> and <i>"dat"</i>, appending both with the <code>[SEP]</code> token and making the model predict which of the two sentences is correct.
+          <p>
+            We evaluated RobBERT's performance on a task that is specific to
+            Dutch, namely disambiguating <i>"die"</i> and <i>"dat"</i> (=
+            <i>"that"</i> in English). In Dutch, depending on the sentence, both
+            terms can be either demonstrative or relative pronouns; in addition
+            they can also be used in a subordinating conjunction, i.e. to
+            introduce a clause. The use of either of these words depends on the
+            gender of the word it refers to. Distinguishing these words is a
+            task introduced by
+            <a href="https://arxiv.org/abs/2001.02943"
+              >Allein <i>et al.</i> (2020)</a
+            >, who presented multiple models trained on the Europarl and SoNaR
+            corpora. Their results ranged from an accuracy of 75.03% on Europarl
+            to 84.56% on SoNaR.
+          </p>
+          <p>
+            For this task, we use the Dutch version of the Europarl corpus,
+            which we split in 1.3M utterances for training, 319k for validation,
+            and 399k for testing. We then process every sentence by checking if
+            it contains <i>"die"</i> and <i>"dat"</i>, and if so, add a training
+            example for every occurrence of this word in the sentence, where a
+            single occurrence is masked. For the test set for example, this
+            resulted in about 289k masked sentences. We then test two different
+            approaches for solving this task on this dataset. The first approach
+            is making the BERT models use their MLM task and guess which word
+            should be filled in this spot, and check if it has more confidence
+            in either <i>"die"</i> and <i>"dat"</i> (by checking the first 2,048
+            guesses at most, as this seemed sufficiently large). This allows us
+            to compare the zero-shot BERT models, i.e. without any fine-tuning
+            after pre-training.. The second approach uses the same data, but
+            creates two sentences by filling in the mask with both
+            <i>"die"</i> and <i>"dat"</i>, appending both with the
+            <code>[SEP]</code> token and making the model predict which of the
+            two sentences is correct.
+          </p>
+
           <h2 class="mt-4">High-level sentiment analysis</h2>
+          <p>
+            we compare its performance with other BERT-models and
+            state-of-the-art systems in sentiment analysis, to show its
+            performance for classification tasks. We replicated the high-level
+            sentiment analysis task used to evaluate BERTje to be able to
+            compare our methods. This task uses a dataset called Dutch Book
+            Reviews Dataset (DBRD), in which book reviews scraped from hebban.nl
+            are labeled as positive or negative. Although the dataset contains
+            118,516 reviews, only 22,252 of these reviews are actually labeled
+            as positive or negative.
+          </p>
+
+          <p>
+            We trained our model for 2000 iterations with a batch size of 128
+            and a warm-up of 500 iterations, reaching a learning rate of 10⁻⁵.
+            We found that our model performed better when trained on the last
+            part of the book reviews than on the first part. This is likely due
+            to this part containing concluding remarks summarizing the overall
+            sentiment.
+          </p>
         </div>
       </div>
     </div>
     <div
-      class="row"
+      class="row mt-4"
       style="background: linear-gradient(45deg, #e3ffe7cc 0%, #d9e7ffcc 100%);"
     >
       <div class="row">
@@ -195,9 +278,21 @@ The second approach uses the same data, but creates two sentences by filling in 
                 data-slide-to="0"
                 class="active bg-dark"
               ></li>
-              <li class="bg-dark" data-target="#myCarousel" data-slide-to="1"></li>
-              <li class="bg-dark"  data-target="#myCarousel" data-slide-to="2"></li class="text-dark">
-              <li class="bg-dark"  data-target="#myCarousel" data-slide-to="3"></li class="text-dark">
+              <li
+                class="bg-dark"
+                data-target="#myCarousel"
+                data-slide-to="1"
+              ></li>
+              <li
+                class="bg-dark"
+                data-target="#myCarousel"
+                data-slide-to="2"
+              ></li>
+              <li
+                class="bg-dark"
+                data-target="#myCarousel"
+                data-slide-to="3"
+              ></li>
             </ol>
             <!-- Wrapper for carousel items -->
             <div class="carousel-inner">
@@ -223,7 +318,7 @@ The second approach uses the same data, but creates two sentences by filling in 
                         en heeft een geweldige ontknoping! Loes heeft er een fan
                         bij...
                       </p>
-                      <img src="book_0.png" alt="Book 2 score" width="300px">
+                      <img src="book_0.png" alt="Book 2 score" width="300px" />
                     </div>
                   </div>
                 </div>
@@ -244,7 +339,7 @@ The second approach uses the same data, but creates two sentences by filling in 
                         maar na 4 hoofdstukken heb ik het opgegeven en het boek
                         weggelegd.
                       </p>
-                      <img src="book_1.png" alt="Book 2 score" width="300px">
+                      <img src="book_1.png" alt="Book 2 score" width="300px" />
                     </div>
                   </div>
                 </div>
@@ -265,8 +360,7 @@ The second approach uses the same data, but creates two sentences by filling in 
                         mijn eigen jeugdleven en opvoeding, maar het is allemaal
                         nogal saai weergegeven.
                       </p>
-                      <img src="book_2.png" alt="Book 2 score" width="300px">
-
+                      <img src="book_2.png" alt="Book 2 score" width="300px" />
                     </div>
                   </div>
                 </div>
@@ -303,7 +397,7 @@ The second approach uses the same data, but creates two sentences by filling in 
                         N.J Simmonds wel een paar teasers gehad over het
                         verhaal. Lees ook het interview met N.J. Simmons
                       </p>
-                      <img src="book_3.png" alt="Book 3 score" width="300px">
+                      <img src="book_3.png" alt="Book 3 score" width="300px" />
                     </div>
                   </div>
                 </div>
