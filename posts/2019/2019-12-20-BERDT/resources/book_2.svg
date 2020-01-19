@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="353px" height="61px" viewBox="0 0 353 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>book_2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-1.11022302e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#E54C3D" offset="0%"></stop>
+            <stop stop-color="#2ECA71" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-1.11022302e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#E54C3D" offset="0%"></stop>
+            <stop stop-color="#FFF380" offset="50.0578528%"></stop>
+            <stop stop-color="#2ECA71" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="book_2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#2C3E50" fill="url(#linearGradient-1)" x="125" y="15" width="217" height="18" rx="8"></rect>
+        <rect id="Rectangle" stroke="#212529" fill="url(#linearGradient-2)" x="125" y="15" width="217" height="18" rx="8"></rect>
+        <text id="Sentiment" font-family="FiraSansCondensed-Bold, Fira Sans Condensed" font-size="26" font-style="condensed" font-weight="bold" letter-spacing="1.30000005" fill="#212529">
+            <tspan x="0" y="33">Sentiment</tspan>
+        </text>
+        <line x1="132" y1="40.5" x2="132" y2="9.5" id="Line" stroke="#212529" stroke-width="3" stroke-linecap="round"></line>
+        <text id="Negative" font-family="FiraSansCondensed-Bold, Fira Sans Condensed" font-size="16" font-style="condensed" font-weight="bold" letter-spacing="0.800000032" fill="#212529">
+            <tspan x="100.1" y="57">Negative</tspan>
+        </text>
+        <text id="-4.753" font-family="FiraSansCondensed-Regular, Fira Sans Condensed" font-size="8" font-style="condensed" font-weight="normal" letter-spacing="0.400000016" fill="#A8B4C0">
+            <tspan x="121.66" y="6">-4.753</tspan>
+        </text>
+    </g>
+</svg>
