@@ -84,9 +84,9 @@
           <pre
             class="small pl-4"
             style="margin: 0px; line-height: 125%;"
-          ><span style="color: rgb(249, 38, 114);">from</span> <span style="color: rgb(248, 248, 242);">transformers</span> <span style="color: rgb(249, 38, 114);">import</span> <span style="color: rgb(248, 248, 242);">AutoTokenizer,</span> <span style="color: rgb(248, 248, 242);">AutoModelForSequenceClassification</span>
-<span style="color: rgb(248, 248, 242);">tokenizer</span> <span style="color: rgb(249, 38, 114);">=</span> <span style="color: rgb(248, 248, 242);">AutoTokenizer</span><span style="color: rgb(249, 38, 114);">.</span><span style="color: rgb(248, 248, 242);">from_pretrained(</span><span style="color: rgb(230, 219, 116);">"pdelobelle/RobBERT-base"</span><span style="color: rgb(248, 248, 242);">)</span>
-<span style="color: rgb(248, 248, 242);">model</span> <span style="color: rgb(249, 38, 114);">=</span> <span style="color: rgb(248, 248, 242);">AutoModelForSequenceClassification</span><span style="color: rgb(249, 38, 114);">.</span><span style="color: rgb(248, 248, 242);">from_pretrained(</span><span style="color: rgb(230, 219, 116);">"pdelobelle/RobBERT-base"</span><span style="color: rgb(248, 248, 242);">)</span>
+          ><span style="color: rgb(249, 38, 114);">from</span> <span style="color: rgb(248, 248, 242);">transformers</span> <span style="color: rgb(249, 38, 114);">import</span> <span style="color: rgb(248, 248, 242);">RobertaTokenizer,</span> <span style="color: rgb(248, 248, 242);">RobertaForSequenceClassification</span>
+<span style="color: rgb(248, 248, 242);">tokenizer</span> <span style="color: rgb(249, 38, 114);">=</span> <span style="color: rgb(248, 248, 242);">RobertaTokenizer</span><span style="color: rgb(249, 38, 114);">.</span><span style="color: rgb(248, 248, 242);">from_pretrained(</span><span style="color: rgb(230, 219, 116);">"pdelobelle/robBERT-base"</span><span style="color: rgb(248, 248, 242);">)</span>
+<span style="color: rgb(248, 248, 242);">model</span> <span style="color: rgb(249, 38, 114);">=</span> <span style="color: rgb(248, 248, 242);">RobertaForSequenceClassification</span><span style="color: rgb(249, 38, 114);">.</span><span style="color: rgb(248, 248, 242);">from_pretrained(</span><span style="color: rgb(230, 219, 116);">"pdelobelle/robBERT-base"</span><span style="color: rgb(248, 248, 242);">)</span>
           </pre>
 
           <p>
@@ -109,7 +109,7 @@
                 <button
                   type="button"
                   class="btn btn-outline-light"
-                  v-on:click="copyTextToClipboard('pdelobelle/RobBERT-base')"
+                  v-on:click="copyTextToClipboard('pdelobelle/robBERT-base')"
                 >
                   <i class="fas fa-copy"></i> Copy
                 </button>
@@ -121,11 +121,11 @@
 
             <tr>
               <td>
-                <span class="text-monospace">pdelobelle/RobBERT-dbrd</span>
+                <span class="text-monospace">pdelobelle/robBERT-dutch-books</span>
                 <button
                   type="button"
                   class="btn btn-outline-light"
-                  v-on:click="copyTextToClipboard('pdelobelle/RobBERT-diedat')"
+                  v-on:click="copyTextToClipboard('pdelobelle/robBERT-dutch-books')"
                 >
                   <i class="fas fa-copy"></i> Copy
                 </button>
