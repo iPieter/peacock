@@ -73,10 +73,12 @@ def build_post(path, post, destination_file, config_data):
             doc = pandoc.Document()
             doc.markdown_github = f.read().encode("utf-8")
             post_config["text"] = doc.html.decode()
+            post_config["html"] = ""
     elif "index.html" in post["files"]:
         logging.debug("Using html file for this post.")
         with open(os.path.join(post["path"], "index.html"), mode="r") as f:
             post_config["html"] = f.read()
+            post_config["text"] = ""
 
     rendered = parse_file(os.path.join(path, "_post.html"), config_data)
 
