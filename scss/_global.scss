@@ -10,7 +10,8 @@ body {
 
 p {
   line-height: 1.750;
-  margin: 10px 0;
+  font-weight: 400;
+  margin: 15px 0;
   a {
     text-decoration: underline;
   }
@@ -18,7 +19,7 @@ p {
 
 article {
   p {
-    text-indent: 2em;
+    //text-indent: 2em;
   }
 
   h1+p, h2+p, h3+p, table+p, p:first-child {
