@@ -50,7 +50,7 @@ During the project, **several classifiers and network architectures** were revie
 
 - Document embeddings
   <div class="row">
-    <img src="doc2vec_vectorizer.pdf" alt="Doc2vec vectorizer" class="col-md-8 mx-auto"/>
+    <img src="doc2vec_vectorizer.pdf" alt="Doc2vec vectorizer" class="col-md-8 mx-auto" height="100%"/>
   </div>
 - Part-of-speech tags ([NLTK](http://www.nltk.org/))
   <img src="postag_vectorizer.pdf" alt="Pos tags vectorizer" class="col-md-12">
