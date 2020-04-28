@@ -65,9 +65,17 @@ article {
   }
 
   figcaption {
-    color: $gray-900;
+    color: $gray-600;
     font-size: 14px;
     font-size: bold;
     margin-top: 6px;
+  }
+
+  .katex-display > .katex {
+    display: inline-block;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow-x: scroll;
+    text-align: initial;
   }
 }
