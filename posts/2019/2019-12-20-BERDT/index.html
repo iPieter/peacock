@@ -580,10 +580,8 @@
       <div class="row justify-content-md-center">
         <div class="col-lg-4 col-md-6">
           <figure>
-            <svg width="100%" viewBox="0 0 300 476" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            <svg width="100%" viewBox="-15 0 292 476" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">
-              <title>Artboard</title>
-              <desc>Created with Sketch.</desc>
               <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="Arrow-11"
                   transform="translate(114.000000, 440.500000) rotate(-90.000000) translate(-114.000000, -440.500000) translate(97.000000, 434.000000)">
@@ -1030,7 +1028,9 @@
 <span id="cb1-9"><a href="#cb1-9"></a> (<span class="st">&#39;Ik zie een bos in mijn tuin.&#39;</span>, <span class="fl">0.007785357069224119</span>, <span class="st">&#39; bos&#39;</span>),</span>
 <span id="cb1-10"><a href="#cb1-10"></a> (<span class="st">&#39;Ik zie een storm in mijn tuin.&#39;</span>, <span class="fl">0.0077188946306705475</span>, <span class="st">&#39; storm&#39;</span>)]</span></code></pre>
             </div>
-            <p>Well, at least it makes some sense…</p>
+            <p>Ok, I'll be honest. I thought a tree (<i>een boom</i>) would be the most likely, I didn't even think of a
+              lamp (<i>een lamp</i>). But I guess it makes sense anyway. And giraffes are not even in the top 10k
+              suggestions, so that's disappointing.</p>
             <h2 id="decoders">Decoders</h2>
             <p>So that’s the encoder side. For some language tasks, it is enough (NER, POS tagging, etc.). But for
               others, like translation, we need the decoder as well. Translation could thus be formulated as a task
@@ -1077,7 +1077,8 @@
               are learned during training.</p>
             <p><span class="math display">\text{Attention}(Q, K, V) =
                 \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V</span></p>
-            <p>After calculating the self-attention for each head, the outputs are fed into a linear layer and then concatinated.</p>
+            <p>After calculating the self-attention for each head, the outputs are fed into a linear layer and then
+              concatinated.</p>
 
             <p>If you want to learn more about the attention mechanism specifically, there are some good resources, like
               <a href="https://towardsdatascience.com/illustrated-self-attention-2d627e33b20a">this post from Towards
@@ -1102,9 +1103,491 @@
               newly initialized head that we train on the data that we want. And since most weights are from the trained
               base model, we only need a fraction of the data. So it will go a lot faster as well!</p>
             <h2 id="custom-heads-sentence-and-token-classification">Custom heads: sentence and token classification</h2>
-            <p>If you’re interested in the custom heads we have trained and their performance, see Downstream tasks.</p>
-            <h2 id="wrapping-it-all-up">Wrapping it all up</h2>
-            <h1>Downstream tasks</h1>
+            <p>So to train our model, we used a language modeling head. But as it turns out, we could also add other
+              heads that do other things. These heads can be trained on a lot less data and are faster to train, so it's
+              really easy to train your own on a custom task.</p>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-lg-6 col-md-8">
+          <figure>
+            <svg width="100%" viewBox="0 0 581 341" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>Sentence and token level classification</title>
+              <g id="labeling" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Arrow-11"
+                  transform="translate(101.000000, 278.500000) rotate(-90.000000) translate(-101.000000, -278.500000) translate(84.000000, 272.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(123.000000, 278.500000) rotate(-90.000000) translate(-123.000000, -278.500000) translate(106.000000, 272.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(145.000000, 278.500000) rotate(-90.000000) translate(-145.000000, -278.500000) translate(128.000000, 272.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(167.000000, 278.500000) rotate(-90.000000) translate(-167.000000, -278.500000) translate(150.000000, 272.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(189.000000, 278.500000) rotate(-90.000000) translate(-189.000000, -278.500000) translate(172.000000, 272.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(211.000000, 278.500000) rotate(-90.000000) translate(-211.000000, -278.500000) translate(194.000000, 272.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(233.000000, 278.500000) rotate(-90.000000) translate(-233.000000, -278.500000) translate(216.000000, 272.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <rect id="Rectangle" fill-opacity="0.5" fill="#91FF9E" x="91" y="91" width="162" height="162" rx="7">
+                </rect>
+                <g id="Arrow-11"
+                  transform="translate(103.000000, 66.500000) rotate(-90.000000) translate(-103.000000, -66.500000) translate(86.000000, 60.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(125.000000, 66.500000) rotate(-90.000000) translate(-125.000000, -66.500000) translate(108.000000, 60.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(147.000000, 66.500000) rotate(-90.000000) translate(-147.000000, -66.500000) translate(130.000000, 60.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(169.000000, 66.500000) rotate(-90.000000) translate(-169.000000, -66.500000) translate(152.000000, 60.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(191.000000, 66.500000) rotate(-90.000000) translate(-191.000000, -66.500000) translate(174.000000, 60.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(213.000000, 66.500000) rotate(-90.000000) translate(-213.000000, -66.500000) translate(196.000000, 60.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(235.000000, 66.500000) rotate(-90.000000) translate(-235.000000, -66.500000) translate(218.000000, 60.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <path
+                  d="M98,89 L196,89 L196,116 C196,120.970563 191.970563,125 187,125 L89,125 L89,98 C89,93.0294373 93.0294373,89 98,89 Z"
+                  id="Rectangle" stroke="#FFFFFF" stroke-width="4" fill="#91FF9E"></path>
+                <text id="Encoder" font-family="FiraSansCondensed-Bold, Fira Sans Condensed" font-size="22"
+                  font-style="condensed" font-weight="bold" letter-spacing="1.10000004" fill="#333333">
+                  <tspan x="98.2339998" y="114">Encoder</tspan>
+                </text>
+                <text id="Tokenized-input" font-family="FiraSansCondensed-Bold, Fira Sans Condensed" font-size="12"
+                  font-style="condensed" font-weight="bold" line-spacing="11" letter-spacing="0.6" fill="#82EB8E">
+                  <tspan x="-8.008" y="314.780029">Tokenized input</tspan>
+                </text>
+                <text id="Output-Per-token" font-family="FiraSansCondensed-Bold, Fira Sans Condensed" font-size="12"
+                  font-style="condensed" font-weight="bold" line-spacing="11" letter-spacing="0.6" fill="#82EB8E">
+                  <tspan x="44.104" y="32">Output</tspan>
+                  <tspan x="31" y="45.0079956" font-family="FiraSansCondensed-Regular, Fira Sans Condensed"
+                    font-weight="normal">Per token</tspan>
+                </text>
+                <g id="Group" transform="translate(98.000000, 189.000000)">
+                  <rect id="Rectangle" fill="#91FF9E" x="15" y="0" width="132" height="37" rx="7"></rect>
+                  <rect id="Rectangle" fill="#79D1E7" x="10" y="4" width="132" height="37" rx="7"></rect>
+                  <rect id="Rectangle" fill="#6FBAF1" x="5" y="8" width="132" height="37" rx="7"></rect>
+                  <rect id="Rectangle" fill="#639CFF" x="0" y="13" width="132" height="37" rx="7"></rect>
+                  <text id="Attention-heads" font-family="FiraSansCondensed-Bold, Fira Sans Condensed" font-size="15"
+                    font-style="condensed" font-weight="bold" letter-spacing="0.75000003" fill="#FFFFFF">
+                    <tspan x="11.0749998" y="37">Attention heads</tspan>
+                  </text>
+                </g>
+                <g id="Group" transform="translate(98.000000, 131.000000)">
+                  <rect id="Rectangle" fill="#91FF9E" x="15" y="0" width="132" height="37" rx="7"></rect>
+                  <rect id="Rectangle" fill="#79D1E7" x="10" y="4" width="132" height="37" rx="7"></rect>
+                  <rect id="Rectangle" fill="#6FBAF1" x="5" y="8" width="132" height="37" rx="7"></rect>
+                  <rect id="Rectangle" fill="#639CFF" x="0" y="13" width="132" height="37" rx="7"></rect>
+                  <text id="Attention-heads" font-family="FiraSansCondensed-Bold, Fira Sans Condensed" font-size="15"
+                    font-style="condensed" font-weight="bold" letter-spacing="0.75000003" fill="#FFFFFF">
+                    <tspan x="11.0749998" y="37">Attention heads</tspan>
+                  </text>
+                </g>
+                <text id="&lt;s&gt;"
+                  transform="translate(103.500000, 314.500000) rotate(-90.000000) translate(-103.500000, -314.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="94.724" y="319">&lt;s&gt;</tspan>
+                </text>
+                <text id="Ik"
+                  transform="translate(124.500000, 310.500000) rotate(-90.000000) translate(-124.500000, -310.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="119.536" y="315">Ik</tspan>
+                </text>
+                <text id="zie"
+                  transform="translate(146.500000, 313.500000) rotate(-90.000000) translate(-146.500000, -313.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="138.992" y="318">zie</tspan>
+                </text>
+                <text id="een"
+                  transform="translate(169.500000, 314.500000) rotate(-90.000000) translate(-169.500000, -314.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="159.768" y="319">een</tspan>
+                </text>
+                <text id="giraf"
+                  transform="translate(191.000000, 319.500000) rotate(-90.000000) translate(-191.000000, -319.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="178" y="324">giraf</tspan>
+                </text>
+                <text id="."
+                  transform="translate(213.500000, 305.500000) rotate(-90.000000) translate(-213.500000, -305.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="212.048" y="310">.</tspan>
+                </text>
+                <text id="&lt;/s&gt;"
+                  transform="translate(234.500000, 318.500000) rotate(-90.000000) translate(-234.500000, -318.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="221.924" y="323">&lt;/s&gt;</tspan>
+                </text>
+                <text id="0"
+                  transform="translate(106.000000, 40.500000) rotate(-90.000000) translate(-106.000000, -40.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="102" y="45">0</tspan>
+                </text>
+                <text id="N"
+                  transform="translate(127.000000, 40.500000) rotate(-90.000000) translate(-127.000000, -40.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="122" y="45">N</tspan>
+                </text>
+                <text id="VERB"
+                  transform="translate(148.500000, 29.500000) rotate(-90.000000) translate(-148.500000, -29.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="133" y="34">VERB</tspan>
+                </text>
+                <text id="DET"
+                  transform="translate(172.000000, 33.500000) rotate(-90.000000) translate(-172.000000, -33.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="160" y="38">DET</tspan>
+                </text>
+                <text id="N"
+                  transform="translate(193.000000, 39.500000) rotate(-90.000000) translate(-193.000000, -39.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="188" y="44">N</tspan>
+                </text>
+                <text id="PUNCT"
+                  transform="translate(216.000000, 23.500000) rotate(-90.000000) translate(-216.000000, -23.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="195.552" y="28">PUNCT</tspan>
+                </text>
+                <text id="0"
+                  transform="translate(237.000000, 40.500000) rotate(-90.000000) translate(-237.000000, -40.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="233" y="45">0</tspan>
+                </text>
+                <g id="Arrow-11"
+                  transform="translate(425.000000, 279.500000) rotate(-90.000000) translate(-425.000000, -279.500000) translate(408.000000, 273.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(447.000000, 279.500000) rotate(-90.000000) translate(-447.000000, -279.500000) translate(430.000000, 273.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(469.000000, 279.500000) rotate(-90.000000) translate(-469.000000, -279.500000) translate(452.000000, 273.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(491.000000, 279.500000) rotate(-90.000000) translate(-491.000000, -279.500000) translate(474.000000, 273.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(513.000000, 279.500000) rotate(-90.000000) translate(-513.000000, -279.500000) translate(496.000000, 273.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(535.000000, 279.500000) rotate(-90.000000) translate(-535.000000, -279.500000) translate(518.000000, 273.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11"
+                  transform="translate(557.000000, 279.500000) rotate(-90.000000) translate(-557.000000, -279.500000) translate(540.000000, 273.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <rect id="Rectangle" fill-opacity="0.5" fill="#91FF9E" x="415" y="92" width="162" height="162" rx="7">
+                </rect>
+                <g id="Arrow-11"
+                  transform="translate(427.000000, 67.500000) rotate(-90.000000) translate(-427.000000, -67.500000) translate(410.000000, 61.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11" opacity="0.114071801"
+                  transform="translate(449.000000, 67.500000) rotate(-90.000000) translate(-449.000000, -67.500000) translate(432.000000, 61.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11" opacity="0.114071801"
+                  transform="translate(471.000000, 67.500000) rotate(-90.000000) translate(-471.000000, -67.500000) translate(454.000000, 61.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11" opacity="0.114071801"
+                  transform="translate(493.000000, 67.500000) rotate(-90.000000) translate(-493.000000, -67.500000) translate(476.000000, 61.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11" opacity="0.114071801"
+                  transform="translate(515.000000, 67.500000) rotate(-90.000000) translate(-515.000000, -67.500000) translate(498.000000, 61.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11" opacity="0.114071801"
+                  transform="translate(537.000000, 67.500000) rotate(-90.000000) translate(-537.000000, -67.500000) translate(520.000000, 61.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <g id="Arrow-11" opacity="0.114071801"
+                  transform="translate(559.000000, 67.500000) rotate(-90.000000) translate(-559.000000, -67.500000) translate(542.000000, 61.000000)">
+                  <g>
+                    <line x1="0" y1="8.5" x2="32" y2="8.5" id="Stroke-11" stroke="#639CFF" stroke-width="2"></line>
+                    <polyline id="Arrow-head-11" fill="#639CFF"
+                      points="25.3425197 16.5 24 15.0679526 31.109252 8.50146726 24 1.93302562 25.3425197 0.5 34 8.50146726 25.3425197 16.5">
+                    </polyline>
+                  </g>
+                </g>
+                <path
+                  d="M422,90 L520,90 L520,117 C520,121.970563 515.970563,126 511,126 L413,126 L413,99 C413,94.0294373 417.029437,90 422,90 Z"
+                  id="Rectangle" stroke="#FFFFFF" stroke-width="4" fill="#91FF9E"></path>
+                <text id="Encoder" font-family="FiraSansCondensed-Bold, Fira Sans Condensed" font-size="22"
+                  font-style="condensed" font-weight="bold" letter-spacing="1.10000004" fill="#333333">
+                  <tspan x="422.234" y="115">Encoder</tspan>
+                </text>
+                <text id="Tokenized-input" font-family="FiraSansCondensed-Bold, Fira Sans Condensed" font-size="12"
+                  font-style="condensed" font-weight="bold" line-spacing="11" letter-spacing="0.6" fill="#82EB8E">
+                  <tspan x="315.992" y="315.780029">Tokenized input</tspan>
+                </text>
+                <text id="&lt;s&gt;"
+                  transform="translate(427.500000, 314.500000) rotate(-90.000000) translate(-427.500000, -314.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="418.724" y="319">&lt;s&gt;</tspan>
+                </text>
+                <text id="Ik"
+                  transform="translate(448.500000, 310.500000) rotate(-90.000000) translate(-448.500000, -310.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="443.536" y="315">Ik</tspan>
+                </text>
+                <text id="zie"
+                  transform="translate(470.500000, 313.500000) rotate(-90.000000) translate(-470.500000, -313.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="462.992" y="318">zie</tspan>
+                </text>
+                <g id="Group" transform="translate(422.000000, 190.000000)">
+                  <rect id="Rectangle" fill="#91FF9E" x="15" y="0" width="132" height="37" rx="7"></rect>
+                  <rect id="Rectangle" fill="#79D1E7" x="10" y="4" width="132" height="37" rx="7"></rect>
+                  <rect id="Rectangle" fill="#6FBAF1" x="5" y="8" width="132" height="37" rx="7"></rect>
+                  <rect id="Rectangle" fill="#639CFF" x="0" y="13" width="132" height="37" rx="7"></rect>
+                  <text id="Attention-heads" font-family="FiraSansCondensed-Bold, Fira Sans Condensed" font-size="15"
+                    font-style="condensed" font-weight="bold" letter-spacing="0.75000003" fill="#FFFFFF">
+                    <tspan x="11.0749998" y="37">Attention heads</tspan>
+                  </text>
+                </g>
+                <g id="Group" transform="translate(422.000000, 132.000000)">
+                  <rect id="Rectangle" fill="#91FF9E" x="15" y="0" width="132" height="37" rx="7"></rect>
+                  <rect id="Rectangle" fill="#79D1E7" x="10" y="4" width="132" height="37" rx="7"></rect>
+                  <rect id="Rectangle" fill="#6FBAF1" x="5" y="8" width="132" height="37" rx="7"></rect>
+                  <rect id="Rectangle" fill="#639CFF" x="0" y="13" width="132" height="37" rx="7"></rect>
+                  <text id="Attention-heads" font-family="FiraSansCondensed-Bold, Fira Sans Condensed" font-size="15"
+                    font-style="condensed" font-weight="bold" letter-spacing="0.75000003" fill="#FFFFFF">
+                    <tspan x="11.0749998" y="37">Attention heads</tspan>
+                  </text>
+                </g>
+                <text id="een"
+                  transform="translate(493.500000, 315.500000) rotate(-90.000000) translate(-493.500000, -315.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="483.768" y="320">een</tspan>
+                </text>
+                <text id="giraf"
+                  transform="translate(515.000000, 319.500000) rotate(-90.000000) translate(-515.000000, -319.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="502" y="324">giraf</tspan>
+                </text>
+                <text id="."
+                  transform="translate(537.500000, 306.500000) rotate(-90.000000) translate(-537.500000, -306.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="536.048" y="311">.</tspan>
+                </text>
+                <text id="&lt;/s&gt;"
+                  transform="translate(558.500000, 318.500000) rotate(-90.000000) translate(-558.500000, -318.500000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="545.924" y="323">&lt;/s&gt;</tspan>
+                </text>
+                <text id="Positive"
+                  transform="translate(427.500000, 24.000000) rotate(-90.000000) translate(-427.500000, -24.000000) "
+                  font-family="Lora-Regular, Lora" font-size="12" font-weight="normal" fill="#333333">
+                  <tspan x="405.5" y="28.5">Positive</tspan>
+                </text>
+                <text id="Output-Only-for-the" font-family="FiraSansCondensed-Bold, Fira Sans Condensed" font-size="12"
+                  font-style="condensed" font-weight="bold" line-spacing="11" letter-spacing="0.6" fill="#82EB8E">
+                  <tspan x="373.764" y="33">Output</tspan>
+                  <tspan x="288" y="46.0079956" font-family="FiraSansCondensed-Regular, Fira Sans Condensed"
+                    font-weight="normal">Only for the first token</tspan>
+                </text>
+              </g>
+            </svg>
+            <figcaption>Token-level classification (left) and sentence-level classification (right) for an example
+              input.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto mt-0">
+
+          <p>
+            Of course, not all tasks are the same. Roughly, there are kinds of tasks: (i) sentence-level prediction
+            and (ii) token-level prediction. As the names imply, the difference is that one predicts something on a
+            sentence or document level versus making a prediction for each token.</p>
+
+          <p>If you’re interested in the custom heads we have trained and their performance, see <a
+              href="#downstream-tasks">Downstream tasks</a>.</p>
+
+          <h2 id="wrapping-it-all-up">Wrapping it up and why monolingual models matter</h2>
+          <p>So we discussed language models—and their probabilistic interpretation—and how they are related to
+            transformer models. With a lot of self-supervised training on large corpora, these models are relatively
+            good for these tasks. Multilingual models also perform very well, but they do mix a lot of languages (over
+            100 for Google's mBERT).</p>
+          <p>As a language model, a multilingual model will then have to deal with very different linguistic properties.
+            For the tokenizer, this means either a lot more tokens, or less tokens that represent actual words in one
+            language. Despite these drawbacks, multilingual models might leverage some features from related languages,
+            which could increase performance.</p>
+          <p>This is also what we observed, multilingual models do perform well on a variety of tasks, especially if
+            sufficient training data is available. If this is not the case, monolingual models like RobBERT have a
+            slight edge.</p>
+
+            <h1 id="downstream-tasks">Downstream tasks</h1>
             <h2>Anaphora resolution with <i>die</i> and <i>dat</i></h2>
             <p>
               We evaluated RobBERT's performance on a task that is specific to
@@ -1137,7 +1620,7 @@
               after pre-training.. The second approach uses the same data, but
               creates two sentences by filling in the mask with both
               <i>"die"</i> and <i>"dat"</i>, appending both with the
-              <code>[SEP]</code> token and making the model predict which of the
+              <code>&lt;sep&gt;</code> token and making the model predict which of the
               two sentences is correct.
             </p>
 
