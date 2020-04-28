@@ -109,6 +109,10 @@ header.masthead {
       font-weight: 300;
       font-style: italic;
       @include serif-font;
+
+      .btn {
+        font-style: normal;
+      }
     }
     @media only screen and (min-width: 768px) {
       h1 {

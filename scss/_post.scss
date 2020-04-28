@@ -63,4 +63,11 @@ article {
       max-width: 100%;
     }
   }
+
+  figcaption {
+    color: $gray-900;
+    font-size: 14px;
+    font-size: bold;
+    margin-top: 6px;
+  }
 }
