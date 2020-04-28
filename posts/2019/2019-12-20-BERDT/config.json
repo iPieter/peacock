@@ -13,5 +13,7 @@
   "pdf": "https://arxiv.org/abs/2001.06286",
   "bibtex": "",
   "resource": "/robbert#get-started",
-  "draft": false
+  "draft": false,
+  "code": "https://github.com/iPieter/robbert"
+
 }

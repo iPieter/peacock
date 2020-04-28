@@ -1010,7 +1010,7 @@
 
           <p>We could also interpret this probabilistically, we have a language model
             <p><span class="math display">P(\text{``giraf&quot;} \mid \text{``ik zie een &lt;mask&gt; in mijn
-                tuin.&quot;})<0.0001< /span>
+                tuin.&quot;})&lt;0.0001</span>
             </p>
             <p>Or a more probable:</p>
             <p><span class="math display">P(\text{``boom&quot;} \mid \text{ik zie een &lt;mask&gt; in mijn
@@ -1068,9 +1068,22 @@
               words are missing. Yay, no more out-of-vocabulary (OOV) issues!</p>
             <p>For all these tokens, we take a vector (similar to word embeddings) from our embeddings matrix. Hold up,
               wasn’t that problematic for word2vec? Yes, but transformer-based models do something else before the
-              attention heads: they alter the embeddings with a positional encoding, which is a sine and cosine
-              concatenated.</p>
+              attention heads: they multiply the embeddings with a positional encoding, which is a sine and cosine
+              concatenated. These altered embeddings then get fed into the first layer of attention heads.</p>
             <h2 id="self-attention-mechanism">Self-attention mechanism</h2>
+            <p>So we have multiple layers (12 in the case of RobBERT) that each have multiple attention heads (also 12).
+              Each head calculates scaled dot-product attention based on <em>Query</em> (Q), <em>Key</em> (K) and
+              <em>Value</em> (V) vectors, where these vectors are calculated from three respective weight matrices that
+              are learned during training.</p>
+            <p><span class="math display">\text{Attention}(Q, K, V) =
+                \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V</span></p>
+            <p>After calculating the self-attention for each head, the outputs are fed into a linear layer and then concatinated.</p>
+
+            <p>If you want to learn more about the attention mechanism specifically, there are some good resources, like
+              <a href="https://towardsdatascience.com/illustrated-self-attention-2d627e33b20a">this post from Towards
+                Data Science</a> and <a href="http://jalammar.github.io/illustrated-transformer/">Jay Alammar's The
+                Illustrated Transformer</a>!</p>
+
             <h2 id="pre-training-and-finetuning">Pre-training and finetuning</h2>
             <p>As it happens, language models are quite expensive to train. We used a high-performance computing cluster
               with ~80 Nvidia P100’s for several days. This is because we train it on a large dataset (39 GB of text)
@@ -1154,133 +1167,133 @@
     </div>
     <div class="row mt-4" style="background: linear-gradient(45deg, #e3ffe7cc 0%, #d9e7ffcc 100%);">
       <div class="">
-          <div class="col-lg-8 col-md-10 mx-auto mt-5 ml-0">
-            <h2>Examples on sentiment analysis</h2>
-            <p>
-              We've trained and evaluated our model on the Dutch Books Review
-              Dataset (DBRD), which is a collection of labeled possitive,
-              negative and neutral reviews. This allowed us to do sentiment
-              analysis on these reviews. We show the first examples from our
-              test set here.
-            </p>
-          </div>
-          <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Carousel indicators -->
-            <ol class="carousel-indicators ">
-              <li data-target="#myCarousel" data-slide-to="0" class="active bg-dark"></li>
-              <li class="bg-dark" data-target="#myCarousel" data-slide-to="1"></li>
-              <li class="bg-dark" data-target="#myCarousel" data-slide-to="2"></li>
-              <li class="bg-dark" data-target="#myCarousel" data-slide-to="3"></li>
-            </ol>
-            <!-- Wrapper for carousel items -->
-            <div class="carousel-inner">
-              <div class="item carousel-item active">
-                <div class="col-md-9 col-center m-auto pb-5">
-                  <div class="media">
-                    <div class="col-md-2 col-sm-3">
-                      <img src="book_0_front.jpg" class="align-self-start mr-3" alt="Book 0 front"
-                        style="width: 100%;" /></div>
-                    <div class="media-body col-sm-9">
-                      <h5 class="mt-0">Zwanenzang</h5>
-                      <h6>By Loes den Hollander</h6>
-                      <p>
-                        Wat een geweldig boek is dit weer van Loes! Ik kan
-                        mezelf inmiddels toch wel een fan noemen hoor. Vrijdag
-                        vond ik geweldig maar Zwanenzang doet er zeker niet voor
-                        onder. Broeinest heb ik ook gelezen maar vergeleken met
-                        deze twee vond ik die toch net iets minder maar ook nog
-                        steeds geweldig. Zwanenzang leest als een trein, is
-                        nergens saai, blijft spannend tot het laatste hoofdstuk
-                        en heeft een geweldige ontknoping! Loes heeft er een fan
-                        bij...
-                      </p>
-                      <img src="book_0.png" alt="Book 2 score" width="300px" />
-                    </div>
+        <div class="col-lg-8 col-md-10 mx-auto mt-5 ml-0">
+          <h2>Examples on sentiment analysis</h2>
+          <p>
+            We've trained and evaluated our model on the Dutch Books Review
+            Dataset (DBRD), which is a collection of labeled possitive,
+            negative and neutral reviews. This allowed us to do sentiment
+            analysis on these reviews. We show the first examples from our
+            test set here.
+          </p>
+        </div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Carousel indicators -->
+          <ol class="carousel-indicators ">
+            <li data-target="#myCarousel" data-slide-to="0" class="active bg-dark"></li>
+            <li class="bg-dark" data-target="#myCarousel" data-slide-to="1"></li>
+            <li class="bg-dark" data-target="#myCarousel" data-slide-to="2"></li>
+            <li class="bg-dark" data-target="#myCarousel" data-slide-to="3"></li>
+          </ol>
+          <!-- Wrapper for carousel items -->
+          <div class="carousel-inner">
+            <div class="item carousel-item active">
+              <div class="col-md-9 col-center m-auto pb-5">
+                <div class="media">
+                  <div class="col-md-2 col-sm-3">
+                    <img src="book_0_front.jpg" class="align-self-start mr-3" alt="Book 0 front" style="width: 100%;" />
                   </div>
-                </div>
-              </div>
-              <div class="item carousel-item">
-                <div class="col-md-9 col-center m-auto pb-5">
-                  <div class="media">
-                    <div class="col-md-2 col-sm-3">
-                      <img src="book_1_front.jpg" class="align-self-start mr-3" alt="Book 1 front"
-                        style="width: 100%;" /></div>
-                    <div class="media-body col-sm-9">
-                      <h5 class="mt-0">Een boek per dag</h5>
-                      <h6>By Nina Sankovitch</h6>
-                      <p>
-                        Ik vond er helemaal niets aan. Het is niet mijn gewoonte
-                        maar na 4 hoofdstukken heb ik het opgegeven en het boek
-                        weggelegd.
-                      </p>
-                      <img src="book_1.png" alt="Book 2 score" width="300px" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item carousel-item">
-                <div class="col-md-9 col-center m-auto pb-5">
-                  <div class="media">
-                    <div class="col-md-2 col-sm-3">
-                      <img src="book_2_front.jpg" class="align-self-start mr-3" alt="Book 2 front"
-                        style="width: 100%;" /></div>
-                    <div class="media-body col-sm-9">
-                      <h5 class="mt-0">Dorsvloer vol confetti</h5>
-                      <h6>By Franca Treur</h6>
-                      <p>
-                        Het boek kon mij niet boeien, gaf wel herkenning met
-                        mijn eigen jeugdleven en opvoeding, maar het is allemaal
-                        nogal saai weergegeven.
-                      </p>
-                      <img src="book_2.png" alt="Book 2 score" width="300px" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item carousel-item">
-                <div class="col-md-9 col-center m-auto pb-5">
-                  <div class="media">
-                    <div class="col-md-2 col-sm-3">
-                      <img src="book_3_front.jpg" class="align-self-start mr-3" alt="Book 3 front"
-                        style="width: 100%;" /></div>
-                    <div class="media-body col-sm-9">
-                      <h5 class="mt-0">The Path Keeper</h5>
-                      <h6>By N.J. Simmonds</h6>
-                      <p>
-                        'Can love ever be stronger than fate?' dat staat op de
-                        cover van The path keeper en dat vind ik een goede en
-                        interessante vraag. The path keeper is een mooi verhaal
-                        over leven, lotsbestemming en liefde. N.J Simmonds wist
-                        mij op het puntje van mijn stoel te houden met dit
-                        verhaal. Er wordt in het verhaal gebruik gemaakt van
-                        glimpen uit het verleden. Hele hoofdstukken over vorige
-                        levens inclusief bijpassende schrijfstijl. Heel goed
-                        gedaan en een goede toevoeging aan het verhaal. Verder
-                        vond ik het een origineel verhaal met een interessante
-                        kijk op het leven, het lot en religie waardoor je toch
-                        anders gaat kijken naar de wereld. Heb ik die persoon om
-                        een rede ontmoet? Waarom loopt mijn leven op de manier
-                        waarop het loopt? Heb ik iets verkeerds gedaan in een
-                        vorig leven? Ik ben gaan meeleven met Ella en vind het
-                        erg dat ik nu tot 2018 moet wachten om te wachten hoe
-                        het verder gaat. Al heb ik tijdens mijn interview met
-                        N.J Simmonds wel een paar teasers gehad over het
-                        verhaal. Lees ook het interview met N.J. Simmons
-                      </p>
-                      <img src="book_3.png" alt="Book 3 score" width="300px" />
-                    </div>
+                  <div class="media-body col-sm-9">
+                    <h5 class="mt-0">Zwanenzang</h5>
+                    <h6>By Loes den Hollander</h6>
+                    <p>
+                      Wat een geweldig boek is dit weer van Loes! Ik kan
+                      mezelf inmiddels toch wel een fan noemen hoor. Vrijdag
+                      vond ik geweldig maar Zwanenzang doet er zeker niet voor
+                      onder. Broeinest heb ik ook gelezen maar vergeleken met
+                      deze twee vond ik die toch net iets minder maar ook nog
+                      steeds geweldig. Zwanenzang leest als een trein, is
+                      nergens saai, blijft spannend tot het laatste hoofdstuk
+                      en heeft een geweldige ontknoping! Loes heeft er een fan
+                      bij...
+                    </p>
+                    <img src="book_0.png" alt="Book 2 score" width="300px" />
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Carousel controls -->
-            <a class="carousel-control left carousel-control-prev text-dark" href="#myCarousel" data-slide="prev">
-              <i class="fa fa-angle-left"></i>
-            </a>
-            <a class="carousel-control right carousel-control-next text-dark" href="#myCarousel" data-slide="next">
-              <i class="fa fa-angle-right"></i>
-            </a>
+            <div class="item carousel-item">
+              <div class="col-md-9 col-center m-auto pb-5">
+                <div class="media">
+                  <div class="col-md-2 col-sm-3">
+                    <img src="book_1_front.jpg" class="align-self-start mr-3" alt="Book 1 front" style="width: 100%;" />
+                  </div>
+                  <div class="media-body col-sm-9">
+                    <h5 class="mt-0">Een boek per dag</h5>
+                    <h6>By Nina Sankovitch</h6>
+                    <p>
+                      Ik vond er helemaal niets aan. Het is niet mijn gewoonte
+                      maar na 4 hoofdstukken heb ik het opgegeven en het boek
+                      weggelegd.
+                    </p>
+                    <img src="book_1.png" alt="Book 2 score" width="300px" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item carousel-item">
+              <div class="col-md-9 col-center m-auto pb-5">
+                <div class="media">
+                  <div class="col-md-2 col-sm-3">
+                    <img src="book_2_front.jpg" class="align-self-start mr-3" alt="Book 2 front" style="width: 100%;" />
+                  </div>
+                  <div class="media-body col-sm-9">
+                    <h5 class="mt-0">Dorsvloer vol confetti</h5>
+                    <h6>By Franca Treur</h6>
+                    <p>
+                      Het boek kon mij niet boeien, gaf wel herkenning met
+                      mijn eigen jeugdleven en opvoeding, maar het is allemaal
+                      nogal saai weergegeven.
+                    </p>
+                    <img src="book_2.png" alt="Book 2 score" width="300px" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item carousel-item">
+              <div class="col-md-9 col-center m-auto pb-5">
+                <div class="media">
+                  <div class="col-md-2 col-sm-3">
+                    <img src="book_3_front.jpg" class="align-self-start mr-3" alt="Book 3 front" style="width: 100%;" />
+                  </div>
+                  <div class="media-body col-sm-9">
+                    <h5 class="mt-0">The Path Keeper</h5>
+                    <h6>By N.J. Simmonds</h6>
+                    <p>
+                      'Can love ever be stronger than fate?' dat staat op de
+                      cover van The path keeper en dat vind ik een goede en
+                      interessante vraag. The path keeper is een mooi verhaal
+                      over leven, lotsbestemming en liefde. N.J Simmonds wist
+                      mij op het puntje van mijn stoel te houden met dit
+                      verhaal. Er wordt in het verhaal gebruik gemaakt van
+                      glimpen uit het verleden. Hele hoofdstukken over vorige
+                      levens inclusief bijpassende schrijfstijl. Heel goed
+                      gedaan en een goede toevoeging aan het verhaal. Verder
+                      vond ik het een origineel verhaal met een interessante
+                      kijk op het leven, het lot en religie waardoor je toch
+                      anders gaat kijken naar de wereld. Heb ik die persoon om
+                      een rede ontmoet? Waarom loopt mijn leven op de manier
+                      waarop het loopt? Heb ik iets verkeerds gedaan in een
+                      vorig leven? Ik ben gaan meeleven met Ella en vind het
+                      erg dat ik nu tot 2018 moet wachten om te wachten hoe
+                      het verder gaat. Al heb ik tijdens mijn interview met
+                      N.J Simmonds wel een paar teasers gehad over het
+                      verhaal. Lees ook het interview met N.J. Simmons
+                    </p>
+                    <img src="book_3.png" alt="Book 3 score" width="300px" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          <!-- Carousel controls -->
+          <a class="carousel-control left carousel-control-prev text-dark" href="#myCarousel" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+          </a>
+          <a class="carousel-control right carousel-control-next text-dark" href="#myCarousel" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+          </a>
+        </div>
       </div>
     </div>
     <div class="container">
@@ -1290,7 +1303,7 @@
           <p>
             We named our model RobBERT, or to be more precise: our model named
             itself RobBERT. When we used word masking in a sentence to introduce
-            itself, it picked `RobBERT` as the most likely name. In an
+            itself, it picked RobBERT as the most likely name. In an
             serendipitous way, this also highlighted the link to RoBERTa, so
             that name was perfect!
           </p>
