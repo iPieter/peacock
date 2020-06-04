@@ -90,6 +90,19 @@ header.masthead {
     }
   }
   .post-heading {
+
+    .post-image {
+      display: inline-flex;
+    }
+
+    .post-title {
+      display: inline-block;
+    }
+
+    .post-authors {
+      display: block;
+    }
+
     h1 {
       font-size: 35px;
     }

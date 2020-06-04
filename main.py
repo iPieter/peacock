@@ -117,7 +117,7 @@ def generate_feeds(config_data, output_path, drafts=False):
 def build_site(config_data, path, output_path, drafts=False):
     logging.info("Exporting site to folder {}/".format(output_path))
 
-    config_data["PHEASANT_VERSION"] = "0.2.0"
+    config_data["PHEASANT_VERSION"] = "0.2.1"
     config_data["last_updated"] = datetime.now().strftime("%B %d, %Y")
 
     # First render the nav bar and footer components
@@ -135,7 +135,6 @@ def build_site(config_data, path, output_path, drafts=False):
             os.path.join(output_path, page["url"]),
             config_data,
         )
-
     for page in blog_posts:
         # os.mkdir(os.path.join(output_path, page["url"]))
         logging.debug(
@@ -151,6 +150,9 @@ def build_site(config_data, path, output_path, drafts=False):
             os.path.join(output_path, page["url"], "index.html"),
             config_data,
         )
+
+    logging.info("Copying resources to folder {}/resources".format(output_path))
+    shutil.copytree(os.path.join(path, "resources"), os.path.join(output_path, "resources"))
 
     logging.info("Copying js to folder {}/js".format(output_path))
     shutil.copytree(os.path.join(path, "js"), os.path.join(output_path, "js"))

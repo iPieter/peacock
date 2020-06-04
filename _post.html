@@ -71,7 +71,7 @@
     <header class="masthead" style="background: {{background}};">
       <div class="container">
         <div class="row">
-          {{#img}}
+          {{#banner}}
           <div class="col-9 col-sm-8 col-md-4 col-xl-4">
             <img
               src="{{img}}"
@@ -79,17 +79,30 @@
             />
           </div>
           <div class="col-12 col-md-8 col-xl-8">
-          {{/img}}
-          {{^img}}
+          {{/banner}}
+          {{^banner}}
           <div class="col-12 col-md-11 col-xl-11">
-          {{/img}}
+          {{/banner}}
           
             <div class="post-heading">
+              {{^banner}}
+                {{#img}}
+                <div class="post-image">
+                  <img
+                    src="{{img}}"
+                    style="max-height: 100%;"
+                  />
+                </div>
+                {{/img}}
+              {{/banner}}
+              <div class="post-title">
+
               <h1>{{post_title}}</h1>
               {{#post_subtitle}}
                 <h2>{{post_subtitle}}</h2>
               {{/post_subtitle}}
-              <i class="">{{author}}</i>
+            </div>
+              <i class="post-authors">{{author}}</i>
               <h3 class="subheading">
                 {{{abstract}}}
               </h3>
