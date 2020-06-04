@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- Generator: DataGraph - https://www.visualdatatools.com/DataGraph/index.html  --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="252" height="216" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g>
+  <!-- Background -->
+  <g id="Background">
+    <!-- Grid -->
+    <g id="Grid">
+      <path d="M 112.467 171.5 L 112.467 19.5 M 174.433 171.5 L 174.433 19.5 "
+        stroke="black" stroke-dasharray="0.0105292,4.21169" stroke-dashoffset="0.00526462" stroke-linecap="round" fill="none" stroke-width="0.5"/>
+      <path d="M 50.5 137.722 L 236.4 137.722 M 50.5 103.944 L 236.4 103.944 M 50.5 70.1667 L 236.4 70.1667 
+               M 50.5 36.3889 L 236.4 36.3889 "
+        stroke="black" stroke-dasharray="0.010302,4.12081" stroke-dashoffset="0.00515101" stroke-linecap="round" fill="none" stroke-width="0.5"/>
+    </g>
+  </g>
+  <!-- Commands -->
+  <g id="Commands">
+    <!-- ACC -->
+    <g id="ACC">
+      <defs>
+        <clipPath id="clipPath">
+          <rect x="50.5" y="19.5" width="185.9" height="152"/>
+        </clipPath>
+      </defs>
+      <g clip-path="url(#clipPath)">
+        <path d="M 50.5 75.7645 L 55.6639 63.0421 L 60.8278 58.7484 L 65.9917 56.522 L 71.1556 57.3171 
+                 L 76.3194 56.522 L 81.4833 56.522 L 86.6472 48.0934 L 91.8111 46.026 L 96.975 44.1178 
+                 L 102.139 39.8239 L 107.303 39.8239 L 112.467 37.1203 L 117.631 38.0746 L 122.794 37.4385 
+                 L 127.958 38.7108 L 133.122 39.6648 L 138.286 39.3468 L 143.45 39.3468 L 148.614 43.0044 
+                 L 153.778 44.1178 L 158.942 40.9371 L 164.106 44.4358 L 169.269 50.797 L 174.433 50.0018 
+                 L 179.597 55.2497 L 184.761 58.2713 L 189.925 62.088 L 195.089 67.3359 L 200.253 69.2444 
+                 L 205.417 70.0395 L 210.581 73.8562 L 215.744 70.9935 L 220.908 74.3332 "
+          stroke="rgb(43,187,255)" fill="none" stroke-width="2"/>
+      </g>
+      <path d="M 50.5 79.2645 L 50.5 72.2645 M 55.6639 66.5421 L 55.6639 59.5421 M 60.8278 62.2484 L 60.8278 55.2484 
+               M 65.9917 60.022 L 65.9917 53.022 M 71.1556 60.8171 L 71.1556 53.8171 M 76.3194 60.022 L 76.3194 53.022 
+               M 81.4833 60.022 L 81.4833 53.022 M 86.6472 51.5934 L 86.6472 44.5934 M 91.8111 49.526 L 91.8111 42.526 
+               M 96.975 47.6178 L 96.975 40.6178 M 102.139 43.3239 L 102.139 36.3239 M 107.303 43.3239 L 107.303 36.3239 
+               M 112.467 40.6203 L 112.467 33.6203 M 117.631 41.5746 L 117.631 34.5746 M 122.794 40.9385 L 122.794 33.9385 
+               M 127.958 42.2108 L 127.958 35.2108 M 133.122 43.1648 L 133.122 36.1648 M 138.286 42.8468 L 138.286 35.8468 
+               M 143.45 42.8468 L 143.45 35.8468 M 148.614 46.5044 L 148.614 39.5044 M 153.778 47.6178 L 153.778 40.6178 
+               M 158.942 44.4371 L 158.942 37.4371 M 164.106 47.9358 L 164.106 40.9358 M 169.269 54.297 L 169.269 47.297 
+               M 174.433 53.5018 L 174.433 46.5018 M 179.597 58.7497 L 179.597 51.7497 M 184.761 61.7713 L 184.761 54.7713 
+               M 189.925 65.588 L 189.925 58.588 M 195.089 70.8359 L 195.089 63.8359 M 200.253 72.7444 L 200.253 65.7444 
+               M 205.417 73.5395 L 205.417 66.5395 M 210.581 77.3562 L 210.581 70.3562 M 215.744 74.4935 L 215.744 67.4935 
+               M 220.908 77.8332 L 220.908 70.8332 "
+        stroke="rgb(43,187,255)" fill="none" stroke-width="2"/>
+    </g>
+    <!-- F_1 -->
+    <g id="F_1">
+      <defs>
+        <clipPath id="clipPath2">
+          <rect x="50.5" y="19.5" width="185.9" height="152"/>
+        </clipPath>
+      </defs>
+      <g clip-path="url(#clipPath2)">
+        <path d="M 50.5 78.8606 L 55.6639 64.3061 L 60.8278 59.8756 L 65.9917 56.9754 L 71.1556 57.4807 
+                 L 76.3194 56.6566 L 81.4833 56.637 L 86.6472 48.1297 L 91.8111 46.0585 L 96.975 44.1194 
+                 L 102.139 39.8241 L 107.303 39.8244 L 112.467 37.1396 L 117.631 38.1048 L 122.794 37.5012 
+                 L 127.958 38.8383 L 133.122 39.871 L 138.286 39.6689 L 143.45 39.897 L 148.614 44.0161 
+                 L 153.778 45.4753 L 158.942 42.4506 L 164.106 46.8276 L 169.269 54.3144 L 174.433 54.3539 
+                 L 179.597 61.4603 L 184.761 66.543 L 189.925 73.1151 L 195.089 82.0451 L 200.253 82.5297 
+                 L 205.417 86.2895 L 210.581 93.3259 L 215.744 83.6719 L 220.908 94.6542 "
+          stroke="rgb(43,216,246)" fill="none" stroke-width="2"/>
+      </g>
+      <g>
+        <circle cx="50.5" cy="78.8606" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="55.6639" cy="64.3061" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="60.8278" cy="59.8756" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="65.9917" cy="56.9754" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="71.1556" cy="57.4807" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="76.3194" cy="56.6566" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="81.4833" cy="56.637" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="86.6472" cy="48.1297" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="91.8111" cy="46.0585" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="96.975" cy="44.1194" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="102.139" cy="39.8241" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="107.303" cy="39.8244" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="112.467" cy="37.1396" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="117.631" cy="38.1048" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="122.794" cy="37.5012" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="127.958" cy="38.8383" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="133.122" cy="39.871" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="138.286" cy="39.6689" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="143.45" cy="39.897" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="148.614" cy="44.0161" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="153.778" cy="45.4753" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="158.942" cy="42.4506" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="164.106" cy="46.8276" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="169.269" cy="54.3144" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="174.433" cy="54.3539" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="179.597" cy="61.4603" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="184.761" cy="66.543" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="189.925" cy="73.1151" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="195.089" cy="82.0451" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="200.253" cy="82.5297" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="205.417" cy="86.2895" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="210.581" cy="93.3259" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="215.744" cy="83.6719" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        <circle cx="220.908" cy="94.6542" r="2" fill="rgb(43,216,246)" stroke="none"/>
+      </g>
+    </g>
+    <!-- No name -->
+    <g id="No_name">
+      <g font-family="Helvetica" font-size="12" fill="rgb(77,175,74)">
+        <text x="252.5" y="45.0896">Within the 80% bounds</text>
+      </g>
+    </g>
+    <!-- Function -->
+    <g id="Function">
+      <path d="M 50.5 50.797 L 236.4 50.797 "
+        stroke="rgb(40,150,255)" stroke-dasharray="8,5" stroke-linecap="butt" fill="none" stroke-width="2"/>
+    </g>
+    <!-- No name -->
+    <g id="No_name_2">
+      <g font-family="Helvetica" font-size="12" fill="rgb(43,216,246)">
+        <text x="225.5" y="99.0896">F</text>
+        <text x="232.83" y="101.6" font-size="9">1</text>
+      </g>
+    </g>
+    <!-- No name -->
+    <g id="No_name_3">
+      <g font-family="Helvetica" font-size="12" fill="rgb(43,187,255)">
+        <text x="223.5" y="81.0896">ACC</text>
+      </g>
+    </g>
+    <!-- Legend -->
+    <g id="Legend">
+      <defs>
+        <clipPath id="clipPath3">
+          <rect x="158.4" y="17.5" width="94" height="18"/>
+        </clipPath>
+      </defs>
+      <g clip-path="url(#clipPath3)">
+        <rect x="158.4" y="17.5" width="94" height="18" fill="white" stroke="none"/>
+      </g>
+      <g>
+        <g>
+          <path d="M 163.4 26.5 L 177.4 26.5 "
+            stroke="rgb(43,187,255)" fill="none" stroke-width="2"/>
+          <path d="M 170.5 30 L 170.5 23 "
+            stroke="rgb(43,187,255)" fill="none" stroke-width="2"/>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="182.4" y="30.8037">ACC</text>
+        </g>
+        <g>
+          <path d="M 210.4 26.5 L 224.4 26.5 "
+            stroke="rgb(43,216,246)" fill="none" stroke-width="2"/>
+          <circle cx="217.5" cy="26.5" r="2" fill="rgb(43,216,246)" stroke="none"/>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="229.4" y="30.8037">F</text>
+          <text x="236.73" y="33.3139" font-size="9">1</text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <!-- Foreground -->
+  <g id="Foreground">
+    <!-- Y Axis -->
+    <g id="Y_Axis">
+      <g transform="translate(14.0188,95.5) rotate(-90) translate(-14.0188,-95.5)" font-family="Helvetica" font-size="12" fill="black">
+        <text x="-0.647266" y="95.5">Utility</text>
+      </g>
+      <!-- Y Labels -->
+      <g id="Y_Labels">
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="33.4262" y="175.804">0</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="23.4184" y="142.026">0,2</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="23.4184" y="108.248">0,4</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="23.4184" y="74.4704">0,6</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="23.4184" y="40.6926">0,8</text>
+        </g>
+      </g>
+      <path d="M 42.5 171.5 L 50.5 171.5 M 46.5 154.611 L 50.5 154.611 M 42.5 137.722 L 50.5 137.722 
+               M 46.5 120.833 L 50.5 120.833 M 42.5 103.944 L 50.5 103.944 M 46.5 87.0556 L 50.5 87.0556 
+               M 42.5 70.1667 L 50.5 70.1667 M 46.5 53.2778 L 50.5 53.2778 M 42.5 36.3889 L 50.5 36.3889 
+               M 46.5 19.5 L 50.5 19.5 "
+        stroke="black" fill="none" stroke-width="0.5"/>
+    </g>
+    <!-- X Axis -->
+    <g id="X_Axis">
+      <g font-family="Helvetica" font-size="12" fill="black">
+        <text x="91.6455" y="209">Adversarial fraction</text>
+      </g>
+      <g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="104.126" y="190.69">0,2</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="166.093" y="190.69">0,4</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="47.1631" y="190.69">0</text>
+        </g>
+      </g>
+      <path d="M 50.5 179.5 L 50.5 171.5 M 112.467 179.5 L 112.467 171.5 M 174.433 179.5 L 174.433 171.5 
+               M 81.4833 175.5 L 81.4833 171.5 M 143.45 175.5 L 143.45 171.5 M 205.417 175.5 L 205.417 171.5 "
+        stroke="black" fill="none" stroke-width="0.5"/>
+    </g>
+    <g font-family="Helvetica-Bold" font-size="13" fill="black">
+      <text x="125.394" y="14.639">Utility</text>
+    </g>
+    <path d="M 50.5 19.5 L 50.5 171.5 L 236.4 171.5 "
+      stroke="black" stroke-linecap="square" fill="none" stroke-width="0.5"/>
+  </g>
+</g>
+</svg>

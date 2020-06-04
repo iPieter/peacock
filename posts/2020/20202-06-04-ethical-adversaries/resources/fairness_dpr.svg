@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- Generator: DataGraph - https://www.visualdatatools.com/DataGraph/index.html  --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="252" height="216" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g>
+  <!-- Background -->
+  <g id="Background">
+    <!-- Below Grid -->
+    <g id="Below_Grid">
+      <!-- Commands -->
+      <g id="Commands">
+        <!-- Y = 0.8,1.25 -->
+        <g id="Y_0_8_1_25">
+          <path d="M 50.5 90.4333 L 236.4 90.4333 L 236.4 44.8333 L 50.5 44.8333 L 50.5 90.4333 z "
+            fill="rgb(76,175,74)" opacity="0.135701" stroke="none"/>
+        </g>
+      </g>
+    </g>
+    <!-- Grid -->
+    <g id="Grid">
+      <path d="M 112.467 171.5 L 112.467 19.5 M 174.433 171.5 L 174.433 19.5 "
+        stroke="black" stroke-dasharray="0.00971929,3.88772" stroke-dashoffset="0.00485965" stroke-linecap="round" fill="none" stroke-width="0.5"/>
+      <path d="M 50.5 120.833 L 236.4 120.833 M 50.5 70.1667 L 236.4 70.1667 M 50.5 19.5 L 236.4 19.5 "
+        stroke="black" stroke-dasharray="0.010302,4.12081" stroke-dashoffset="0.00515101" stroke-linecap="round" fill="none" stroke-width="0.5"/>
+    </g>
+  </g>
+  <!-- Commands -->
+  <g id="Commands_2">
+    <!-- Demographic parity -->
+    <g id="Demographic_parity">
+      <defs>
+        <clipPath id="clipPath">
+          <rect x="50.5" y="19.5" width="185.9" height="152"/>
+        </clipPath>
+      </defs>
+      <g clip-path="url(#clipPath)">
+        <path d="M 50.5 62.0631 L 55.6639 53.9153 L 60.8278 35.2084 L 65.9917 56.2385 L 71.1556 64.4891 
+                 L 76.3194 67.2675 L 81.4833 70.3017 L 86.6472 76.1479 L 91.8111 79.8776 L 96.975 82.4458 
+                 L 102.139 81.5747 L 107.303 83.0489 L 112.467 86.8122 L 117.631 84.6513 L 122.794 87.4659 
+                 L 127.958 87.2257 L 133.122 88.2438 L 138.286 85.9 L 143.45 87.8458 L 148.614 89.6686 
+                 L 153.778 87.8066 L 158.942 91.4708 L 164.106 91.881 L 169.269 87.9701 L 174.433 93.6098 
+                 L 179.597 89.8661 L 184.761 88.3855 L 189.925 85.2697 L 195.089 108.395 L 200.253 88.8892 
+                 L 205.417 101.688 L 210.581 103.909 L 215.744 63.5954 L 220.908 111.925 "
+          stroke="rgb(37,110,255)" fill="none" stroke-width="2"/>
+      </g>
+      <g>
+        <circle cx="50.5" cy="62.0631" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="55.6639" cy="53.9153" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="60.8278" cy="35.2084" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="65.9917" cy="56.2385" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="71.1556" cy="64.4891" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="76.3194" cy="67.2675" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="81.4833" cy="70.3017" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="86.6472" cy="76.1479" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="91.8111" cy="79.8776" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="96.975" cy="82.4458" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="102.139" cy="81.5747" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="107.303" cy="83.0489" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="112.467" cy="86.8122" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="117.631" cy="84.6513" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="122.794" cy="87.4659" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="127.958" cy="87.2257" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="133.122" cy="88.2438" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="138.286" cy="85.9" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="143.45" cy="87.8458" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="148.614" cy="89.6686" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="153.778" cy="87.8066" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="158.942" cy="91.4708" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="164.106" cy="91.881" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="169.269" cy="87.9701" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="174.433" cy="93.6098" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="179.597" cy="89.8661" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="184.761" cy="88.3855" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="189.925" cy="85.2697" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="195.089" cy="108.395" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="200.253" cy="88.8892" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="205.417" cy="101.688" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="210.581" cy="103.909" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="215.744" cy="63.5954" r="2" fill="rgb(37,110,255)" stroke="none"/>
+        <circle cx="220.908" cy="111.925" r="2" fill="rgb(37,110,255)" stroke="none"/>
+      </g>
+    </g>
+    <!-- No name -->
+    <g id="No_name">
+      <g font-family="Helvetica" font-size="12" fill="rgb(77,175,74)">
+        <text x="77.5" y="60.0896">Within the 80% bounds</text>
+      </g>
+    </g>
+    <!-- Baseline without fairness -->
+    <g id="Baseline_without_fairness">
+      <path d="M 50.5 125.313 L 236.4 125.313 "
+        stroke="rgb(40,150,255)" stroke-dasharray="8,5" stroke-linecap="butt" fill="none" stroke-width="2"/>
+    </g>
+    <!-- No name -->
+    <g id="No_name_2">
+      <g font-family="Helvetica" font-size="12" fill="rgb(40,150,255)">
+        <text x="58.5" y="121.09">Naive baseline</text>
+      </g>
+    </g>
+  </g>
+  <!-- Foreground -->
+  <g id="Foreground">
+    <!-- Y Axis -->
+    <g id="Y_Axis">
+      <g transform="translate(14.0188,95.5) rotate(-90) translate(-14.0188,-95.5)" font-family="Helvetica" font-size="12" fill="black">
+        <text x="1.35078" y="95.5">DPR</text>
+      </g>
+      <!-- Y Labels -->
+      <g id="Y_Labels">
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="33.4262" y="175.804">0</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="23.4184" y="125.137">0,5</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="23.4184" y="74.4704">1,0</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="23.4184" y="23.8037">1,5</text>
+        </g>
+      </g>
+      <path d="M 42.5 171.5 L 50.5 171.5 M 46.5 161.367 L 50.5 161.367 M 46.5 151.233 L 50.5 151.233 
+               M 46.5 141.1 L 50.5 141.1 M 46.5 130.967 L 50.5 130.967 M 42.5 120.833 L 50.5 120.833 
+               M 46.5 110.7 L 50.5 110.7 M 46.5 100.567 L 50.5 100.567 M 46.5 90.4333 L 50.5 90.4333 
+               M 46.5 80.3 L 50.5 80.3 M 42.5 70.1667 L 50.5 70.1667 M 46.5 60.0333 L 50.5 60.0333 M 46.5 49.9 L 50.5 49.9 
+               M 46.5 39.7667 L 50.5 39.7667 M 46.5 29.6333 L 50.5 29.6333 M 42.5 19.5 L 50.5 19.5 "
+        stroke="black" fill="none" stroke-width="0.5"/>
+    </g>
+    <!-- X Axis -->
+    <g id="X_Axis">
+      <g font-family="Helvetica" font-size="12" fill="black">
+        <text x="91.6455" y="209">Adversarial fraction</text>
+      </g>
+      <g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="104.126" y="190.69">0,2</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="166.093" y="190.69">0,4</text>
+        </g>
+        <g font-family="Helvetica" font-size="12" fill="black">
+          <text x="47.1631" y="190.69">0</text>
+        </g>
+      </g>
+      <path d="M 50.5 179.5 L 50.5 171.5 M 112.467 179.5 L 112.467 171.5 M 174.433 179.5 L 174.433 171.5 
+               M 81.4833 175.5 L 81.4833 171.5 M 143.45 175.5 L 143.45 171.5 M 205.417 175.5 L 205.417 171.5 "
+        stroke="black" fill="none" stroke-width="0.5"/>
+    </g>
+    <g font-family="Helvetica-Bold" font-size="13" fill="black">
+      <text x="96.855" y="14.639">Fairness (DPR)</text>
+    </g>
+    <path d="M 50.5 19.5 L 50.5 171.5 L 236.4 171.5 "
+      stroke="black" stroke-linecap="square" fill="none" stroke-width="0.5"/>
+  </g>
+</g>
+</svg>
