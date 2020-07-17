@@ -1,5 +1,5 @@
 // Styling for the post page
-.post-preview {
+.post-preview, .tile-preview {
   > a {
     color: $gray-900;
     &:focus,
@@ -77,5 +77,14 @@ article {
     max-width: 100%;
     overflow-x: scroll;
     text-align: initial;
+  }
+}
+
+.tile-preview {
+  padding: 20px;
+  
+  &.tile-box {
+    background-color: rgba(248,249,250,0.85);
+    border-radius: 5px;
   }
 }

@@ -9,8 +9,12 @@
       "name": "About me"
     },
     {
+      "url": "data.html",
+      "name": "Data"
+    },
+    {
       "url": "projects.html",
-      "name": "Software"
+      "name": "Projects"
     }
   ],
   "base": "",
