@@ -59,6 +59,9 @@ table {
 article {
   p {
     font-weight: 500;
+    line-height: 1.5;
+    hyphens: auto;
+    font-size: calc(1rem*1.125*1.125);
     > img {
       max-width: 100%;
     }

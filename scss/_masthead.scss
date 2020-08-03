@@ -127,6 +127,7 @@ header.masthead {
         font-style: normal;
       }
     }
+
     @media only screen and (min-width: 768px) {
       h1 {
         font-size: 55px;
@@ -136,4 +137,18 @@ header.masthead {
       }
     }
   }
+}
+
+.abstract {
+  font-weight: 600;
+  hyphens: auto;
+
+  &::first-letter {
+    -webkit-initial-letter: 2;
+    initial-letter: 2;
+  }
+}
+
+small.meta {
+  @include strong-sans-serif-font
 }

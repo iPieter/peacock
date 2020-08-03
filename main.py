@@ -117,7 +117,7 @@ def generate_feeds(config_data, output_path, drafts=False):
 def build_site(config_data, path, output_path, drafts=False):
     logging.info("Exporting site to folder {}/".format(output_path))
 
-    config_data["PHEASANT_VERSION"] = "0.2.1"
+    config_data["PHEASANT_VERSION"] = "0.2.2"
     config_data["last_updated"] = datetime.now().strftime("%B %d, %Y")
 
     # First render the nav bar and footer components
