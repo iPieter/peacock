@@ -152,3 +152,11 @@ header.masthead {
 small.meta {
   @include strong-sans-serif-font
 }
+
+.banner {
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  margin-top: 90px;
+  border-radius: 5px;
+}

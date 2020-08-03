@@ -70,32 +70,45 @@
     <!-- Page Header -->
     <header class>
       <div class="container">
-        <div class="row mt-5">
-          {{#banner}}
-          <div class="col-lg-2 col-md-1">
+        {{#banner}}
+
+        <div class="row">
+          
+        <div class="col-lg-8 col-md-10 offset-lg-2 offset-md-1 banner" style="background: {{background}}">
             <img
               src="{{img}}"
               style="max-width: 100%; max-height: 300px;"
             />
+            </div>
+          </div>
+
+            <div class="row">
+              <div class="col-lg-2 col-md-1">
+                <hr/>
+              </div>
+            </div>
+        {{/banner}}
+        {{^banner}}
+        <div class="row mt-20">
+          <div class="col-lg-2 col-md-1">
+            <hr/>
+          </div>
+
+          <div class="col-lg-8 col-md-10 abstract">
+            <hr/>
+          </div>
+        </div>
+        {{/banner}}
+
+        <div class="row mt-2">
+          <div class="col-lg-2 col-md-1">
+            <small class="meta text-muted">Posted on {{date}}</small>
+
           </div>
           <div class="col-lg-8 col-md-10">
 
-          {{/banner}}
-          {{^banner}}
-          <div class="col-12 col-md-11 col-xl-11">
-          {{/banner}}
-          
             <div class="post-heading">
-              {{^banner}}
-                {{#img}}
-                <div class="post-image">
-                  <img
-                    src="{{img}}"
-                    style="max-height: 100%;"
-                  />
-                </div>
-                {{/img}}
-              {{/banner}}
+
               <div class="post-title">
 
               <h1>{{post_title}}</h1>
@@ -107,29 +120,39 @@
               <h3 class="subheading">
                 
               </h3>
-              <span class="meta text-muted"
-                >
-                {{#pdf}}
-                <a class="btn btn-outline-primary" href="{{pdf}}" role="button"><i class="fas fa-file-pdf"></i> pdf</a>
-                {{/pdf}}
-                {{#bibtex}}
-                <a class="btn btn-outline-primary" href="{{bibtex}}" role="button">BibTex</a>
-                {{/bibtex}}
-                {{#code}}
-                <a class="btn btn-outline-primary" href="{{code}}" role="button"><i class="fas fa-code"></i>Code</a>
-                {{/code}}
-                {{#resource}}
-                <a class="btn btn-outline-primary" href="{{base}}{{resource}}" role="button"><i class="fas fa-project-diagram"></i>Resource</a>
-                {{/resource}}
-                </span
-              >
+              
             </div>
           </div>
         </div>
+          <div class="row my-3">
+          <div class="col-lg-2 col-md-1">
+            <hr/>
+          </div>
+
+          <div class="col-lg-8 col-md-10 abstract">
+            <hr/>
+          </div>
+        </div>
+
 
         <div class="row">
           <div class="col-lg-2 col-md-1">
-            <small class="meta text-muted">Posted on {{date}}</small>
+            <span class="meta text-muted"
+                >
+                {{#pdf}}
+                <a class="btn btn-link" href="{{pdf}}" role="button"><i class="fas fa-file-pdf"></i> pdf</a>
+                {{/pdf}}
+                {{#bibtex}}
+                <a class="btn btn-link" href="{{bibtex}}" role="button">BibTex</a>
+                {{/bibtex}}
+                {{#code}}
+                <a class="btn btn-link" href="{{code}}" role="button"><i class="fas fa-code"></i>Code</a>
+                {{/code}}
+                {{#resource}}
+                <a class="btn btn-link" href="{{base}}{{resource}}" role="button"><i class="fas fa-project-diagram"></i>Resource</a>
+                {{/resource}}
+                </span
+              >
           </div>
 
           <div class="col-lg-8 col-md-10 abstract">
