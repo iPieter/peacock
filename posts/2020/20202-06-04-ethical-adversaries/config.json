@@ -11,5 +11,6 @@
   "background": "linear-gradient(to left, #7dddf5, #bbf1fa, #d3ecc6)",
   "pdf": "https://arxiv.org/abs/2005.06852",
   "bibtex": "",
-  "resource": ""
+  "resource": "",
+  "draft": true
 }
