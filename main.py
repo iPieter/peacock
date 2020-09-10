@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 import sys, argparse, logging
+import time
+
 import pystache
 import json
 import os
@@ -12,6 +14,8 @@ from datetime import datetime
 import sass
 import pandoc
 from feedgen.feed import FeedGenerator
+from watchdog.observers import Observer
+from filesystem_event_handler import FilesystemEventHandler
 
 PORT = 8000
 
@@ -206,8 +210,7 @@ def main(args, loglevel):
 
             build_site(data, args.path, output_path, drafts=args.draft)
 
-            if args.serve:
-                serve_build(output_path)
+        return output_path
 
     except FileNotFoundError as e:
         logging.error(
@@ -255,10 +258,25 @@ if __name__ == "__main__":
         action="store_true",
     )
     args = parser.parse_args()
-# Setup logging
-if args.verbose:
-    loglevel = logging.DEBUG
-else:
-    loglevel = logging.INFO
 
-main(args, loglevel)
+    # Setup logging
+    if args.verbose:
+        loglevel = logging.DEBUG
+    else:
+        loglevel = logging.INFO
+
+    output_path = main(args, loglevel)
+
+    if args.serve:
+        event_handler = FilesystemEventHandler(args.path, callback=main, args=args, loglevel=loglevel)
+        observer = Observer()
+        observer.schedule(event_handler, args.path, recursive=True)
+        observer.start()
+
+        serve_build(output_path)
+        try:
+            while True:
+                time.sleep(1)
+        except KeyboardInterrupt:
+            observer.stop()
+        observer.join()
