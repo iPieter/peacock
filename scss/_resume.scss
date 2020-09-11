@@ -18,4 +18,11 @@
     margin-top: 5px;
     margin-bottom: 20px;
   }
+
+  .student {
+    align-items: center;
+    flex-basis: auto;
+    flex-direction: row;
+    display: flex;
+  }
 }
