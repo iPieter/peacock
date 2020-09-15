@@ -3,6 +3,7 @@
   "post_subtitle": "They Vastly Improve Casual Conversational Models",
   "abstract": "Graphical emoji are ubiquitous in modern-day online conversations. So is a single thumbs-up emoji able to signify an agreement, without any words. Current state-of-the-art systems are ill-equipped to correctly interpret these emoji, especially in a conversational context. However, in a casual context, the benefits might be high: a better understanding of users’ utterances and more natural, emoji-rich responses.<br/>With this in mind, we modify BERT to fully support emoji, both from the Unicode Standard and custom emoji. This modified BERT is then trained on a corpus of question-answer (QA) tuples with a high number of emoji.",
   "type": "md",
+  "post_tag": "paper",
   "banner": true,
   "theme": "dark",
   "img": "conv_ai_messages.png",

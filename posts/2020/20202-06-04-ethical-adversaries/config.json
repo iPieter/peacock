@@ -3,6 +3,7 @@
   "post_subtitle": "Towards Mitigating Unfairness with Adversarial Machine Learning",
   "abstract": "We offer a new framework that assists in mitigating unfair representations in the dataset used for training. Our framework relies on adversaries to improve fairness. First, it evaluates a model for unfairness w.r.t. protected attributes and ensures that an adversary cannot guess such attributes for a given outcome, by optimizing the model’s parameters for fairness while limiting utility losses. Second, the framework leverages evasion attacks from adversarial machine learning to perform adversarial retraining with new examples unseen by the model. We evaluated our framework on well-studied datasets in the fairness literature where it can surpass other approaches concerning demographic parity, equality of opportunity and also the model’s utility.",
   "type": "md",
+  "post_tag": "paper",
   "banner": true,
   "theme": "dark",
   "img": "architecture.png",
