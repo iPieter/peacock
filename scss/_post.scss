@@ -2,16 +2,19 @@
 .post-preview, .tile-preview {
   > a {
     color: $gray-900;
+
     &:focus,
     &:hover {
       text-decoration: none;
       color: $primary;
     }
+
     > .post-title {
       font-size: 30px;
       margin-top: 0;
       margin-bottom: 10px;
     }
+
     > .post-subtitle {
       font-weight: 300;
       margin: 0 0 10px;
@@ -21,18 +24,6 @@
       margin-bottom: 0;
       margin-top: 20px;
     }
-
-    > .post-tag-blog {
-    color: lighten($purple, 0.5)
-    }
-
-    > .post-tag-introduction {
-      color: $green
-    }
-
-    > .post-tag-paper {
-    color: $orange
-    }
   }
 
   > .post-meta {
@@ -40,9 +31,11 @@
     font-style: italic;
     margin-top: 0;
     color: $gray-600;
+
     > a {
       font-style: normal;
       text-decoration: none;
+
       &:focus,
       &:hover {
         //text-decoration: underline;
@@ -50,6 +43,7 @@
       }
     }
   }
+
   @media only screen and (min-width: 768px) {
     > a {
       > .post-title {
@@ -79,7 +73,8 @@ article {
     font-weight: 500;
     line-height: 1.55;
     hyphens: auto;
-    font-size: calc(1rem*1.125*1.125);
+    font-size: calc(1rem * 1.125 * 1.125);
+
     > img {
       max-width: 100%;
     }
@@ -103,9 +98,21 @@ article {
 
 .tile-preview {
   padding: 20px;
-  
+
   &.tile-box {
-    background-color: rgba(248,249,250,0.85);
+    background-color: rgba(248, 249, 250, 0.85);
     border-radius: 5px;
   }
+}
+
+.post-tag-news {
+  color: lighten($purple, 0.5);
+}
+
+.post-tag-post {
+  color: $green
+}
+
+.post-tag-paper {
+  color: $orange
 }

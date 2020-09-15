@@ -3,7 +3,7 @@
   "post_subtitle": "A Dutch RoBERTa-based Language Model",
   "abstract": "Pre-trained language models have been dominating the field of natural language processing in recent years, and have led to significant performance gains for various complex natural language tasks. One of the most prominent pre-trained language models is BERT. Although the multilingual version of BERT performs well on many tasks, recent studies showed that BERT models trained on a single language significantly outperform the multilingual results.<br/>For this reason we present a Dutch model based on RoBERTa, which we call RobBERT. We show that RobBERT improves state of the art results in Dutch-specific language tasks.",
   "type": "md",
-  "post_tag": "introduction",
+  "post_tag": "post",
   "banner": true,
   "theme": "dark",
   "img": "logo.png",

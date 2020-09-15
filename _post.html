@@ -73,7 +73,7 @@
         {{#banner}}
 
         <div class="row">
-          
+
         <div class="col-lg-8 col-md-10 offset-lg-2 offset-md-1 banner" style="background: {{background}}">
             <img
               src="{{img}}"
@@ -102,6 +102,7 @@
 
         <div class="row mt-2">
           <div class="col-lg-2 col-md-1">
+            <h5 class="text-uppercase post-tag post-tag-{{post_tag}}">{{post_tag}}</h5>
             <small class="meta text-muted">Posted on {{date}}</small>
 
           </div>
@@ -118,9 +119,9 @@
             </div>
               <i class="post-authors">{{author}}</i>
               <h3 class="subheading">
-                
+
               </h3>
-              
+
             </div>
           </div>
         </div>
@@ -173,7 +174,7 @@
       </div>
     </header>
 
-    
+
 
     <!-- Post Content -->
     {{#text}}
@@ -181,7 +182,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            
+
           {{{text}}}
           </div>
         </div>
