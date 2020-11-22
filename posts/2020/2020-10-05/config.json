@@ -1,0 +1,20 @@
+{
+  "post_title": "Dutch Humor Detection by Generating Negative Examples",
+  "post_subtitle": "Web Demo",
+  "abstract": "Detecting if a text is humorous is a hard task to do computationally, as it usually requires linguistic and common sense insights. In machine learning, humor detection is usually modelled as a binary classification task, trained to predict if the given text is a joke or another type of text. Rather than using completely different non-humorous texts, we propose using text generation algorithms for imitating the original joke dataset to increase the difficulty for the learning algorithm. We found that RobBERT outperforms other algorithms, and especially shines when distinguishing jokes from the generated negative examples.",
+  "type": "md",
+  "post_tag": "paper",
+  "banner": true,
+  "theme": "dark",
+  "img": "",
+  "author": "Thomas Winters and Pieter Delobelle",
+  "date": "2020-10-05",
+  "background": "",
+  "background-old": "",
+  "pdf": "",
+  "bibtex": "",
+  "resource": "",
+  "draft": true,
+  "code": ""
+
+}

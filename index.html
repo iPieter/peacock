@@ -95,6 +95,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           {{#blog_posts}}
+          {{^hidden}}
           <hr />
           <div class="post-preview">
             <a href="{{base}}/{{url}}/">
@@ -133,6 +134,7 @@
               {{/draft}} Posted on {{date}}
             </p>
           </div>
+          {{/hidden}}
           {{/blog_posts}}
         </div>
       </div>
