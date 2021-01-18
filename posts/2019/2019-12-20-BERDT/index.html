@@ -56,8 +56,8 @@
           </p>
 
           <pre class="small pl-4" style="margin: 0px; line-height: 125%;"><span style="color: rgb(249, 38, 114);">from</span> <span style="color: rgb(248, 248, 242);">transformers</span> <span style="color: rgb(249, 38, 114);">import</span> <span style="color: rgb(248, 248, 242);">RobertaTokenizer,</span> <span style="color: rgb(248, 248, 242);">RobertaForSequenceClassification</span>
-<span style="color: rgb(248, 248, 242);">tokenizer</span> <span style="color: rgb(249, 38, 114);">=</span> <span style="color: rgb(248, 248, 242);">RobertaTokenizer</span><span style="color: rgb(249, 38, 114);">.</span><span style="color: rgb(248, 248, 242);">from_pretrained(</span><span style="color: rgb(230, 219, 116);">"pdelobelle/robBERT-base"</span><span style="color: rgb(248, 248, 242);">)</span>
-<span style="color: rgb(248, 248, 242);">model</span> <span style="color: rgb(249, 38, 114);">=</span> <span style="color: rgb(248, 248, 242);">RobertaForSequenceClassification</span><span style="color: rgb(249, 38, 114);">.</span><span style="color: rgb(248, 248, 242);">from_pretrained(</span><span style="color: rgb(230, 219, 116);">"pdelobelle/robBERT-base"</span><span style="color: rgb(248, 248, 242);">)</span>
+<span style="color: rgb(248, 248, 242);">tokenizer</span> <span style="color: rgb(249, 38, 114);">=</span> <span style="color: rgb(248, 248, 242);">RobertaTokenizer</span><span style="color: rgb(249, 38, 114);">.</span><span style="color: rgb(248, 248, 242);">from_pretrained(</span><span style="color: rgb(230, 219, 116);">"pdelobelle/robbert-v2-dutch-base"</span><span style="color: rgb(248, 248, 242);">)</span>
+<span style="color: rgb(248, 248, 242);">model</span> <span style="color: rgb(249, 38, 114);">=</span> <span style="color: rgb(248, 248, 242);">RobertaForSequenceClassification</span><span style="color: rgb(249, 38, 114);">.</span><span style="color: rgb(248, 248, 242);">from_pretrained(</span><span style="color: rgb(230, 219, 116);">"pdelobelle/robbert-v2-dutch-base"</span><span style="color: rgb(248, 248, 242);">)</span>
           </pre>
 
           <p>
@@ -75,6 +75,22 @@
                   <th>F1 (%)</th>
                 </tr>
               </thead>
+
+              <tr>
+                <td>
+
+                   <span class="badge badge-primary">Latest release</span>
+                  <span class="text-monospace">pdelobelle/robbert-v2-dutch-base</span>
+                  <button type="button" class="btn btn-outline-light"
+                    v-on:click="copyTextToClipboard('pdelobelle/robBERT-base')">
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                </td>
+                <td>LM</td>
+                <td>—</td>
+                <td>—</td>
+              </tr>
+
               <tr>
                 <td>
                   <span class="text-monospace">pdelobelle/robBERT-base</span>
@@ -124,11 +140,24 @@
               </thead>
               <tr>
                 <td>
+                  <span class="badge badge-primary">Latest release</span>
+                  <span class="text-monospace">RobBERT-v2-dutch-base</span>
+                  <a role="button" class="btn btn-outline-light"
+                    href="https://github.com/iPieter/RobBERT/releases/download/v2.0/robbert-v2-dutch-base-fairseq.zip">
+                    <i class="fas fa-download"></i> Download (1.2 GB)
+                    </a>
+                </td>
+                <td>LM</td>
+                <td>—</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>
                   <span class="text-monospace">RobBERT-base</span>
                   <a role="button" class="btn btn-outline-light"
                     href="https://github.com/iPieter/BERDT/releases/download/v1.0/RobBERT-base.pt">
                     <i class="fas fa-download"></i> Download (1.4 GB)
-                    </button>
+                    </a>
                 </td>
                 <td>LM</td>
                 <td>—</td>
