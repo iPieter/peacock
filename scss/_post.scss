@@ -58,7 +58,15 @@ table {
   border-block-start: solid 2px black;
   border-block-end: solid 2px black;
 
+  .spaced {
+    td:not(:first-child) {
+      padding-bottom: 1em;
+      height: 100%;
+    }
+  }
+
   thead {
+
     tr {
       border-block-end: solid 1px black;
 

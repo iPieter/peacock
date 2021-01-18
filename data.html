@@ -2,91 +2,108 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
 
-  <title>{{title}} | Resources</title>
+    <title>{{title}} | Resources</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="{{base}}/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap core CSS -->
+    <link href="{{base}}/css/bootstrap.min.css" rel="stylesheet"/>
 
-  <!-- Custom fonts for this template -->
-  <link href="{{base}}/css/all.min.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
-    type="text/css" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
-    rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:700,700i,800&display=swap" rel="stylesheet" />
+    <!-- Custom fonts for this template -->
+    <link href="{{base}}/css/all.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css"/>
+    <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+            rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:700,700i,800&display=swap"
+          rel="stylesheet"/>
 
-  <!-- Custom styles for this template -->
-  <link href="{{base}}/css/clean-blog.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="{{base}}/css/clean-blog.css" rel="stylesheet"/>
 </head>
 
 <body>
-  <!-- Navigation -->
-  {{{navbar}}}
+<!-- Navigation -->
+{{{navbar}}}
 
-  <!-- Page Header -->
-  <header class="masthead-small">
+<!-- Page Header -->
+<header class="masthead-small">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>Data</h1>
-            <span class="subheading">I'm sharing some of the data used in my research. I hope that you can use this for
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Data</h1>
+                    <span class="subheading">I'm sharing some of the data used in my research. I hope that you can use this for
               developing your own insights and research.</span>
-          </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </header>
+</header>
 
-  <!-- Main Content -->
-  <div class="container" id="software">
+<!-- Main Content -->
+<div class="container" id="software">
     <div class="row">
-      <div class="col-lg-10 col-md-12 mx-auto">
+        <div class="col-lg-10 col-md-12 mx-auto">
 
-        <table>
-          <thead>
-            <tr class="header">
-              <th class="px-2 text-nowrap">Resource</th>
-              <th class="px-2">Description</th>
-              <th class="px-2 text-nowrap">License</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="px-2 text-nowrap"><code>dbrd-gendered</code></td>
-              <td class="px-2">An extension of the <a href="#">Dutch Book Reviews Dataset</a> (DBRD) with the self-reported gender of the review authors.</td>
-              <td class="px-2 text-nowrap"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> 
-                <i class="fab fa-creative-commons"></i>
-                <i class="fab fa-creative-commons-by"></i>
-                <i class="fab fa-creative-commons-nc"></i>
-                <i class="fab fa-creative-commons-sa"></i>
-              </a></td>
-              <td class="px-2 text-nowrap"><a href="{{base}}/resources/DBRD_gender_test_v1.zip" class="btn btn-link">download</a></td>
-            </tr>
+            <table>
+                <thead>
+                <tr class="header">
+                    <th class="px-2 text-nowrap">Resource</th>
+                    <th class="px-2">Description</th>
+                    <th class="px-2 text-nowrap">License</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="spaced">
+                    <td class="px-2 text-nowrap"><code>dbrd-gendered</code></td>
+                    <td class="px-2">An extension of the <a href="#">Dutch Book Reviews Dataset</a> (DBRD) with the
+                        self-reported gender of the review authors.
+                    </td>
+                    <td class="px-2 text-nowrap"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <i class="fab fa-creative-commons"></i>
+                        <i class="fab fa-creative-commons-by"></i>
+                        <i class="fab fa-creative-commons-nc"></i>
+                        <i class="fab fa-creative-commons-sa"></i>
+                    </a></td>
+                    <td class="px-2 text-nowrap"><a href="{{base}}/resources/DBRD_gender_test_v1.zip"
+                                                    class="btn btn-link">download</a></td>
+                </tr>
 
-          <tr>
-              <td class="px-2 text-nowrap"><code>RobBERT</code></td>
-              <td class="px-2">A Dutch BERT model based on RoBERTa.</td>
-              <td class="px-2 text-nowrap"><a href="https://github.com/iPieter/RobBERT/blob/master/LICENSE">
-                MIT
-              </a></td>
-              <td class="px-2 text-nowrap"><a href="{{base}}/robbert" class="btn btn-link">more info</a></td>
-            </tr>
-            
-          </tbody>
-        </table>
+                <tr class="spaced">
+                    <td class="px-2 text-nowrap"><code>RobBERT</code></td>
+                    <td class="px-2">A Dutch BERT model based on RoBERTa.</td>
+                    <td class="px-2 text-nowrap"><a href="https://github.com/iPieter/RobBERT/blob/master/LICENSE">
+                        MIT
+                    </a></td>
+                    <td class="px-2 text-nowrap"><a href="{{base}}/robbert" class="btn btn-link">more info</a></td>
+                </tr>
 
-      </div>
+                <tr>
+                    <td class="px-2 text-nowrap"><code>Dutch professions</code></td>
+                    <td class="px-2">A list of professions in Dutch with an associated gender, based on <a
+                            href="https://github.com/tolga-b/debiaswe">Debiaswe</a>. Used for evaluating a gender
+                      bias in the RobBERT paper.
+                    </td>
+                    <td class="px-2 text-nowrap"><a href="https://github.com/iPieter/RobBERT/blob/master/LICENSE">
+                        MIT
+                    </a></td>
+                    <td class="px-2 text-nowrap"><a href="{{base}}/resources/progressions.json"
+                                                    class="btn btn-link">download</a></td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </div>
     </div>
 
-    <hr />
+    <hr/>
 
     <!-- Footer -->
     {{{footer}}}
