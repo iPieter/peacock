@@ -3,13 +3,13 @@ body {
   font-size: 20px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.750;
+  line-height: 1.75;
   color: $gray-900;
   @include serif-font;
 }
 
 p {
-  line-height: 1.750;
+  line-height: 1.75;
   font-weight: 400;
   margin: 15px 0;
   a {
@@ -17,16 +17,23 @@ p {
   }
 }
 
-article li a {
+article li,
+span,
+table {
+  a {
     text-decoration: underline;
+  }
 }
-
 article {
   p {
     //text-indent: 2em;
   }
 
-  h1+p, h2+p, h3+p, table+p, p:first-child {
+  h1 + p,
+  h2 + p,
+  h3 + p,
+  table + p,
+  p:first-child {
     text-indent: 0;
   }
 }
@@ -48,7 +55,7 @@ h1 {
 
 h2 {
   font-weight: 700;
-  }
+}
 
 h3,
 h4,
@@ -68,14 +75,13 @@ a {
 }
 
 .bg-dark {
-
   a {
     color: $gray-100;
     @include transition-all;
-  
+
     &:focus,
     &:hover {
-      color: lighten($primary,20%);
+      color: lighten($primary, 20%);
     }
   }
 
@@ -83,7 +89,7 @@ a {
     color: $gray_100;
     border-block-start: solid 2px $gray_200;
     border-block-end: solid 2px $gray_200;
-    
+
     td {
       border-top: none;
     }
@@ -91,11 +97,8 @@ a {
     thead {
       th {
         border-bottom: 2px solid $gray_200;
-
       }
-
     }
-
   }
 }
 
@@ -123,13 +126,13 @@ blockquote {
 
 ::-moz-selection {
   color: $white;
-  background: rgba($primary,70%);
+  background: rgba($primary, 70%);
   text-shadow: none;
 }
 
 ::selection {
   color: $white;
-  background: rgba($primary,70%);
+  background: rgba($primary, 70%);
   text-shadow: none;
 }
 
@@ -144,5 +147,5 @@ img::-moz-selection {
 }
 
 .mt-20 {
-  margin-top: 8em!important;
+  margin-top: 8em !important;
 }
