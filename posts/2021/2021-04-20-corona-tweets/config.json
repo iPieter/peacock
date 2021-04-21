@@ -1,0 +1,19 @@
+{
+  "post_title": "Attitudes Towards COVID-19 Measures",
+  "post_subtitle": "Measuring Shifts in Belgium Using Multilingual BERT",
+  "abstract": "We classify seven months' worth of Belgian COVID-related Tweets using multilingual BERT and relate them to their governments' COVID measures. We classify Tweets by their stated opinion on Belgian government curfew measures (too strict, ok, too loose). We examine the change in topics discussed and views expressed over time and in reference to dates of related events such as implementation of new measures or COVID-19 related announcements in the media.",
+  "type": "md",
+  "post_tag": "paper",
+  "banner": true,
+  "theme": "dark",
+  "img": "architecture.png",
+  "author": "Kristen Scott, Pieter Delobelle and Bettina Berendt",
+  "date": "2021-04-21",
+  "background": "rgb(249,248,245)",
+  "pdf": "http://arxiv.org/abs/2104.09947",
+  "bibtex": "",
+  "resource": "https://huggingface.co/DTAI-KULeuven/mbert-corona-tweets-belgium-topics",
+  "draft": true,
+  "code": "https://github.com/iPieter/bert-corona-tweets"
+
+}
