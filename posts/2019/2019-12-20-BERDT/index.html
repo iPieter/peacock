@@ -2,33 +2,32 @@
   <div class="container-fluid" id="app">
     <div class="container">
       <div class="col-lg-8 col-md-10 mx-auto mb-5">
-        <p>The advent of neural networks in natural language processing (NLP) has significantly improved
-          state-of-the-art results within the field. While recurrent neural networks (RNNs) and long short-term memory
-          networks (LSTMs) initially dominated the field, recent models started incorporating attention mechanisms and
-          then later dropped the recurrent part and just kept the attention mechanisms in so-called transformer models.
-          This latter type of model caused a new revolution in NLP and led to popular language models like <a
-            href="https://openai.com/blog/better-language-models/">GPT-2</a> and <a
-            href="https://allennlp.org/elmo">ELMo</a>. <a href="https://github.com/google-research/bert">BERT</a>
-          improved over previous transformer models and recurrent networks by allowing the system to learn from input
-          text in a bidirectional way, rather than only from left-to-right or the other way around. This model was later
-          re-implemented, critically evaluated and improved in the <a
-            href="https://github.com/pytorch/fairseq/blob/master/examples/roberta/README.md">RoBERTa model</a>.</p>
-        <p>These large-scale transformer models provide the advantage of being able to solve NLP tasks by having a
-          <strong>common, expensive pre-training phase, followed by a smaller fine-tuning phase</strong>. The
-          pre-training happens in an unsupervised way by providing large corpora of text in the desired language. The
-          second phase only needs a relatively small annotated data set for fine-tuning to outperform previous popular
-          approaches in one of a large number of possible language tasks.</p>
-        <p>While language models are usually trained on English data, some multilingual models also exist. These are
-          usually trained on a large quantity of text in different languages. For example, Multilingual-BERT is trained
-          on a collection of corpora in 104 different languages and generalizes language components well across
-          languages. However, models trained on data from one specific language usually improve the performance over
-          multilingual models for this particular language. Training a RoBERTa model on a Dutch dataset thus has a lot
-          of potential for increasing performance for many downstream Dutch NLP tasks.</p>
-
+        <p>RobBERT is the state-of-the-art Dutch BERT model.
+          It is a large pre-trained general Dutch language model that can be fine-tuned on a given dataset to perform any text classification, regression or token-tagging task.
+          As such, it has been successfully used by many <a href="https://scholar.google.com/scholar?oi=bibs&amp;hl=en&amp;cites=7180110604335112086" rel="nofollow">researchers</a> and <a href="https://huggingface.co/models?search=robbert" rel="nofollow">practitioners</a> for achieving state-of-the-art performance for a wide range of Dutch natural language processing tasks, including:</p>
+          <ul>
+          <li><a href="https://www.aclweb.org/anthology/2021.wassa-1.27/" rel="nofollow">Emotion detection</a></li>
+          <li>Sentiment analysis (<a href="https://arxiv.org/pdf/2001.06286.pdf" rel="nofollow">book reviews</a>, <a href="https://biblio.ugent.be/publication/8704637/file/8704638.pdf" rel="nofollow">news articles</a>*)</li>
+          <li><a href="https://arxiv.org/pdf/2001.06286.pdf" rel="nofollow">Coreference resolution</a></li>
+          <li>Named entity recognition (<a href="https://arxiv.org/pdf/2001.06286.pdf" rel="nofollow">CoNLL</a>, <a href="https://arxiv.org/pdf/2004.02814.pdf" rel="nofollow">job titles</a>*, <a href="https://github.com/proycon/deepfrog">SoNaR</a>)</li>
+          <li>Part-of-speech tagging (<a href="https://arxiv.org/pdf/2001.06286.pdf" rel="nofollow">Small UD Lassy</a>, <a href="https://github.com/proycon/deepfrog">CGN</a>)</li>
+          <li><a href="https://arxiv.org/pdf/2001.06286.pdf" rel="nofollow">Zero-shot word prediction</a></li>
+          <li><a href="https://arxiv.org/pdf/2010.13652.pdf" rel="nofollow">Humor detection</a></li>
+          <li><a href="https://www.cambridge.org/core/journals/natural-language-engineering/article/abs/automatic-classification-of-participant-roles-in-cyberbullying-can-we-detect-victims-bullies-and-bystanders-in-social-media-text/A2079C2C738C29428E666810B8903342" rel="nofollow">Cyberbulling detection</a></li>
+          <li><a href="https://gitlab.com/spelfouten/dutch-simpletransformers/" rel="nofollow">Correcting dt-spelling mistakes</a>*</li>
+          </ul>
+          <p>and also achieved outstanding, near-sota results for:</p>
+          <ul>
+          <li><a href="https://arxiv.org/pdf/2101.05716.pdf" rel="nofollow">Natural language inference</a>*</li>
+          <li><a href="https://medium.com/broadhorizon-cmotions/nlp-with-r-part-5-state-of-the-art-in-nlp-transformers-bert-3449e3cd7494" rel="nofollow">Review classification</a>*</li>
+          </ul>
+          <p>* <em>Note that several evaluations use RobBERT-v1, and that the second and improved RobBERT-v2 outperforms this first model on everything we tested</em></p>
+          <p><em>(Also note that this list is not exhaustive. If you used RobBERT for your application, we are happy to know about it! Send us a mail, or add it yourself to this list by sending a pull request with the edit!)</em></p>
+          <p>To use the RobBERT model using <a href="https://huggingface.co/transformers/" rel="nofollow">HuggingFace transformers</a>, use the name <a href="https://huggingface.co/pdelobelle/robbert-v2-dutch-base" rel="nofollow"><code>pdelobelle/robbert-v2-dutch-base</code></a>.</p>
       </div>
-    </div>
-    <div class="row text-white bg-dark" id="get-started">
-      <div class="col-lg-8 col-md-10 mx-auto py-4">
+     
+    <div class="row text-white bg-dark rounded" id="get-started">
+      <div class="col-md-10 mx-auto py-4">
         <h1>Get started with our models</h1>
         <p>
           We release our pretrained models for both
@@ -72,7 +71,6 @@
                   <th>Model</th>
                   <th>Task</th>
                   <th>Accuracy (%)</th>
-                  <th>F1 (%)</th>
                 </tr>
               </thead>
 
@@ -82,12 +80,11 @@
                    <span class="badge badge-primary">Latest release</span>
                   <span class="text-monospace">pdelobelle/robbert-v2-dutch-base</span>
                   <button type="button" class="btn btn-outline-light"
-                    v-on:click="copyTextToClipboard('pdelobelle/robBERT-base')">
+                    v-on:click="copyTextToClipboard('pdelobelle/robbert-v2-dutch-base')">
                     <i class="fas fa-copy"></i> Copy
                   </button>
                 </td>
                 <td>LM</td>
-                <td>—</td>
                 <td>—</td>
               </tr>
 
@@ -101,7 +98,6 @@
                 </td>
                 <td>LM</td>
                 <td>—</td>
-                <td>—</td>
               </tr>
 
               <tr>
@@ -113,7 +109,6 @@
                   </button>
                 </td>
                 <td>DBRD</td>
-                <td>94.4%</td>
                 <td>94.4%</td>
               </tr>
             </table>
@@ -135,7 +130,6 @@
                   <th>Model</th>
                   <th>Task</th>
                   <th>Accuracy (%)</th>
-                  <th>F1 (%)</th>
                 </tr>
               </thead>
               <tr>
@@ -149,7 +143,6 @@
                 </td>
                 <td>LM</td>
                 <td>—</td>
-                <td>—</td>
               </tr>
               <tr>
                 <td>
@@ -160,7 +153,6 @@
                     </a>
                 </td>
                 <td>LM</td>
-                <td>—</td>
                 <td>—</td>
               </tr>
               <tr>
@@ -173,19 +165,46 @@
                 </td>
                 <td><i>Die</i> vs <i>dat</i></td>
                 <td>98.4%</td>
-                <td>98.1%</td>
               </tr>
             </table>
           </div>
 
         </div>
-        <h2 class="mt-4 mb-0">A note on copyright</h2>
         <p>We're releasing all our models under <a
             href="https://github.com/iPieter/RobBERT/blob/master/LICENSE">MIT</a>.</p>
       </div>
     </div>
+
     <div class="container">
       <div class="row">
+
+        <div class="col-lg-8 col-md-10 mx-auto mb-0 mt-4">
+          <p>The advent of neural networks in natural language processing (NLP) has significantly improved
+            state-of-the-art results within the field. While recurrent neural networks (RNNs) and long short-term memory
+            networks (LSTMs) initially dominated the field, recent models started incorporating attention mechanisms and
+            then later dropped the recurrent part and just kept the attention mechanisms in so-called transformer models.
+            This latter type of model caused a new revolution in NLP and led to popular language models like <a
+              href="https://openai.com/blog/better-language-models/">GPT-2</a> and <a
+              href="https://allennlp.org/elmo">ELMo</a>. <a href="https://github.com/google-research/bert">BERT</a>
+            improved over previous transformer models and recurrent networks by allowing the system to learn from input
+            text in a bidirectional way, rather than only from left-to-right or the other way around. This model was later
+            re-implemented, critically evaluated and improved in the <a
+              href="https://github.com/pytorch/fairseq/blob/master/examples/roberta/README.md">RoBERTa model</a>.</p>
+          <p>These large-scale transformer models provide the advantage of being able to solve NLP tasks by having a
+            <strong>common, expensive pre-training phase, followed by a smaller fine-tuning phase</strong>. The
+            pre-training happens in an unsupervised way by providing large corpora of text in the desired language. The
+            second phase only needs a relatively small annotated data set for fine-tuning to outperform previous popular
+            approaches in one of a large number of possible language tasks.</p>
+          <p>While language models are usually trained on English data, some multilingual models also exist. These are
+            usually trained on a large quantity of text in different languages. For example, Multilingual-BERT is trained
+            on a collection of corpora in 104 different languages and generalizes language components well across
+            languages. However, models trained on data from one specific language usually improve the performance over
+            multilingual models for this particular language. Training a RoBERTa model on a Dutch dataset thus has a lot
+            of potential for increasing performance for many downstream Dutch NLP tasks.</p>
+  
+        </div>
+      </div>
+      
         <div class="col-lg-8 col-md-10 mx-auto mt-5">
           <h1 id="intro-in-robbert-bert-and-roberta">Intro in RobBERT, BERT and RoBERTa</h1>
 

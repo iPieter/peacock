@@ -12,8 +12,8 @@
   "background": "rgb(249,248,245)",
   "pdf": "http://arxiv.org/abs/2104.09947",
   "bibtex": "",
-  "resource": "https://huggingface.co/DTAI-KULeuven/mbert-corona-tweets-belgium-topics",
-  "draft": true,
+  "absoluteresource": "https://huggingface.co/DTAI-KULeuven/mbert-corona-tweets-belgium-topics",
+  "draft": false,
   "code": "https://github.com/iPieter/bert-corona-tweets"
 
 }
