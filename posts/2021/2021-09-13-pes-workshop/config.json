@@ -1,0 +1,15 @@
+{
+  "post_subtitle": "Data-Driven and Algorithmic Tools in Public Employment Services",
+  "post_title": "Time to Question if We Should",
+  "abstract": "Algorithmic and data-driven systems have been introduced to assist Public Employment Services (PES) in various countries. However, their deployment has been heavily criticized. We organized a workshop on this topic and analyze three salient discussion topics that emerged, centered around our research questions: (1) the challenge of representing individuals with data, (2) the role of job counsellors and data-driven systems in PES, and (3) questions around the interactions between job seeker, counsellor, and system. Finally, we consider lessons learned from the workshop and describe plans aiming at involving stakeholders in a co-design process.",
+  "type": "md",
+  "post_tag": "paper",
+  "banner": false,
+  "theme": "dark",
+  "author": "Pieter Delobelle, Kristen M. Scott, Sonja Mei Wang, Milagros Miceli, David Hartmann, Tianling Yang, Elena Murasso, Karolina Sztandar-Sztanderska, Bettina Berendt",
+  "date": "2021-09-17",
+  "background": "rgb(249,248,245)",
+  "pdf": "https://feast-ecmlpkdd.github.io/papers/FEAST2021_paper_5.pdf",
+  "bibtex": "",
+  "draft": true
+}
