@@ -3,6 +3,7 @@
   position: absolute;
   border-bottom: 1px solid $gray-200;
   color: $gray-900;
+  background-color: white;
   @include sans-serif-font;
   .navbar-brand {
     font-weight: 800;
