@@ -1,0 +1,19 @@
+{
+  "post_title": "Measuring Fairness with Biased Rulers",
+  "abstract": "An increasing awareness of biased patterns in natural language processing resources, like BERT, has motivated many metrics to quantify 'bias' and 'fairness'. But comparing the results of different metrics and the works that evaluate with such metrics remains difficult, if not outright impossible. We survey the existing literature on fairness metrics for pretrained language models and experimentally evaluate compatibility, including both biases in language models as in their downstream tasks. We do this by a mixture of traditional literature survey and correlation analysis, as well as by running empirical evaluations. We find that many metrics are not compatible and highly depend on templates, attribute and target seeds and the choice of embeddings.",
+  "post_subtitle": "A Survey on Quantifying Biases in Pretrained Language Models",
+  "type": "md",
+  "post_tag": "paper",
+  "banner": true,
+  "theme": "dark",
+  "img": "architecture.png",
+  "author": "Pieter Delobelle, Ewoenam Kwaku Tokpo, Toon Calders and Bettina Berendt",
+  "date": "2021-12-15",
+  "background": "rgb(249,248,245)",
+  "pdf": "http://arxiv.org/abs/2104.09947",
+  "bibtex": "",
+  "absoluteresource": "",
+  "draft": false,
+  "code": "https://github.com/iPieter/biased-rulers"
+
+}
