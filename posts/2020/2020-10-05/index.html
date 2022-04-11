@@ -1,0 +1,47 @@
+<article>
+    <div class="container-fluid" id="app">
+        <div class="form-group row">
+            <textarea class="col-md-6 offset-md-3 form-control" v-model="text" rows="4"></textarea>
+        </div>
+        <div class="row">
+            <button class="btn btn-primary col-md-6 offset-md-3" v-on:click="submit()">Analyze</button>
+        </div>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    let app = new Vue({
+        el: "#app",
+        data: {
+            text: "Het is groen en het verraadt je? Kermit de klikker."
+        },
+        methods: {
+            async postData(url = '', data = {}) {
+                // Default options are marked with *
+                const response = await fetch(url, {
+                    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                    mode: 'no-cors', // no-cors, *cors, same-origin
+                    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                    credentials: 'omit', // include, *same-origin, omit
+                    headers: {
+                        //'Content-Type': 'application/json'
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    redirect: 'follow', // manual, *follow, error
+                    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                    body: data // body data type must match "Content-Type" header
+                });
+
+                return response;
+            },
+            submit() {
+                this.postData('http://127.0.0.1:8001', "Dit is een test")
+                    .then(data => {
+                        console.log(data);
+                    });
+            }
+        }
+    });
+
+</script>

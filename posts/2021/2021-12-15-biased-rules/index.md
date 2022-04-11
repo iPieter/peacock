@@ -27,8 +27,8 @@ We tested how different template are correlated with two embedding strategies an
 Using mean-pooled embeddings, we at least got a bit more consistent results and we can clearly identify the two unbleached templates (T10 and T11).
 
 <div class="row">
-    <div class="col-md-6 col-xs-12"> <img class="figure-img img-fluid" src="template_types.pdf"/> <figcaption>Embeddings from [CLS] tokens.</figcaption></div>
-    <div class="col-md-6 col-xs-12"> <img class="figure-img img-fluid" src="SWP_template_types.pdf"/>  <figcaption>Embeddings by mean-pooling the target tokens.</figcaption> </div>
+    <div class="col-md-6 col-xs-12"> <img class="figure-img img-fluid" src="template_types.png"/> <figcaption>Embeddings from [CLS] tokens.</figcaption></div>
+    <div class="col-md-6 col-xs-12"> <img class="figure-img img-fluid" src="SWP_template_types.png"/>  <figcaption>Embeddings by mean-pooling the target tokens.</figcaption> </div>
 </div>
 
 ## Compatibility of embeddings
@@ -39,7 +39,7 @@ The other embedding methods are a lot more correlated, so that might mean that m
 But for example SEAT and a variant by Lauscher et al. (2021) are not really comparable because of this, even though both are based on WEAT.
 
 <div class="row">
-    <div class="col-md-6 col-xs-12 mx-auto"> <img class="figure-img img-fluid" src="embedding_types.pdf"/> </div>
+    <div class="col-md-6 col-xs-12 mx-auto"> <img class="figure-img img-fluid" src="embedding_types.png"/> </div>
 </div>
 
 
@@ -49,7 +49,7 @@ There is also an extrinsic bias measure in the following figure, BiasInBios, whi
 Here, higher scores are better instead of worse, so we have a negative correlation with some metrics. However, only -0.8 for the best-correlating method is not great...
 
 <div class="row">
-    <div class="col-md-6 col-xs-12 mx-auto"> <img class="figure-img img-fluid" src="metrics-correlations.pdf"/> </div>
+    <div class="col-md-6 col-xs-12 mx-auto"> <img class="figure-img img-fluid" src="metrics-correlations.png"/> </div>
 </div>
 
 # Conclusion and recommendations
