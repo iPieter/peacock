@@ -121,7 +121,7 @@ def generate_feeds(config_data, output_path, drafts=False):
 def build_site(config_data, path, output_path, drafts=False):
     logging.info("Exporting site to folder {}/".format(output_path))
 
-    config_data["PHEASANT_VERSION"] = "0.2.2"
+    config_data["PHEASANT_VERSION"] = "0.3"
     config_data["last_updated"] = datetime.now().strftime("%B %d, %Y")
 
     # First render the nav bar and footer components
@@ -191,6 +191,10 @@ def main(args, loglevel):
         with open(os.path.join(args.path, "config.json")) as f:
             data = json.load(f)
 
+        logging.debug("Reading file news.json.")
+        with open(os.path.join(args.path, "news.json")) as f:
+            data['news'] = json.load(f)
+
             logging.debug("Correctly read in all data, building the site")
 
             output_path = os.path.join(args.path, "build")
@@ -214,11 +218,11 @@ def main(args, loglevel):
 
     except FileNotFoundError as e:
         logging.error(
-            "File config.json not found or not readable. Check if it exists. Stacktrace:"
+            "File config.json or news.json not found or not readable. Check if it exists. Stacktrace:"
         )
         print(e)
     except json.decoder.JSONDecodeError as e:
-        logging.error("File config.json was unreadable by the JSON parser. Stacktrace:")
+        logging.error("File config.json or news.json was unreadable by the JSON parser. Stacktrace:")
         print(e)
 
 

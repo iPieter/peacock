@@ -94,31 +94,12 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto mb-4">
-          <h1>Recent activity</h1>
+          <h1>News</h1>
+          {{#news}}
           <span class="d-block">
-            <span class="text-muted mr-1 font-italic">Nov. 10, 2021</span> I presented our work on RobBERT at <a href="https://bnaic2021.uni.lu">BNAIC/Benelearn 2021</a>.
+            <span class="text-muted mr-1 font-italic">{{date}}</span> {{{title}}}
           </span> 
-          <span class="d-block">
-            <span class="text-muted mr-1 font-italic">Sep. 17, 2021</span> I will give a talk at <a href="https://feast-ecmlpkdd.github.io">FEAST @ ECML-PKDD 2021</a> about of our workshop on algorithmic tools in public employment services.
-          </span> 
-          <span class="d-block">
-            <span class="text-muted mr-1 font-italic">Apr. 21, 2021</span> We released our paper on <a href="{{base}}/attitudes-towards-covid-19-measures/"> attitudes towards corona measures</a>.
-          </span> 
-          <span class="d-block">
-            <span class="text-muted mr-1 font-italic">Mar. 25, 2021</span> I will give a presentation on versioning at <a href="https://www.kuleuven.be/open-science/events/2021/OSD4PhD">Open Science Discovery for PhD Students</a>.
-          </span>  
-          <span class="d-block">
-            <span class="text-muted mr-1 font-italic">Feb. 17, 2021</span> We released the <a href="https://github.com/iPieter/what-the-mask-android">Android version</a> of 'What the mask'.
-          </span>
-          <span class="d-block">
-            <span class="text-muted mr-1 font-italic">Feb. 11, 2021</span> I gave a presentation about RobBERT at <a href="https://techwolf.ai">TechWolf</a>.
-          </span>
-          <span class="d-block">
-            <span class="text-muted mr-1 font-italic">Feb. 9, 2021</span> I gave a presentation about RobBERT at <a href="https://ml6.eu">ML6</a>.
-          </span>
-          <span class="d-block">
-            <span class="text-muted mr-1 font-italic">Feb. 1, 2021</span> Our <a href="https://www.whatthemask.be">COVID-19 mask policy application</a> was featured in <a href="https://www.hbvl.be/cnt/dmf20210201_95996090">HBVL</a>.
-          </span>
+          {{/news}}
         </div>
       </div>
       <div class="row">
