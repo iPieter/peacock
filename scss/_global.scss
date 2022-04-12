@@ -149,3 +149,10 @@ img::-moz-selection {
 .mt-20 {
   margin-top: 8em !important;
 }
+
+.truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

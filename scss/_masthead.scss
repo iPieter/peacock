@@ -160,3 +160,17 @@ small.meta {
   margin-top: 90px;
   border-radius: 5px;
 }
+
+.news {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 10px 0 30px;
+  @include sans-serif-font;
+}
+
+.ss-abstract {
+  font-size: 18px;
+  font-weight: 400;
+  color: $gray-600;
+  @include sans-serif-font;
+}
