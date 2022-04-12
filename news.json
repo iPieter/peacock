@@ -8,11 +8,16 @@
     "title": "<a href='/measuring-fairness-with-biased-rulers/'>Our survey of intrinsic fairness measures</a> got accepted at NAACL 2022.",
     "type": "paper",
     "date": "07/04/2022"
-  },
+  },  
   {
     "title": "Our paper on the role of stakeholders in public employment services got accepted at FAccT22.",
     "type": "paper",
     "date": "07/04/2022"
+  },
+  {
+    "title": "I was at a <a href='https://www.lorentzcenter.nl/fairness-in-algorithmic-decision-makinga-domain-specific-approach.html'>Lorentz Center workshop</a> on algorithmic fairness.",
+    "type": "workshop",
+    "date": "20/03/2022"
   },
   {
     "title": "I presented our work on RobBERT at <a href='https://bnaic2021.uni.lu'>BNAIC/Benelearn 2021</a>.",
