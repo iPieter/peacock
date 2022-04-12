@@ -90,7 +90,7 @@ def build_post(path, post, destination_file, config_data):
 
 def process_news(data):
     today = datetime.datetime.now()
-    d = datetime.timedelta(days = 365)
+    d = datetime.timedelta(days = 180)
     for item in data['news']:
         item['date'] = datetime.datetime.strptime(item['date'], "%d/%m/%Y").strftime("%B %d, %Y")
     data['news_recent'] = [item for item in data['news'] if datetime.datetime.strptime(item['date'], "%B %d, %Y") > today - d]
@@ -138,6 +138,9 @@ def build_site(config_data, path, output_path, drafts=False):
 
     # add the blog posts
     config_data["blog_posts"] = blog_posts
+    
+    for page in blog_posts:
+        page['date_formatted'] = datetime.datetime.strptime(page['date'], "%Y-%m-%d").strftime("%B %d, %Y")
 
     for page in config_data["static_pages"]:
         build_file(

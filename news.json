@@ -1,6 +1,11 @@
 [
   {
-    "title": "Our survey of intrinsic fairness measures got accepted at NAACL 2022.",
+    "title": "I will give a talk at the <a href='https://www.meetup.com/Belgium-NLP-Meetup/events/285098644/'>15th Belgian NLP meetup</a> in Ghent.",
+    "type": "talk",
+    "date": "18/05/2022"
+  },
+  {
+    "title": "<a href='/measuring-fairness-with-biased-rulers/'>Our survey of intrinsic fairness measures</a> got accepted at NAACL 2022.",
     "type": "paper",
     "date": "07/04/2022"
   },
@@ -10,42 +15,42 @@
     "date": "07/04/2022"
   },
   {
-    "title": "I presented our work on RobBERT at <a href='https://bnaic2021.uni.lu'>BNAIC/Benelearn 2021</a>",
+    "title": "I presented our work on RobBERT at <a href='https://bnaic2021.uni.lu'>BNAIC/Benelearn 2021</a>.",
     "type": "talk",
     "date": "10/11/2021"
   },
   {
-    "title": "I gave a talk at <a href='https://feast-ecmlpkdd.github.io'>FEAST @ ECML-PKDD 2021</a> about of our workshop on algorithmic tools in public employment services",
+    "title": "I gave a talk at <a href='https://feast-ecmlpkdd.github.io'>FEAST @ ECML-PKDD 2021</a> about of our workshop on algorithmic tools in public employment services.",
     "type": "talk",
     "date": "17/09/2021"
   },
   {
-    "title": "We released our paper on <a href='{{base}}/attitudes-towards-covid-19-measures/'> attitudes towards corona measures</a>",
+    "title": "We released our paper on <a href='/attitudes-towards-covid-19-measures/'> attitudes towards corona measures</a>.",
     "type": "paper",
     "date": "21/04/2021"
   },
   {
-    "title": "I gave a presentation on versioning at <a href='https://www.kuleuven.be/open-science/events/2021/OSD4PhD'>Open Science Discovery for PhD Students",
+    "title": "I gave a presentation on versioning at <a href='https://www.kuleuven.be/open-science/events/2021/OSD4PhD'>Open Science Discovery for PhD Students</a>.",
     "type": "talk",
     "date": "25/03/2021"
   },
   {
-    "title": "We released the <a href='https://github.com/iPieter/what-the-mask-android'>Android version</a> of 'What the mask'",
+    "title": "We released the <a href='https://github.com/iPieter/what-the-mask-android'>Android version</a> of 'What the mask'.",
     "type": "release",
     "date": "17/02/2021"
   },
   {
-    "title": "I gave a presentation about RobBERT at <a href='https://techwolf.ai'>TechWolf</a>",
+    "title": "I gave a presentation about RobBERT at <a href='https://techwolf.ai'>TechWolf</a>.",
     "type": "talk",
     "date": "11/02/2021"
   },
   {
-    "title": "I gave a presentation about RobBERT at <a href='https://ml6.eu'>ML6</a>",
+    "title": "I gave a presentation about RobBERT at <a href='https://ml6.eu'>ML6</a>.",
     "type": "talk",
     "date": "09/02/2021"
   },
   {
-    "title": "Our <a href='https://www.whatthemask.be'>COVID-19 mask policy application</a> was featured in <a href='https://www.hbvl.be/cnt/dmf20210201_95996090'>HBVL</a>",
+    "title": "Our <a href='https://www.whatthemask.be'>COVID-19 mask policy application</a> was featured in <a href='https://www.hbvl.be/cnt/dmf20210201_95996090'>HBVL</a>.",
     "type": "news",
     "date": "01/02/2021"
   }
