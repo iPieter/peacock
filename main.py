@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import sys, argparse, logging
 import time
-
 import pystache
 import json
 import os
@@ -10,7 +9,7 @@ import socketserver
 import functools
 import pathlib
 import shutil
-from datetime import datetime
+import datetime
 import sass
 import pandoc
 from feedgen.feed import FeedGenerator
@@ -89,6 +88,13 @@ def build_post(path, post, destination_file, config_data):
     with open(os.path.join(destination_file), mode="w") as fout:
         fout.write(rendered)
 
+def process_news(data):
+    today = datetime.datetime.now()
+    d = datetime.timedelta(days = 365)
+    for item in data['news']:
+        item['date'] = datetime.datetime.strptime(item['date'], "%d/%m/%Y").strftime("%B %d, %Y")
+    data['news_recent'] = [item for item in data['news'] if datetime.datetime.strptime(item['date'], "%B %d, %Y") > today - d]
+
 
 def generate_feeds(config_data, output_path, drafts=False):
     fg = FeedGenerator()
@@ -111,7 +117,7 @@ def generate_feeds(config_data, output_path, drafts=False):
         fe.id(config_data["RSS_link"] + post["url"] + "/")
         fe.title(post["post_title"])
         fe.summary(post["abstract"])
-        fe.published(datetime.strptime(post["date"], "%Y-%m-%d").isoformat() + "+00:00")
+        fe.published(datetime.datetime.strptime(post["date"], "%Y-%m-%d").isoformat() + "+00:00")
         fe.link(href=config_data["RSS_link"] + post["url"] + "/")
 
     fg.atom_file(os.path.join(output_path, "atom.xml"))
@@ -122,7 +128,7 @@ def build_site(config_data, path, output_path, drafts=False):
     logging.info("Exporting site to folder {}/".format(output_path))
 
     config_data["PHEASANT_VERSION"] = "0.3"
-    config_data["last_updated"] = datetime.now().strftime("%B %d, %Y")
+    config_data["last_updated"] = datetime.datetime.now().strftime("%B %d, %Y")
 
     # First render the nav bar and footer components
     config_data["navbar"] = parse_file(os.path.join(path, "_navbar.html"), config_data)
@@ -194,6 +200,8 @@ def main(args, loglevel):
         logging.debug("Reading file news.json.")
         with open(os.path.join(args.path, "news.json")) as f:
             data['news'] = json.load(f)
+
+            process_news(data)
 
             logging.debug("Correctly read in all data, building the site")
 
