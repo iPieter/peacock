@@ -1,6 +1,11 @@
 [
   {
-    "title": "I will give a talk at the <a href='https://www.meetup.com/Belgium-NLP-Meetup/events/285098644/'>15th Belgian NLP meetup</a> in Ghent.",
+    "title": "<a href='https://dl.acm.org/doi/10.1145/3531146.3534631'>Our paper on PES systems</a> won the best student paper award at FAccT!",
+    "type": "talk",
+    "date": "20/06/2022"
+  },
+  {
+    "title": "I gave a talk at the <a href='https://www.meetup.com/Belgium-NLP-Meetup/events/285098644/'>15th Belgian NLP meetup</a> in Ghent.",
     "type": "talk",
     "date": "18/05/2022"
   },
