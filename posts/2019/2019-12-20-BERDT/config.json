@@ -15,6 +15,9 @@
   "bibtex": "",
   "resource": "/robbert#get-started",
   "draft": false,
-  "code": "https://github.com/iPieter/robbert"
+  "code": "https://github.com/iPieter/robbert",
+  "featured": true,
+  "project": true,
+  "related_work": []
 
 }

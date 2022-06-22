@@ -14,6 +14,9 @@
   "bibtex": "",
   "absoluteresource": "",
   "draft": false,
-  "code": "https://github.com/iPieter/biased-rulers"
+  "code": "https://github.com/iPieter/biased-rulers",
+  "featured": true,
+  "project": true,
+  "related_work": []
 
 }

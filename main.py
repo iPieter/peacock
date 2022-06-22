@@ -112,7 +112,7 @@ def generate_feeds(config_data, output_path, drafts=False):
     fg.link(href=config_data["RSS_link"] + "/test.atom", rel="self")
     fg.language(config_data["RSS_language"])
 
-    for post in config_data["blog_posts"]:
+    for post in config_data["featured_posts"]:
         fe = fg.add_entry()
         fe.id(config_data["RSS_link"] + post["url"] + "/")
         fe.title(post["post_title"])
@@ -127,19 +127,19 @@ def generate_feeds(config_data, output_path, drafts=False):
 def build_site(config_data, path, output_path, drafts=False):
     logging.info("Exporting site to folder {}/".format(output_path))
 
-    config_data["PHEASANT_VERSION"] = "0.3"
+    config_data["PHEASANT_VERSION"] = "0.4"
     config_data["last_updated"] = datetime.datetime.now().strftime("%B %d, %Y")
 
     # First render the nav bar and footer components
     config_data["navbar"] = parse_file(os.path.join(path, "_navbar.html"), config_data)
     config_data["footer"] = parse_file(os.path.join(path, "_footer.html"), config_data)
 
-    blog_posts = find_index_posts(path, drafts)
+    posts = find_index_posts(path, drafts)
 
     # add the blog posts
-    config_data["blog_posts"] = blog_posts
+    config_data["featured_posts"] = list(filter(lambda post: post['featured'], posts))
     
-    for page in blog_posts:
+    for page in posts:
         page['date_formatted'] = datetime.datetime.strptime(page['date'], "%Y-%m-%d").strftime("%B %d, %Y")
 
     for page in config_data["static_pages"]:
@@ -148,7 +148,7 @@ def build_site(config_data, path, output_path, drafts=False):
             os.path.join(output_path, page["url"]),
             config_data,
         )
-    for page in blog_posts:
+    for page in posts:
         # os.mkdir(os.path.join(output_path, page["url"]))
         logging.debug(
             "Copying resources to {}".format(os.path.join(output_path, page["url"]))
@@ -291,7 +291,7 @@ if __name__ == "__main__":
         serve_build(output_path)
         try:
             while True:
-                time.sleep(1)
+                time.sleep(5)
         except KeyboardInterrupt:
             observer.stop()
         observer.join()

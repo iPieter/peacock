@@ -14,5 +14,8 @@
   "bibtex": "",
   "resource": "",
   "draft": false,
-  "code": "https://github.com/iPieter/ethical-adversaries"
+  "code": "https://github.com/iPieter/ethical-adversaries",
+  "featured": true,
+  "project": true,
+  "related_work": []
 }

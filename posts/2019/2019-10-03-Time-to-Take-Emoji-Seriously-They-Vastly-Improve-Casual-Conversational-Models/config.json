@@ -12,5 +12,8 @@
   "background": "linear-gradient(135deg, rgba(235, 242, 249, 1), rgba(245, 245, 245, 1), rgba(235, 246, 246, 1))",
   "pdf": "https://arxiv.org/abs/1910.13793",
   "bibtex": "",
-  "resource": ""
+  "resource": "",
+  "featured": true,
+  "project": false,
+  "related_work": []
 }

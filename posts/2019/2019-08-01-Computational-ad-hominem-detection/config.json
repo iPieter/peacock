@@ -12,5 +12,8 @@
   "background": "linear-gradient(to bottom right, rgba(245, 239, 241, 1), rgba(245, 245, 245, 1), rgba(249, 240, 232, 1))",
   "pdf": "https://www.aclweb.org/anthology/P19-2028/",
   "bibtex": "",
-  "code": "https://github.com/iPieter/G0B34a_knowledge_and_the_web"
+  "code": "https://github.com/iPieter/G0B34a_knowledge_and_the_web",
+  "featured": true,
+  "project": true,
+  "related_work": []
 }

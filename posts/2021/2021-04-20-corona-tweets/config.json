@@ -14,6 +14,9 @@
   "bibtex": "",
   "absoluteresource": "https://huggingface.co/DTAI-KULeuven/mbert-corona-tweets-belgium-topics",
   "draft": false,
-  "code": "https://github.com/iPieter/bert-corona-tweets"
+  "code": "https://github.com/iPieter/bert-corona-tweets",
+  "featured": true,
+  "project": true,
+  "related_work": []
 
 }
