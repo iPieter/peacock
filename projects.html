@@ -47,126 +47,69 @@
   <!-- Main Content -->
   <div class="container" id="software">
     <div class="row">
-      <div class="col-lg-5 col-md-6 mx-auto">
+      {{#project_posts}}
+      {{^hidden}}
+      <div class="col-md-6 col-sm-12 px-5 mt-5">
+        <div class="post-preview">
+      {{#banner}}
 
-        <!-- JERBOA -->
-        <div class="tile-preview tile-box">
+  <div class="row">
 
-          <h3 class="post-title">
-            Jerboa
-          </h3>
-
-          <p>A self-deployable chat application with support for custom emoji, math rendering, side-by-side PDF
-            viewing, etc...</p>
-          <figure>
-            <img src="{{base}}/resources/jerboa.png" class="img-fluid" alt="Screenshot of Jerboa" />
-          </figure>
-          <p class="post-meta">
-            <a class="btn btn-outline-primary" href="https://github.com/iPieter/Jerboa" role="button"><i
-                class="fas fa-code"></i>Code
-            </a>
-            2019-present
-          </p>
-        </div>
-
-        <!-- TURTLE -->
-        <div class="tile-preview">
-
-          <h3 class="post-title">
-            Turtle
-          </h3>
-          <p>A cross-platform expense tracker.</p>
-          <p class="post-meta">
-            <a class="btn btn-outline-primary" href="https://github.com/iPieter/turtle_expense_tracker" role="button"><i
-                class="fas fa-code"></i>Code
-            </a>
-            2019
-          </p>
-        </div>
-
-
-
-        <!-- RobBERT -->
-        <div class="tile-preview tile-box">
-
-          <h3 class="post-title">
-            kiwi.ml
-          </h3>
-
-          <p>Reproducible distributed machine learning.</p>
-          <p class="post-meta">
-            2020-present
-          </p>
-        </div>
-      </div>
-
-
-      <div class="col-lg-5 col-md-6 mx-auto">
-
-
-        <!-- RobBERT -->
-        <div class="tile-preview tile-box">
-
-          <h3 class="post-title">
-            RobBERT
-          </h3>
-
-          <p>A Dutch RoBERTa-based language model </p>
-          <p class="post-meta">
-            <a class="btn btn-outline-primary" href="https://github.com/iPieter/RobBERT" role="button"><i
-                class="fas fa-code"></i>Code
-            </a>
-            2019-present
-          </p>
-        </div>
-
-
-        <!-- RUN APP -->
-        <div class="tile-preview">
-
-          <h3 class="post-title">
-            Sports tracker
-          </h3>
-          <p>A custom sports tracker for running and other sports.</p>
-          <p class="post-meta">
-            2019
-          </p>
-        </div>
-
-        <!-- RULE ENGINE -->
-        <div class="tile-preview tile-box">
-
-          <h3 class="post-title">
-            Rule engine for Dart/Flutter
-          </h3>
-          <p>An open source rule matching system for Dart. The rule
-            engine follows a syntax inspired by Drools, but adapted for our needs. The project contains a standard lexer
-            and parser, which output is then used to compile the described rules into a RETE network.</p>
-          <p class="post-meta">
-            <a class="btn btn-outline-primary" href="https://github.com/iPieter/rule_engine_dart" role="button"><i
-                class="fas fa-code"></i>Code
-            </a>
-            2019
-          </p>
-        </div>
-
-        <!-- PEACOCK -->
-        <div class="tile-preview">
-
-          <h3 class="post-title">
-            Peacock
-          </h3>
-          <p>A static site generator (used for this site).</p>
-          <p class="post-meta">
-            <a class="btn btn-outline-primary" href="https://github.com/iPieter/peacock" role="button"><i
-                class="fas fa-code"></i>Code
-            </a>
-            2019-present
-          </p>
-        </div>
-
+  <div class="banner mt-0" style="background: {{background}}; max-height: 200px;">
+      <img
+        src="{{url}}/{{img}}"
+        style="max-width: 100%; max-height: 160px;"
+      />
       </div>
     </div>
+
+      
+  {{/banner}}
+      <a href="{{base}}/{{url}}/">
+        <div class="d-inline-block ss-abstract">
+        <span class="text-uppercase post-tag post-tag-{{post_tag}}">{{post_tag}}</span> 
+        <span>Posted on {{date_formatted}}</span>
+      </div>
+        <h3 class="post-title">
+          {{post_title}}
+        </h3>
+        {{#post_subtitle}}
+        <h4>{{post_subtitle}}</h4>
+        {{/post_subtitle}}
+      </a>
+      <p class="truncate ss-abstract">{{abstract}}</p>
+      <p class="post-meta">
+        {{#pdf}}
+        <a class="btn btn-link" href="{{pdf}}" role="button"
+          ><i class="fas fa-file-pdf"></i> pdf
+        </a>
+        {{/pdf}} {{#bibtex}}
+        <a class="btn btn-link" href="{{bibtex}}" role="button"
+          >BibTex
+        </a>
+        {{/bibtex}} {{#code}}
+        <a class="btn btn-link" href="{{code}}" role="button"
+          ><i class="fas fa-code"></i>Code
+        </a>
+        {{/code}} {{#resource}}
+        <a
+          class="btn btn-link"
+          href="{{base}}{{resource}}"
+          role="button"
+          ><i class="fas fa-project-diagram"></i>Resource
+        </a>
+        {{/resource}} {{#draft}}
+        <a class="btn btn-outline-warning" href="#" role="button"
+          >Draft
+        </a>
+        {{/draft}}
+      </p>
+    </div>
+  </div>
+    {{/hidden}}
+    {{/project_posts}}
+</div>
+</div>
   </div>
 
   <hr />

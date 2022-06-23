@@ -33,7 +33,21 @@ def find_index_posts(path, drafts=False):
                     post_data["files"] = files
                     post_data["url"] = post_data["post_title"].lower().replace(" ", "-")
                     logging.debug("Added post: {}".format(post_data["post_title"]))
+                    
+                    #reset unused fields
+                    if 'pdf' not in post_data:
+                        post_data['pdf'] = False
+                    if 'bibtex' not in post_data:
+                        post_data['bibtex'] = False
+                    if 'code' not in post_data:
+                        post_data['code'] = False
+                    if 'resource' not in post_data:
+                        post_data['resource'] = False
+                    if 'absoluteresource' not in post_data:
+                        post_data['absoluteresource'] = False
+
                     blog_posts.append(post_data)
+                post_data = {}
 
     return sorted(blog_posts, key=lambda post: post["date"], reverse=True)
 
@@ -138,6 +152,7 @@ def build_site(config_data, path, output_path, drafts=False):
 
     # add the blog posts
     config_data["featured_posts"] = list(filter(lambda post: post['featured'], posts))
+    config_data["project_posts"] = list(filter(lambda post: post['project'], posts))
     
     for page in posts:
         page['date_formatted'] = datetime.datetime.strptime(page['date'], "%Y-%m-%d").strftime("%B %d, %Y")

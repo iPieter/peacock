@@ -16,6 +16,7 @@
   "resource": "/robbert#get-started",
   "draft": false,
   "code": "https://github.com/iPieter/robbert",
+  "absoluteresource": "https://huggingface.co/pdelobelle/robbert-v2-dutch-base",
   "featured": true,
   "project": true,
   "related_work": []
