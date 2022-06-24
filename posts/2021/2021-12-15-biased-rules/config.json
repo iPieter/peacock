@@ -9,7 +9,7 @@
   "img": "architecture.png",
   "author": "Pieter Delobelle, Ewoenam Kwaku Tokpo, Toon Calders and Bettina Berendt",
   "date": "2021-12-15",
-  "background": "rgb(249,248,245)",
+  "background": "url('/resources/web-tile.png')",
   "pdf": "http://arxiv.org/abs/2104.09947",
   "bibtex": "",
   "absoluteresource": "",

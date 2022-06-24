@@ -1,0 +1,19 @@
+{
+    "post_title": "Jerboa",
+    "post_subtitle": "A self-deployable chat app",
+    "abstract": "A self-deployable chat application with support for custom emoji, math rendering, side-by-side PDF viewing, etc...",
+    "type": "md",
+    "post_tag": "project",
+    "banner": false,
+    "theme": "dark",
+    "img": "",
+    "author": "Pieter Delobelle, Anton Danneels",
+    "date": "2019-07-01",
+    "background": "linear-gradient(to bottom right, rgba(245, 239, 241, 1), rgba(245, 245, 245, 1), rgba(249, 240, 232, 1))",
+    "bibtex": "",
+    "code": "https://github.com/iPieter/jerboa",
+    "featured": false,
+    "project": true,
+    "related_work": []
+  }
+  

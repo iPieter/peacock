@@ -1,0 +1,19 @@
+{
+    "post_title": "Rule engine Rule for Dart",
+    "post_subtitle": "An open source rule matching system",
+    "abstract": "An open source rule engine that follows a syntax inspired by Drools, but adapted for Flutter and Dart. The project contains a standard lexer and parser, which output is then used to compile the described rules into a RETE network.",
+    "type": "md",
+    "post_tag": "project",
+    "banner": false,
+    "theme": "dark",
+    "img": "",
+    "author": "Pieter Delobelle, Anton Danneels",
+    "date": "2018-07-17",
+    "background": "linear-gradient(to bottom right, rgba(245, 239, 241, 1), rgba(245, 245, 245, 1), rgba(249, 240, 232, 1))",
+    "bibtex": "",
+    "code": "https://github.com/iPieter/rule-engine",
+    "featured": false,
+    "project": true,
+    "related_work": []
+  }
+  
