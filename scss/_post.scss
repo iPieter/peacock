@@ -130,3 +130,28 @@ article {
 .post-tag-paper {
   color: $orange
 }
+
+.paper {
+  @include sans-serif-font;
+  display: block;
+  .paper-title {
+    display: block;
+    font-weight: 600;
+    height: 28px;
+  }
+
+  .paper-authors {
+    display: block;
+    font-weight: 500;
+    height: 28px;
+
+  }
+
+  .paper-venue {
+    display: block;
+    font-size: 85%;
+    font-weight: 500;
+    color: $gray-600
+  }
+
+}

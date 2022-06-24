@@ -15,6 +15,11 @@ import pandoc
 from feedgen.feed import FeedGenerator
 from watchdog.observers import Observer
 from filesystem_event_handler import FilesystemEventHandler
+import re
+from pybtex import database
+from pybtex.style.names.plain import NameStyle
+
+plain = NameStyle().format
 
 PORT = 8000
 
@@ -33,19 +38,53 @@ def find_index_posts(path, drafts=False):
                     post_data["files"] = files
                     post_data["url"] = post_data["post_title"].lower().replace(" ", "-")
                     logging.debug("Added post: {}".format(post_data["post_title"]))
-                    
-                    #reset unused fields
-                    if 'pdf' not in post_data:
-                        post_data['pdf'] = False
-                    if 'bibtex' not in post_data:
-                        post_data['bibtex'] = False
-                    if 'code' not in post_data:
-                        post_data['code'] = False
-                    if 'resource' not in post_data:
-                        post_data['resource'] = False
-                    if 'absoluteresource' not in post_data:
-                        post_data['absoluteresource'] = False
 
+                    # reset unused fields
+                    if "pdf" not in post_data:
+                        post_data["pdf"] = False
+                    if "bibtex" not in post_data:
+                        post_data["bibtex"] = False
+                    if "code" not in post_data:
+                        post_data["code"] = False
+                    if "resource" not in post_data:
+                        post_data["resource"] = False
+                    if "absoluteresource" not in post_data:
+                        post_data["absoluteresource"] = False
+
+                    bib_files = []
+                    for file in files:
+                        match = re.search(r".*\.bib", file)
+                        if match:
+                            bib_data = database.parse_file(
+                                os.path.join(node, match.group())
+                            )
+                            for item in bib_data.entries:
+                                bib_files.append(
+                                    {
+                                        "title": bib_data.entries[item]
+                                        .fields["title"]
+                                        .replace("{", "")
+                                        .replace("}", ""),
+                                        "venue": bib_data.entries[item].fields["venue"]
+                                        if "venue" in bib_data.entries[item].fields
+                                        else bib_data.entries[item].fields[
+                                            "archivePrefix"
+                                        ]
+                                        if "archivePrefix"
+                                        in bib_data.entries[item].fields
+                                        else bib_data.entries[item].fields["booktitle"]
+                                        if "booktitle" in bib_data.entries[item].fields
+                                        else bib_data.entries[item].fields["journal"]
+                                        if "journal" in bib_data.entries[item].fields
+                                        else None,
+                                        "authors": ", ".join([ plain(p).format().render_as('text') for p in bib_data.entries[item].persons['author'] ]),
+                                        "key": item,
+                                        "year": bib_data.entries[item].fields['year']
+                                    }
+                                )
+
+                    print(bib_files)
+                    post_data['papers'] = bib_files
                     blog_posts.append(post_data)
                 post_data = {}
 
@@ -102,12 +141,19 @@ def build_post(path, post, destination_file, config_data):
     with open(os.path.join(destination_file), mode="w") as fout:
         fout.write(rendered)
 
+
 def process_news(data):
     today = datetime.datetime.now()
-    d = datetime.timedelta(days = 180)
-    for item in data['news']:
-        item['date'] = datetime.datetime.strptime(item['date'], "%d/%m/%Y").strftime("%B %d, %Y")
-    data['news_recent'] = [item for item in data['news'] if datetime.datetime.strptime(item['date'], "%B %d, %Y") > today - d]
+    d = datetime.timedelta(days=180)
+    for item in data["news"]:
+        item["date"] = datetime.datetime.strptime(item["date"], "%d/%m/%Y").strftime(
+            "%B %d, %Y"
+        )
+    data["news_recent"] = [
+        item
+        for item in data["news"]
+        if datetime.datetime.strptime(item["date"], "%B %d, %Y") > today - d
+    ]
 
 
 def generate_feeds(config_data, output_path, drafts=False):
@@ -131,7 +177,9 @@ def generate_feeds(config_data, output_path, drafts=False):
         fe.id(config_data["RSS_link"] + post["url"] + "/")
         fe.title(post["post_title"])
         fe.summary(post["abstract"])
-        fe.published(datetime.datetime.strptime(post["date"], "%Y-%m-%d").isoformat() + "+00:00")
+        fe.published(
+            datetime.datetime.strptime(post["date"], "%Y-%m-%d").isoformat() + "+00:00"
+        )
         fe.link(href=config_data["RSS_link"] + post["url"] + "/")
 
     fg.atom_file(os.path.join(output_path, "atom.xml"))
@@ -151,11 +199,13 @@ def build_site(config_data, path, output_path, drafts=False):
     posts = find_index_posts(path, drafts)
 
     # add the blog posts
-    config_data["featured_posts"] = list(filter(lambda post: post['featured'], posts))
-    config_data["project_posts"] = list(filter(lambda post: post['project'], posts))
-    
+    config_data["featured_posts"] = list(filter(lambda post: post["featured"], posts))
+    config_data["project_posts"] = list(filter(lambda post: post["project"], posts))
+
     for page in posts:
-        page['date_formatted'] = datetime.datetime.strptime(page['date'], "%Y-%m-%d").strftime("%B %d, %Y")
+        page["date_formatted"] = datetime.datetime.strptime(
+            page["date"], "%Y-%m-%d"
+        ).strftime("%B %d, %Y")
 
     for page in config_data["static_pages"]:
         build_file(
@@ -180,7 +230,9 @@ def build_site(config_data, path, output_path, drafts=False):
         )
 
     logging.info("Copying resources to folder {}/resources".format(output_path))
-    shutil.copytree(os.path.join(path, "resources"), os.path.join(output_path, "resources"))
+    shutil.copytree(
+        os.path.join(path, "resources"), os.path.join(output_path, "resources")
+    )
 
     logging.info("Copying js to folder {}/js".format(output_path))
     shutil.copytree(os.path.join(path, "js"), os.path.join(output_path, "js"))
@@ -217,7 +269,7 @@ def main(args, loglevel):
 
         logging.debug("Reading file news.json.")
         with open(os.path.join(args.path, "news.json")) as f:
-            data['news'] = json.load(f)
+            data["news"] = json.load(f)
 
             process_news(data)
 
@@ -231,7 +283,9 @@ def main(args, loglevel):
             if args.clean:
                 logging.info("Cleaning flag present. Removing build folder.")
                 try:
-                    shutil.rmtree(output_path,)
+                    shutil.rmtree(
+                        output_path,
+                    )
                 except FileNotFoundError as e:
                     logging.warn("Some error during build removal.")
                     print(e)
@@ -248,7 +302,9 @@ def main(args, loglevel):
         )
         print(e)
     except json.decoder.JSONDecodeError as e:
-        logging.error("File config.json or news.json was unreadable by the JSON parser. Stacktrace:")
+        logging.error(
+            "File config.json or news.json was unreadable by the JSON parser. Stacktrace:"
+        )
         print(e)
 
 
@@ -278,7 +334,10 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--base", nargs=1, default="", help="Overwrite base url from the config file.",
+        "--base",
+        nargs=1,
+        default="",
+        help="Overwrite base url from the config file.",
     )
 
     parser.add_argument(
@@ -298,7 +357,9 @@ if __name__ == "__main__":
     output_path = main(args, loglevel)
 
     if args.serve:
-        event_handler = FilesystemEventHandler(args.path, callback=main, args=args, loglevel=loglevel)
+        event_handler = FilesystemEventHandler(
+            args.path, callback=main, args=args, loglevel=loglevel
+        )
         observer = Observer()
         observer.schedule(event_handler, args.path, recursive=True)
         observer.start()
