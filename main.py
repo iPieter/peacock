@@ -79,7 +79,9 @@ def find_index_posts(path, drafts=False):
                                         else None,
                                         "authors": ", ".join([ plain(p).format().render_as('text') for p in bib_data.entries[item].persons['author'] ]),
                                         "key": item,
-                                        "year": bib_data.entries[item].fields['year']
+                                        "year": bib_data.entries[item].fields['year'],
+                                        "url":
+                                        "bibtex": 
                                     }
                                 )
 
