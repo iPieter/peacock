@@ -203,16 +203,15 @@
               <span class="paper-authors">{{authors}}</span>
               <span class="paper-venue">{{venue}}</span>
             <span class="meta text-muted ml-0">
-              <a class="btn btn-link pl-0 pt-0" href="{{pdf}}" role="button"
+              <a class="btn btn-link pl-0 pt-0" href="{{url}}" role="button"
                 ><i class="fas fa-file-pdf"></i> read paper</a
               >
-              <a class="btn btn-link pt-0" href="{{base}}{{resource}}" role="button"
-                ><i class="fas fa-book"></i> copy bibtex</a
+              <button class="btn btn-link pt-0 clipboard" href="#" role="button" data-clipboard-text="{{bibtex}}"
+                ><i class="fas fa-copy"></i> copy bibtex</button
               >
-
-              <a class="btn btn-link pt-0" href="{{base}}{{resource}}" role="button"
-                ><i class="fas fa-file"></i> download bibtex</a
-              >
+              <!--<a class="btn btn-link pt-0" href="{{base}}{{resource}}" role="button"
+                ><i class="fas fa-download"></i> download bibtex</a
+              >-->
             </span></div>
           </div>
           {{/papers}}
@@ -232,5 +231,11 @@
 
     <!-- Custom scripts for this template -->
     <script src="{{base}}/js/clean-blog.min.js" async></script>
+
+    <script>
+      new ClipboardJS('.clipboard');
+    </script>
+
+
   </body>
 </html>

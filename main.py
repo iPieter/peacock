@@ -55,9 +55,15 @@ def find_index_posts(path, drafts=False):
                     for file in files:
                         match = re.search(r".*\.bib", file)
                         if match:
-                            bib_data = database.parse_file(
-                                os.path.join(node, match.group())
-                            )
+                            file = os.path.join(node, match.group())
+                            bib_data = database.parse_file(file)
+                            
+                            with open(file) as fp:
+                                biblio = fp.read()
+
+                            if len(bib_data.entries) > 1:
+                                logging.warn(f"Multiple bib entries in {file}, this is not properly supported.")
+
                             for item in bib_data.entries:
                                 bib_files.append(
                                     {
@@ -77,16 +83,23 @@ def find_index_posts(path, drafts=False):
                                         else bib_data.entries[item].fields["journal"]
                                         if "journal" in bib_data.entries[item].fields
                                         else None,
-                                        "authors": ", ".join([ plain(p).format().render_as('text') for p in bib_data.entries[item].persons['author'] ]),
+                                        "authors": ", ".join(
+                                            [
+                                                plain(p).format().render_as("text")
+                                                for p in bib_data.entries[item].persons[
+                                                    "author"
+                                                ]
+                                            ]
+                                        ),
                                         "key": item,
-                                        "year": bib_data.entries[item].fields['year'],
-                                        "url":
-                                        "bibtex": 
+                                        "year": bib_data.entries[item].fields["year"],
+                                        "url": bib_data.entries[item].fields["url"],
+                                        "bibtex": biblio,
                                     }
                                 )
 
                     print(bib_files)
-                    post_data['papers'] = bib_files
+                    post_data["papers"] = bib_files
                     blog_posts.append(post_data)
                 post_data = {}
 
