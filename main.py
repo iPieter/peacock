@@ -50,6 +50,8 @@ def find_index_posts(path, drafts=False):
                         post_data["resource"] = False
                     if "absoluteresource" not in post_data:
                         post_data["absoluteresource"] = False
+                    if "video" not in post_data:
+                        post_data["video"] = False
 
                     bib_files = []
                     for file in files:

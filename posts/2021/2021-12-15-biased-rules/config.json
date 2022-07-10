@@ -10,13 +10,14 @@
   "author": "Pieter Delobelle, Ewoenam Kwaku Tokpo, Toon Calders and Bettina Berendt",
   "date": "2021-12-15",
   "background": "url('/resources/web-tile.png')",
-  "pdf": "http://arxiv.org/abs/2104.09947",
+  "pdf": "https://aclanthology.org/2022.naacl-main.122/",
   "bibtex": "",
   "absoluteresource": "",
   "draft": false,
   "code": "https://github.com/iPieter/biased-rulers",
   "featured": true,
   "project": true,
-  "related_work": []
+  "related_work": [],
+  "video": "https://youtu.be/8_81GsyJGnA"
 
 }
