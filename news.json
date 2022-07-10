@@ -1,5 +1,10 @@
 [
   {
+    "title": "I will present <a href='measuring-fairness-with-biased-rulers/'>Our survey of intrinsic fairness measures</a> at NAACL '22.",
+    "type": "talk",
+    "date": "11/07/2022"
+  },
+  {
     "title": "<a href='https://dl.acm.org/doi/10.1145/3531146.3534631'>Our paper on PES systems</a> won the best student paper award at FAccT!",
     "type": "talk",
     "date": "20/06/2022"
