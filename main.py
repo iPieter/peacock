@@ -36,7 +36,13 @@ def find_index_posts(path, drafts=False):
                 if drafts or not "draft" in post_data or not post_data["draft"]:
                     post_data["path"] = node
                     post_data["files"] = files
-                    post_data["url"] = post_data["post_title"].lower().replace(" ", "-")
+                    # blog posts have a separate url scheme
+                    if "blog" in post_data and post_data["blog"]:
+                        year = datetime.datetime.strptime(post_data["date"], "%Y-%m-%d").strftime("%Y")
+                        post_data["url"] = "blog/" + year + "/" + post_data["post_title"].lower().replace(" ", "-")
+                    else:
+                        post_data["url"] = post_data["post_title"].lower().replace(" ", "-")
+                            
                     logging.debug("Added post: {}".format(post_data["post_title"]))
 
                     # reset unused fields
@@ -206,7 +212,7 @@ def generate_feeds(config_data, output_path, drafts=False):
 def build_site(config_data, path, output_path, drafts=False):
     logging.info("Exporting site to folder {}/".format(output_path))
 
-    config_data["PHEASANT_VERSION"] = "0.4"
+    config_data["PHEASANT_VERSION"] = "0.5"
     config_data["last_updated"] = datetime.datetime.now().strftime("%B %d, %Y")
 
     # First render the nav bar and footer components
@@ -218,6 +224,7 @@ def build_site(config_data, path, output_path, drafts=False):
     # add the blog posts
     config_data["featured_posts"] = list(filter(lambda post: post["featured"], posts))
     config_data["project_posts"] = list(filter(lambda post: post["project"], posts))
+    config_data["blog_posts"] = list(filter(lambda post: "blog" in post and post["blog"], posts))
 
     for page in posts:
         page["date_formatted"] = datetime.datetime.strptime(

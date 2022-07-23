@@ -4,7 +4,7 @@
   "contact": "You can find me on <a href='https://twitter.com/pieterdelobelle'>Twitter</a> or <a href='mailto:pieter.delobelle@cs.kuleuven.be'>send me an email</a>.",
   "static_pages": [
     { "url": "index.html", "name": "Home" },
-    { "url": "index.html", "name": "Blog" },
+    { "url": "blog.html", "name": "Blog" },
     {
       "url": "data.html",
       "name": "Resources"
