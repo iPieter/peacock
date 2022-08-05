@@ -1,0 +1,25 @@
+{
+    "post_title": "On the implementation of DisCo",
+    "abstract": "In this blog post, I'll go over some confusion I had and choices that were made when implementing the DisCo fairness metric.", 
+    "post_subtitle": "Design choices of the fairness metric DisCo.",
+    "type": "md",
+    "post_tag": "blogpost",
+    "banner": false,
+    "theme": "dark",
+    "img": "",
+    "author": "Pieter Delobelle",
+    "date": "2022-07-19",
+    "background": "",
+    "pdf": "",
+    "bibtex": "",
+    "absoluteresource": "",
+    "draft": false,
+    "code": "https://github.com/iPieter/biased-rulers",
+    "featured": false,
+    "project": false,
+    "blog": true,
+    "related_work": [],
+    "video": ""
+
+  }
+  

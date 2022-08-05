@@ -1,0 +1,25 @@
+{
+    "post_title": "FairDistillation",
+    "post_subtitle": "Mitigating Stereotyping in Language Models",
+    "abstract": " Large pre-trained language models are successfully being used in a variety of tasks, across many languages. With this ever-increasing usage, the risk of harmful side eﬀects also rises, for example by reproducing and reinforcing stereotypes. However, detecting and mitigating these harms is diﬃcult to do in general and becomes computationally expensive when tackling multiple languages or when considering diﬀerent biases. To address this, we present FairDistillation : a cross-lingual method based on knowledge distillation to construct smaller language models while controlling for speciﬁc biases. ",
+    "type": "md",
+    "post_tag": "paper",
+    "banner": false,
+    "theme": "dark",
+    "img": "",
+    "author": "Pieter Delobelle",
+    "date": "2022-08-05",
+    "background": "url('/resources/web-tile.png')",
+    "pdf": "https://arxiv.org/pdf/2207.04546.pdf",
+    "bibtex": "",
+    "absoluteresource": "",
+    "draft": false,
+    "code": "https://github.com/iPieter/universal-distillation",
+    "featured": true,
+    "project": false,
+    "blog": false,
+    "related_work": [],
+    "video": ""
+
+  }
+  
