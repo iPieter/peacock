@@ -1,6 +1,6 @@
 {
     "post_title": "Updating RobBERT",
-    "abstract": "", 
+    "abstract": "A few things happened since our Dutch language model RobBERT was trained in 2019. In this blogpost, I explore how to update RobBERT efficiently to include these new words and shifting word usages.", 
     "post_subtitle": "Bringing a language model to 2022",
     "type": "md",
     "post_tag": "blogpost",
@@ -14,7 +14,7 @@
     "bibtex": "",
     "absoluteresource": "",
     "draft": false,
-    "code": "https://github.com/iPieter/biased-rulers",
+    "code": "",
     "featured": false,
     "project": false,
     "blog": true,

@@ -87,6 +87,10 @@ article {
     > img {
       max-width: 100%;
     }
+
+    .katex {
+      font-size: 1.1em;
+    }
   }
 
   figcaption {
@@ -123,8 +127,8 @@ article {
   color: $blue
 }
 
-.post-tag-post {
-  color: $green
+.post-tag-blogpost {
+  color: $yellow
 }
 
 .post-tag-paper {

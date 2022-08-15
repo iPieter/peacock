@@ -71,8 +71,29 @@ To extend our RobBERT vocab, we can add all the new tokens. Since we can view bo
 
 But we still need to figure out how to find the merges. We only need the merges that result in a token that is in the difference `New - Old`, since all others should be covered by the original RobBERT (v2) tokenizer. This means we can easily iterate over all merges, perform the merger and check if it is one that we need. 
 
-So that gives us a new vocabulary size of 42750, meaning we added 2750 tokens. The actual difference was a bit larger, but I removed some completely meaningless ascii sequences. If we are performing tokenizer surgery anyways, why not do it right?
+So that gives us a new vocabulary size of 42774, meaning we added 2774 tokens. The actual difference was a bit larger, but I removed some completely meaningless ascii sequences. If we are performing tokenizer surgery anyways, why not do it right?
 
-# The actual training: where do we start?
+For tokens related to corona or other things after 2022, this is obviously a big improvement:
 
-RQs
+```python
+>>>tokenizer_2022("De coronamaatregelen")
+[0, 62, 42162, 2]
+
+>>>tokenizer("De coronamaatregelen")
+[0, 62, 8913, 265, 564, 856, 20959, 2]
+```
+
+
+# The actual training
+To train our model, we have a few options that affect our performance and more importantly, total training cost. First, we could train the model from scratch like we did when transitioning from RobBERT v1 to RobBERT v2. Second, we could continue pre-training. Third, and perhaps the most out-of-the-box method would be to distill our RobBERT v2 model to a smaller "RobBERT(je?) 2022" model, which would be challenging with the different tokenizers.
+
+The reason that I spend all the effort extending our vocabulary, is because we can also size up our embeddings matrix in RobBERT, without losing the existing embeddings. This means that we can use the 40k embeddings we already have and just have to train for those 2774 new tokens. Ideally, this would also make the embeddings somewhat compatible, but that is speculation. 
+
+The hyperparameters are pretty standard. The MLM probabilities are 10% replacing with a `<mask>` token and 10% with another token. We use gradient accumulation over 128 batches for an effective batch size of 2048 with 2 3080 Ti's. 
+
+The model is now training, so fingers crossed that it is actually an improvement...
+
+# What's next?
+Hopefully this model will perform pretty well tasks with more current language usage and by training on enough data, it hopefully won't suffer from catastrophic forgetting. 
+
+If this is the case, you might see a paper appearing. Otherwise, I guess RobBERT 2022 stops with this blogpost.. 🤷‍♂️

@@ -31,6 +31,21 @@ In conclusion, knowledge distillation is an interesting method to create smaller
 Because all the predicted probabilities are used a training signal for the student, this sets the stage to introduce fairness constraints as an alternative to CDA.
 
 # Fairness constraints
+The predictions of the teacher model can be used to train a smaller model where we also introduce some fairness constraints.
+These constraints can in theory be anything; although our implementation only supports single-token substitutions.
+There are some lists of substitutions we could use, such as [AugLy](https://github.com/facebookresearch/AugLy), but we focused on pronouns for simplicity and because it's a bit tricky to measure bias with the same lists of professions that we use to mitigate those biases.
 
-# What now?
-djqwdqodqwd
+<div class="row">
+        <figure>
+    <div class="col-md-8 col-sm-12 col-12 mx-auto"> 
+        <img src="fair-distillation.png" width="100%" alt="Illustration of our FairDistillation method."/>
+        </div>
+        <div class="col">
+    <figcaption>Illustration of FairDstillation, where the teacher model's MLM predictions are modified and afterwards used as a training signal for a smaller student model.</figcaption>
+    </div>
+        </figure>
+    </div>
+
+We tested this on BERT, an English model, and RobBERT, a Dutch model. Both seem to have less stereotypical predictions and the performance only took a minor hit, but is still on par with the distilled variants without fairness.
+
+So this is a promising method to create fairer language models, although the reliance on substitution rules still makes it a bit brittle, but that's future work.

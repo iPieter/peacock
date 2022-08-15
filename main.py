@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from ast import arguments
 import sys, argparse, logging
 import time
 import pystache
@@ -150,7 +151,9 @@ def build_post(path, post, destination_file, config_data):
         logging.debug("Rendering markdown file for this post.")
         with open(os.path.join(post["path"], "index.md"), mode="r") as f:
             doc = pandoc.Document()
-            doc.markdown_github = f.read().encode("utf-8")
+            doc.add_argument("katex")
+            doc.add_argument("highlight-style=pygments")
+            doc.gfm = f.read().encode("utf-8")
             post_config["text"] = doc.html.decode()
             post_config["html"] = ""
     elif "index.html" in post["files"]:
