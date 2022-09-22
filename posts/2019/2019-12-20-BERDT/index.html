@@ -1852,11 +1852,13 @@
 
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script>
-  var app = new Vue({
-    el: "#app",
-    data: {
+  
+
+  Vue.createApp({
+    data() {
+      return {
       library: "transformers"
-    },
+    }},
     methods: {
       fallbackCopyTextToClipboard(text) {
         var textArea = document.createElement("textarea");
@@ -1891,5 +1893,5 @@
         );
       }
     }
-  });
+  }).mount('#app');
 </script>

@@ -1,9 +1,15 @@
 [
   {
+    "title": "I'm at ECML-PKDD '22 with two papers!",
+    "type": "talk",
+    "date": "19/09/2022"
+  },
+  {
     "title": "Our paper on <a href='fairdistillation/'>mitigating biases in language models</a> got accepted at ECML-PKDD '22 <a href='https://youtu.be/Q5Sw4RTu84s'><i class='fab fa-youtube'></i></a>.",
     "type": "talk",
     "date": "15/08/2022"
-  },  {
+  },  
+  {
     "title": "I presented <a href='measuring-fairness-with-biased-rulers/'>Our survey of intrinsic fairness measures</a> at NAACL '22.",
     "type": "talk",
     "date": "11/07/2022"
