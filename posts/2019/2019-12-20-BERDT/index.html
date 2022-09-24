@@ -4100,7 +4100,75 @@
             <code>&lt;sep&gt;</code> token and making the model predict which of
             the two sentences is correct.
           </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row mt-4"
+      style="background: linear-gradient(45deg, #e3ffe7cc 0%, #d9e7ffcc 100%)"
+    >
+      <div class="container">
+        <div class="col-lg-8 col-md-10 mx-auto mt-5 ml-0">
+          <h2>Demo on disambiguating 'die' and 'dat'</h2>
+          <p>
+            With our language model, you can easily disambiguate between 'die'
+            and 'dat' in Dutch. Just enter a sentence in Dutch, and our model
+            will automatically identify which word should be used.
+          </p>
+          <div class="input-group mb-3">
+            <input
+              v-model="text"
+              class="form-control demo font-weight-normal"
+            />
+            <div class="input-group-append">
+              <button
+                v-on:click="getDisambiguation()"
+                type="button"
+                class="btn btn-primary"
+              >
+                Analyse
+              </button>
+            </div>
+          </div>
 
+          <div class="demo font-weight-normal" style="height: 80px">
+            <div v-if="sentence.length > 0">
+              <div v-for="item in sentence" class="d-inline-block mr-1">
+                <span
+                  v-if="'interpretation' in item && item.interpretation == 'incorrect'"
+                >
+                  <span class="mr-1" style="text-decoration: line-through">
+                    {{ item.input }}</span
+                  >
+                  <span class="badge badge-success" style="font-size: 100%">
+                    {{ item.predicted }}
+                  </span>
+                </span>
+                <span
+                  v-else-if="'interpretation' in item && item.interpretation == 'correct'"
+                  class="badge badge-success"
+                  style="font-size: 100%"
+                >
+                  {{ item.input }}
+                </span>
+                <span v-else> {{ item.part }} </span>
+              </div>
+            </div>
+            <div v-else-if="submitted">
+              <div class="d-flex justify-content-center">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto mt-5">
           <h2 class="mt-4">High-level sentiment analysis</h2>
           <p>
             we compare its performance with other BERT-models and
@@ -4122,37 +4190,6 @@
             to this part containing concluding remarks summarizing the overall
             sentiment.
           </p>
-        </div>
-      </div>
-    </div>
-    <div
-      class="row mt-4"
-      style="background: linear-gradient(45deg, #e3ffe7cc 0%, #d9e7ffcc 100%)"
-    >
-      <div class="container">
-        <div class="col-lg-8 col-md-10 mx-auto mt-5 ml-0">
-          <h2>Demo on disambiguating 'die' and 'dat'</h2>
-            <p>...</p>
-        </div>
-        <input v-model="text" />
-        <button v-on:click="getDisambiguation()">Analyse</button>
-          <div v-if="sentence.length > 0">
-            <div v-for="item in sentence" class="d-inline-block mr-1">
-            <span v-if="'interpretation' in item && item.interpretation == 'incorrect'" style="color:red"> 
-              <span style="text-decoration: line-through"> {{ item.input }}</span> 
-              <span style="color:green">
-                {{ item.predicted }}
-              </span>
-              </span>
-            <span v-else-if="'interpretation' in item && item.interpretation == 'correct'" style="color:green"> {{ item.input }} </span>
-            <span v-else> {{ item.part }} </span>
-            </div>
-          </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto mt-5">
           <h1 id="name">Finally, a note on the name and the logo</h1>
           <p>
             We named our model RobBERT, or to be more precise: our model named
@@ -4180,20 +4217,22 @@
       return {
         library: "transformers",
         text: "Dat demo werkt goed.",
-        sentence: []
+        sentence: [],
+        submitted: false,
       };
     },
     methods: {
       getDisambiguation() {
         let _this = this;
+        this.submitted = true;
 
         fetch("https://api.pieter.ai/disambiguation/mlm/all", {
           method: "POST",
           headers: {
             Accept: "application/json",
-            'Content-Type': 'application/x-www-form-urlencoded'
+            "Content-Type": "application/x-www-form-urlencoded",
           },
-          body: "sentence="+this.text,
+          body: "sentence=" + this.text,
         })
           .then(
             function (response) {
@@ -4207,7 +4246,7 @@
           .then(
             function (data) {
               this.sentence.splice(0, this.sentence.length);
-              console.log(data);
+              this.submitted = false;
               data.forEach(function (x) {
                 _this.sentence.push(x);
               });

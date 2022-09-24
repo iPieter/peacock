@@ -135,6 +135,10 @@ article {
   color: $orange
 }
 
+.demo {
+  @include sans-serif-font;
+}
+
 .paper {
   @include sans-serif-font;
   display: block;
