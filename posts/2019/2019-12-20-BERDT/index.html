@@ -4115,7 +4115,7 @@
             and 'dat' in Dutch. Just enter a sentence in Dutch, and our model
             will automatically identify which word should be used.
           </p>
-          <div class="input-group mb-3">
+          <div class="input-group">
             <input
               v-model="text"
               class="form-control demo font-weight-normal"
@@ -4130,18 +4130,20 @@
               </button>
             </div>
           </div>
+          <div class="demo mt-1 mb-3 font-weight-normal" style="font-size: 70%">
+            Or try an example: <a href="#" class="link text-primary" v-on:click.prevent="getDisambiguationOne()">Dat is mijn fout, maar dat fout kan ik niet meer aanpassen.</a>
+          </div>
 
-          <div class="demo font-weight-normal" style="height: 80px">
+          <div class="demo font-weight-normal" style="min-height: 70px">
             <div v-if="sentence.length > 0">
               <div v-for="item in sentence" class="d-inline-block mr-1">
                 <span
                   v-if="'interpretation' in item && item.interpretation == 'incorrect'"
                 >
-                  <span class="mr-1" style="text-decoration: line-through">
-                    {{ item.input }}</span
-                  >
-                  <span class="badge badge-success" style="font-size: 100%">
-                    {{ item.predicted }}
+                  <span class="badge badge-danger" style="font-size: 100%">
+                    <span class="mr-1" style="text-decoration: line-through">
+                      {{ item.input }}</span
+                    >{{ item.predicted }}
                   </span>
                 </span>
                 <span
@@ -4222,6 +4224,10 @@
       };
     },
     methods: {
+      getDisambiguationOne() {
+        this.text = "Dat is mijn fout, maar dat fout kan ik niet meer aanpassen.";
+        this.getDisambiguation();
+      },
       getDisambiguation() {
         let _this = this;
         this.submitted = true;
