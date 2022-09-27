@@ -1,6 +1,11 @@
 [
   {
-    "title": "I'm at ECML-PKDD '22 with two papers!",
+    "title": "I will talk about RobBERT at the <a href='https://www.meetup.com/nl-NL/data-science-leuven/events/288482920/'>Data Science Meetup in Leuven</a>.",
+    "type": "talk",
+    "date": "26/09/2022"
+  },
+    {
+    "title": "I'm at ECML-PKDD '22 with two papers 🥳",
     "type": "talk",
     "date": "19/09/2022"
   },

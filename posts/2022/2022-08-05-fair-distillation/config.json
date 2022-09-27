@@ -9,7 +9,7 @@
     "img": "fair-distillation.png",
     "author": "Pieter Delobelle",
     "date": "2022-08-16",
-    "background": "url('/resources/web-tile.png')",
+    "background": "linear-gradient(135deg, rgba(255, 248, 244, 1), rgba(245, 245, 245, 1), rgba(245, 252, 255, 1))",
     "pdf": "https://arxiv.org/pdf/2207.04546.pdf",
     "bibtex": "",
     "absoluteresource": "",
