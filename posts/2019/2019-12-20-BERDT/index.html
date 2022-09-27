@@ -2679,15 +2679,15 @@
           </p>
           <p>
             <span class="math display"
-              >P(\text{``giraf&quot;} \mid \text{``ik zie een &lt;mask&gt; in
-              mijn tuin.&quot;})&lt;0.0001</span
+              >$$P(\text{``giraf&quot;} \mid \text{``ik zie een &lt;mask&gt; in
+              mijn tuin.&quot;})&lt;0.0001$$</span
             >
           </p>
           <p>Or a more probable:</p>
           <p>
             <span class="math display"
-              >P(\text{``boom&quot;} \mid \text{ik zie een &lt;mask&gt; in mijn
-              tuin.&quot;})=0.1498</span
+              >$$P(\text{``boom&quot;} \mid \text{ik zie een &lt;mask&gt; in
+              mijn tuin.&quot;})=0.1498$$</span
             >
           </p>
 
@@ -2720,15 +2720,15 @@
             So that’s the encoder side. For some language tasks, it is enough
             (NER, POS tagging, etc.). But for others, like translation, we need
             the decoder as well. Translation could thus be formulated as a task
-            <span class="math inline">P(A) P(B\mid A)</span> with a decoder that
-            depends on the outputs of the encoder or language model.
+            <span class="math inline">$P(A) P(B\mid A)$</span> with a decoder
+            that depends on the outputs of the encoder or language model.
             Practically, this looks a bit like this:
           </p>
           <p>
             <span class="math display"
-              >P(\text{``Ik zie een giraf in mijn tuin&quot;})\newline \cdot
+              >$$P(\text{``Ik zie een giraf in mijn tuin&quot;})\newline \cdot
               P(\text{``I see a giraffe in my garden&quot;}\mid \text{``Ik zie
-              een giraf in mijn tuin&quot;})</span
+              een giraf in mijn tuin&quot;})$$</span
             >
           </p>
 
@@ -2742,14 +2742,14 @@
           </p>
           <p>
             <span class="math display"
-              >P(\text{``I see a giraffe&quot;}|\text{``I see
-              a&quot;})=0.01</span
+              >$$P(\text{``I see a giraffe&quot;}|\text{``I see
+              a&quot;})=0.01$$</span
             >
           </p>
           <p>
             <span class="math display"
-              >P(\text{``I see a giraffe in&quot;}|\text{``I see a
-              giraffe&quot;})=0.6</span
+              >$$P(\text{``I see a giraffe in&quot;}|\text{``I see a
+              giraffe&quot;})=0.6$$</span
             >
           </p>
           <p>
@@ -2809,8 +2809,8 @@
           </p>
           <p>
             <span class="math display"
-              >\text{Attention}(Q, K, V) =
-              \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V</span
+              >$$\text{Attention}(Q, K, V) =
+              \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$</span
             >
           </p>
           <p>
@@ -4109,11 +4109,17 @@
     >
       <div class="container">
         <div class="col-lg-8 col-md-10 mx-auto mt-5 ml-0">
-          <h2>Demo on disambiguating 'die' and 'dat'</h2>
+          <h2 id="demo">Demo on disambiguating 'die' and 'dat'</h2>
           <p>
             With our language model, you can easily disambiguate between 'die'
             and 'dat' in Dutch. Just enter a sentence in Dutch, and our model
             will automatically identify which word should be used.
+          </p>
+          <p>
+            We use a distilled model for this demo, since it is cheaper to
+            deploy and still has pretty good performance. The model is not
+            finetuned, but a zero-shot model, meaning we never had to train it
+            explicitly on this task. The model also takes casing into account.
           </p>
           <div class="input-group">
             <input
@@ -4131,7 +4137,13 @@
             </div>
           </div>
           <div class="demo mt-1 mb-3 font-weight-normal" style="font-size: 70%">
-            Or try an example: <a href="#" class="link text-primary" v-on:click.prevent="getDisambiguationOne()">Dat is mijn fout, maar dat fout kan ik niet meer aanpassen.</a>
+            Or try an example:
+            <a
+              href="#"
+              class="link text-primary"
+              v-on:click.prevent="getDisambiguationOne()"
+              >Dat is mijn fout, maar dat fout kan ik niet meer aanpassen.</a
+            >
           </div>
 
           <div class="demo font-weight-normal" style="min-height: 70px">
@@ -4225,7 +4237,8 @@
     },
     methods: {
       getDisambiguationOne() {
-        this.text = "Dat is mijn fout, maar dat fout kan ik niet meer aanpassen.";
+        this.text =
+          "Dat is mijn fout, maar dat fout kan ik niet meer aanpassen.";
         this.getDisambiguation();
       },
       getDisambiguation() {
