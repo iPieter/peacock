@@ -1,6 +1,11 @@
 [
   {
-    "title": "I will talk about RobBERT at the <a href='https://www.meetup.com/nl-NL/data-science-leuven/events/288482920/'>Data Science Meetup in Leuven</a>.",
+    "title": "I will give <a href='https://people.cs.kuleuven.be/~jesse.davis/dtai2022-23.html'>a seminar</a> about language models and fairness in Leuven.",
+    "type": "talk",
+    "date": "18/10/2022"
+  },
+  {
+    "title": "I gave a talk about RobBERT at the <a href='https://www.meetup.com/nl-NL/data-science-leuven/events/288482920/'>Data Science Meetup in Leuven</a>.",
     "type": "talk",
     "date": "26/09/2022"
   },

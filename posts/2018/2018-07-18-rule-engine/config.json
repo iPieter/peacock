@@ -11,7 +11,7 @@
     "date": "2018-07-17",
     "background": "linear-gradient(to bottom right, rgba(245, 239, 241, 1), rgba(245, 245, 245, 1), rgba(249, 240, 232, 1))",
     "bibtex": "",
-    "code": "https://github.com/iPieter/rule-engine",
+    "code": "https://github.com/iPieter/rule-engine-dart",
     "featured": false,
     "project": true,
     "related_work": []
