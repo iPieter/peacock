@@ -1,0 +1,25 @@
+{
+    "post_title": "Updating RobBERT (part 2)",
+    "abstract": "In this second blogpost on updating RobBERT, I discuss the training and analyse how well the model performs for old benchmarks and new tasks.", 
+    "post_subtitle": "Bringing a language model to 2022",
+    "type": "md",
+    "post_tag": "blogpost",
+    "banner": false,
+    "theme": "dark",
+    "img": "",
+    "author": "Pieter Delobelle",
+    "date": "2022-11-10",
+    "background": "",
+    "pdf": "",
+    "bibtex": "",
+    "absoluteresource": "https://huggingface.co/DTAI-KULeuven/robbert-2022-dutch-base",
+    "draft": false,
+    "code": "",
+    "featured": false,
+    "project": false,
+    "blog": true,
+    "related_work": [],
+    "video": ""
+
+  }
+  

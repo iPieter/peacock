@@ -1,0 +1,25 @@
+{
+    "post_title": "RobBERT-2022",
+    "abstract": "A few things happened since our Dutch language model RobBERT was trained in 2019. In this blogpost, I explore how to update RobBERT efficiently to include these new words and shifting word usages.", 
+    "post_subtitle": "Updating a Dutch Language Model to Account for Evolving Language Use",
+    "type": "md",
+    "post_tag": "paper",
+    "banner": true,
+    "theme": "dark",
+    "img": "logo.png",
+    "author": "Pieter Delobelle",
+    "date": "2022-11-15",
+    "background": "linear-gradient(45deg, #e3ffe7 0%, #d9e7ff 100%)",
+    "pdf": "https://arxiv.org/abs/2211.08192",
+    "bibtex": "",
+    "absoluteresource": "https://huggingface.co/DTAI-KULeuven/robbert-2022-dutch-base",
+    "draft": false,
+    "code": "https://github.com/iPieter/robbert",
+    "featured": true,
+    "project": false,
+    "blog": false,
+    "related_work": [],
+    "video": ""
+
+  }
+  

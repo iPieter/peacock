@@ -40,9 +40,9 @@ def find_index_posts(path, drafts=False):
                     # blog posts have a separate url scheme
                     if "blog" in post_data and post_data["blog"]:
                         year = datetime.datetime.strptime(post_data["date"], "%Y-%m-%d").strftime("%Y")
-                        post_data["url"] = "blog/" + year + "/" + post_data["post_title"].lower().replace(" ", "-")
+                        post_data["url"] = "blog/" + year + "/" + post_data["post_title"].lower().replace(" ", "-").replace("(", "").replace(")", "")
                     else:
-                        post_data["url"] = post_data["post_title"].lower().replace(" ", "-")
+                        post_data["url"] = post_data["post_title"].lower().replace(" ", "-").replace("(", "").replace(")", "")
                             
                     logging.debug("Added post: {}".format(post_data["post_title"]))
 
