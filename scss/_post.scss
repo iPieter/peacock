@@ -77,6 +77,14 @@ table {
   }
 }
 
+.smallnote {
+  color: $gray-300;
+  font-size: 16px;
+  display: block;
+  line-height: 1.6;
+  //margin-top: 6px;
+}
+
 article {
   p {
     font-weight: 500;
@@ -96,7 +104,6 @@ article {
   figcaption {
     color: $gray-600;
     font-size: 14px;
-    font-size: bold;
     margin-top: 6px;
   }
 

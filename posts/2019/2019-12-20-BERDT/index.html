@@ -143,7 +143,7 @@
             For some downstream tasks, we also have models in either or both
             formats.
           </p>
-          <div class="d-flex justify-content-center">
+          <div class="d-flex justify-content-center mt-5">
             <button
               class="btn btn-outline-light mx-3"
               href="#"
@@ -182,66 +182,82 @@
               provide.
             </p>
             <div class="table-responsive">
-              <table class="table mt-3">
+              <table class="table mt-3" style="font-size: 0.9em;">
                 <thead>
                   <tr>
+                    <th></th>
                     <th>Model</th>
-                    <th>Task</th>
-                    <th>Accuracy (%)</th>
+                    <th>Parameters</th>
+                    <th>Year</th>
+                    <th>Corpus</th>
+                    <th>Huggingface id</th>
                   </tr>
                 </thead>
-
-                <tr>
-                  <td>
-                    <span class="badge badge-primary">Latest release</span>
-                    <span class="text-monospace"
-                      >pdelobelle/robbert-v2-dutch-base</span
-                    >
-                    <button
-                      type="button"
-                      class="btn btn-outline-light"
-                      v-on:click="copyTextToClipboard('pdelobelle/robbert-v2-dutch-base')"
-                    >
-                      <i class="fas fa-copy"></i> Copy
-                    </button>
-                  </td>
-                  <td>LM</td>
-                  <td>—</td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <span class="text-monospace">pdelobelle/robBERT-base</span>
-                    <button
-                      type="button"
-                      class="btn btn-outline-light"
-                      v-on:click="copyTextToClipboard('pdelobelle/robBERT-base')"
-                    >
-                      <i class="fas fa-copy"></i> Copy
-                    </button>
-                  </td>
-                  <td>LM</td>
-                  <td>—</td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <span class="text-monospace"
-                      >pdelobelle/robBERT-dutch-books</span
-                    >
-                    <button
-                      type="button"
-                      class="btn btn-outline-light"
-                      v-on:click="copyTextToClipboard('pdelobelle/robBERT-dutch-books')"
-                    >
-                      <i class="fas fa-copy"></i> Copy
-                    </button>
-                  </td>
-                  <td>DBRD</td>
-                  <td>94.4%</td>
-                </tr>
-              </table>
-            </div>
+                <tbody>
+                  <tr>
+                    <td><img src="logo-robbert-2022.png" alt="logo of RobBERT-2022" width="37" height="50"></td>
+                    <td><b>RobBERT-2022</b><br>
+                      <span class="smallnote">RobBERT-2022 is the newest release of our RobBERT model. Since the original release in January 2020, some things happened and our language evolved. To account for this, we release a new Dutch BERT model trained on data from 2022.</span></td>
+                    <td>119 M</td>
+                    <td>2022</td>
+                    <td>77 GB</td>
+                    <td><a href="https://huggingface.co/DTAI-KULeuven/robbert-2022-dutch-base" target="_blank" rel="noopener noreferrer">DTAI-KULeuven/ robbert-2022-dutch-base</a></td>
+                  </tr>
+                  <tr>
+                    <td><img src="logo-robbertje.png" alt="logo of RobBERTje" width="37" height="50"></td>
+                    <td><b>RobBERTje Non-shuffled</b><br>
+                      <span class="smallnote">Smaller, distilled RobBERT model trained on the non-shuffled variant of the oscar corpus, without any operations to preserve this order during training and distillation.</span> </td>
+                    <td>74 M</td>
+                    <td>2019</td>
+                    <td>1 GB</td>
+                    <td><a href="https://huggingface.co/DTAI-KULeuven/robbertje-1-gb-non-shuffled">DTAI-KULeuven/ robbertje-1-gb-non-shuffled</a></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><b>RobBERTje Shuffled</b><br>
+                      <span class="smallnote">Smaller, distilled RobBERT model trained on the publicly available and shuffled OSCAR corpus.</span></td>
+                    <td>74 M</td>
+                    <td>2019</td>
+                    <td>1 GB</td>
+                    <td><a href="https://huggingface.co/DTAI-KULeuven/robbertje-1-gb-shuffled">DTAI-KULeuven/ robbertje-1-gb-shuffled</a></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><b>RobBERTje Merged (p=0.5)</b><br>
+                      <span class="smallnote">Same as the non-shuffled variant, but sequential sentences of the same document are merged with a probability of 50%.</span></td>
+                    <td>74 M</td>
+                    <td>2019</td>
+                    <td>1 GB</td>
+                    <td><a href="https://huggingface.co/DTAI-KULeuven/robbertje-1-gb-merged">DTAI-KULeuven/ robbertje-1-gb-merged</a></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><b>RobBERTje BORT</b><br>
+                      <span class="smallnote">A smaller version with 8 attention heads instead of 12 and 4 layers instead of 6 (and 12 for RobBERT).</span></td>
+                    <td>46 M</td>
+                    <td>2019</td>
+                    <td>1 GB</td>
+                    <td><a href="https://huggingface.co/DTAI-KULeuven/robbertje-1-gb-bort">DTAI-KULeuven/ robbertje-1-gb-bort</a></td>
+                  </tr>
+                  <tr>
+                    <td><img src="logo.png" alt="logo of RobBERT" width="37" height="50"></td>
+                    <td><b>RobBERT v2</b><br>
+                      <span class="smallnote">RobBERT is the state-of-the-art Dutch BERT model. It is a large pre-trained general Dutch language model that can be fine-tuned on a given dataset to perform any text classification, regression or token-tagging task.</span></td>
+                    <td>116 M</td>
+                    <td>2019</td>
+                    <td>39 GB</td>
+                    <td><a href="https://huggingface.co/pdelobelle/robbert-v2-dutch-base" target="_blank" rel="noopener noreferrer">pdelobelle/ robbert-v2-dutch-base</a></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><b>RobBERT</b></td>
+                    <td></td>
+                    <td>2019</td>
+                    <td>39 GB</td>
+                    <td><a href="https://huggingface.co/pdelobelle/robBERT-base" target="_blank" rel="noopener noreferrer">pdelobelle/ robBERT-base</a></td>
+                  </tr>
+                </tbody>
+                  </table></div>
           </div>
 
           <div v-else-if="library=='fairseq'">

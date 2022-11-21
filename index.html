@@ -164,7 +164,11 @@
                 role="button"
                 ><i class="fas fa-project-diagram"></i>Resource
               </a>
-              {{/resource}} {{#draft}}
+              {{/resource}} {{#absoluteresource}}
+              <a class="btn btn-link" href="{{absoluteresource}}" role="button"
+                >🤗 Models</a
+              >
+              {{/absoluteresource}} {{#draft}}
               <a class="btn btn-outline-warning" href="#" role="button"
                 >Draft
               </a>
