@@ -1,9 +1,20 @@
 [
   {
+    "title": "I will talk about language models for <a href='https://sites.google.com/view/ai4hr-pe/homepage'>HR and PES in Ghent</a>.",
+    "type": "talk",
+    "date": "11/01/2023"
+  },
+  {
+    "title": "Our paper on <a href='fairdistillation/'>biases in language mdoels</a> got accepted at EACL '23.",
+    "type": "talk",
+    "date": "15/08/2022"
+  }, 
+  {
     "title": "We released <a href='/robbert-2022/'>RobBERT-2022</a>, an up-to-date Dutch BERT model.",
     "type": "talk",
     "date": "15/11/2022"
-  },  {
+  }, 
+  {
     "title": "I gave <a href='https://people.cs.kuleuven.be/~jesse.davis/dtai2022-23.html'>a seminar</a> about language models and fairness in Leuven.",
     "type": "talk",
     "date": "18/10/2022"

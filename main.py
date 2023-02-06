@@ -240,6 +240,14 @@ def build_site(config_data, path, output_path, drafts=False):
             os.path.join(output_path, page["url"]),
             config_data,
         )
+
+    # seperately run build_file for 404 page, we do not want to list it
+    build_file(
+            os.path.join(path, "404.html"),
+            os.path.join(output_path, "404.html"),
+            config_data,
+        )
+    
     for page in posts:
         # os.mkdir(os.path.join(output_path, page["url"]))
         logging.debug(
