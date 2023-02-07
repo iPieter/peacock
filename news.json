@@ -2,12 +2,12 @@
   {
     "title": "I will talk about language models for <a href='https://sites.google.com/view/ai4hr-pe/homepage'>HR and PES in Ghent</a>.",
     "type": "talk",
-    "date": "11/01/2023"
+    "date": "10/02/2023"
   },
   {
-    "title": "Our paper on <a href='fairdistillation/'>biases in language mdoels</a> got accepted at EACL '23.",
+    "title": "Our paper on <a href='how-far-can-it-go/'>biases in language mdoels</a> got accepted at EACL '23.",
     "type": "talk",
-    "date": "15/08/2022"
+    "date": "20/01/2023"
   }, 
   {
     "title": "We released <a href='/robbert-2022/'>RobBERT-2022</a>, an up-to-date Dutch BERT model.",

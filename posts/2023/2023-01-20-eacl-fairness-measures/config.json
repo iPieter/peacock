@@ -1,0 +1,25 @@
+{
+    "post_title": "How far can it go?",
+    "post_subtitle": "On Intrinsic Gender Bias Mitigation for Text Classification",
+    "abstract": "We have designed a probe to investigate the effects of intrinsic gender bias mitigation strategies on downstream text classification tasks. We find that instead of resolving gender bias, these strategies are able to hide it while retaining significant gender information in the embeddings. Based on these findings, we recommend that intrinsic bias mitigation techniques should be combined with other fairness interventions for downstream tasks.",
+    "type": "md",
+    "post_tag": "paper",
+    "banner": true,
+    "theme": "dark",
+    "img": "biases-intrinsic.png",
+    "author": "Ewoenam Tokpo, Pieter Delobelle, Bettina Berendt, Toon Calders",
+    "date": "2023-02-07",
+    "background": "linear-gradient(135deg, rgba(255, 248, 244, 1), rgba(245, 245, 245, 1), rgba(245, 252, 255, 1))",
+    "pdf": "https://arxiv.org/abs/2301.12855",
+    "bibtex": "",
+    "absoluteresource": "",
+    "draft": false,
+    "code": "",
+    "featured": true,
+    "project": false,
+    "blog": false,
+    "related_work": [],
+    "video": ""
+
+  }
+  
