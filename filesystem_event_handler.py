@@ -9,9 +9,9 @@ class FilesystemEventHandler(FileSystemEventHandler):
 
     def __init__(self, base_path:str, callback: typing.Callable = None, args=None, loglevel=None ):
         if os.path.exists(".gitignore"):
-            self.ignored_paths = ['build']
+            self.ignored_paths = [os.path.join(base_path, 'build')]
             with open(os.path.join(base_path, ".gitignore")) as fp:
-                self.ignored_paths.extend([x for x in fp.read().splitlines()])
+                self.ignored_paths.extend([os.path.join(base_path, x) for x in fp.read().splitlines()])
 
             print(self.ignored_paths)
 
