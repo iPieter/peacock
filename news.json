@@ -1,17 +1,44 @@
 [
   {
-    "title": "I will talk about language models for <a href='https://sites.google.com/view/ai4hr-pe/homepage'>HR and PES in Ghent</a>.",
+    "title": "I was interviewed for the Flemish newspaper 'De Morgen'.",
+    "type": "press",
+    "date": "31/03/2023",
+    "outlet_image": "de-morgen.png",
+    "outlet": "De Morgen",
+    "link": "https://www.demorgen.be/tech-wetenschap/nieuwe-tool-midjourney-maakt-in-een-mum-van-tijd-prachtige-beelden-bedreigt-ai-de-jobs-van-illustratoren~b910476f/",
+    "outlet_title": "Nieuwe tool Midjourney maakt in een mum van tijd prachtige beelden: bedreigt AI de jobs van illustratoren?"
+  },
+  {
+    "title": "RobBERT was mentioned in the Dutch newspaper 'NRC'.",
+    "type": "press",
+    "date": "23/10/2020",
+    "outlet_image": "nrc.png",
+    "outlet": "NRC",
+    "link": "https://www.nrc.nl/nieuws/2020/10/23/de-nieuwste-ai-robot-is-onbetrouwbaar-gammel-en-bewonderenswaardig-a4017171",
+    "outlet_title": "De nieuwste AI-robot is onbetrouwbaar, gammel én bewonderenswaardig"
+  },
+  {
+    "title": "RobBERT was mentioned in Synced Review'.",
+    "type": "press",
+    "date": "23/01/2020",
+    "outlet_image": "synced-review.png",
+    "outlet": "Synced Review",
+    "link": "https://syncedreview.com/2020/01/23/hallo-hallo-ku-leuven-tu-berlin-introduce-robbert-a-sota-dutch-bert/",
+    "outlet_title": "Hallo! Hallo! KU Leuven & TU Berlin Introduce ‘RobBERT,’ a SOTA Dutch BERT"
+  },
+  {
+    "title": "I talked about language models for <a href='https://sites.google.com/view/ai4hr-pe/homepage'>HR and PES in Ghent</a>.",
     "type": "talk",
     "date": "10/02/2023"
   },
   {
-    "title": "Our paper on <a href='how-far-can-it-go/'>biases in language mdoels</a> got accepted at EACL '23.",
-    "type": "talk",
+    "title": "Our paper on <a href='how-far-can-it-go/'>biases in language models</a> got accepted at EACL '23.",
+    "type": "news",
     "date": "20/01/2023"
   }, 
   {
     "title": "We released <a href='/robbert-2022/'>RobBERT-2022</a>, an up-to-date Dutch BERT model.",
-    "type": "talk",
+    "type": "news",
     "date": "15/11/2022"
   }, 
   {
@@ -26,22 +53,22 @@
   },
     {
     "title": "I'm at ECML-PKDD '22 with two papers 🥳",
-    "type": "talk",
+    "type": "news",
     "date": "19/09/2022"
   },
   {
     "title": "Our paper on <a href='fairdistillation/'>mitigating biases in language models</a> got accepted at ECML-PKDD '22 <a href='https://youtu.be/Q5Sw4RTu84s'><i class='fab fa-youtube'></i></a>.",
-    "type": "talk",
+    "type": "news",
     "date": "15/08/2022"
   },  
   {
     "title": "I presented <a href='measuring-fairness-with-biased-rulers/'>our survey of intrinsic fairness measures</a> at NAACL '22.",
-    "type": "talk",
+    "type": "news",
     "date": "11/07/2022"
   },
   {
     "title": "<a href='https://dl.acm.org/doi/10.1145/3531146.3534631'>Our paper on PES systems</a> won the best student paper award at FAccT!",
-    "type": "talk",
+    "type": "news",
     "date": "20/06/2022"
   },
   {
@@ -51,17 +78,17 @@
   },
   {
     "title": "<a href='measuring-fairness-with-biased-rulers/'>Our survey of intrinsic fairness measures</a> got accepted at NAACL 2022.",
-    "type": "paper",
+    "type": "news",
     "date": "07/04/2022"
   },  
   {
     "title": "Our paper on the role of stakeholders in public employment services got accepted at FAccT22.",
-    "type": "paper",
+    "type": "news",
     "date": "07/04/2022"
   },
   {
     "title": "I was at a <a href='https://www.lorentzcenter.nl/fairness-in-algorithmic-decision-makinga-domain-specific-approach.html'>Lorentz Center workshop</a> on algorithmic fairness.",
-    "type": "workshop",
+    "type": "news",
     "date": "20/03/2022"
   },
   {
@@ -76,7 +103,7 @@
   },
   {
     "title": "We released our paper on <a href='/attitudes-towards-covid-19-measures/'> attitudes towards corona measures</a>.",
-    "type": "paper",
+    "type": "news",
     "date": "21/04/2021"
   },
   {
@@ -86,7 +113,7 @@
   },
   {
     "title": "We released the <a href='https://github.com/iPieter/what-the-mask-android'>Android version</a> of 'What the mask'.",
-    "type": "release",
+    "type": "news",
     "date": "17/02/2021"
   },
   {

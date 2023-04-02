@@ -181,6 +181,17 @@ def process_news(data):
         if datetime.datetime.strptime(item["date"], "%B %d, %Y") > today - d
     ]
 
+    data["talks"] = [
+        item
+        for item in data["news"]
+        if item["type"] == "talk"
+    ]
+
+    data["press"] = [
+        item
+        for item in data["news"]
+        if item["type"] == "press"
+    ]
 
 def generate_feeds(config_data, output_path, drafts=False):
     fg = FeedGenerator()

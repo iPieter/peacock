@@ -47,7 +47,7 @@
             <div class="site-heading">
               <h1>Appearances</h1>
               <span class="subheading"
-                >This is an overview of all the talks I gave, both publicly or for a private audience.</span
+                >This is an overview of all the talks I gave, both publicly or for a private audience. News outlets also occasionally interview me, those press mentions are also listed here.</span
               >
             </div>
           </div>
@@ -59,11 +59,38 @@
     <div class="container" id="resume">
       <div class="row news">
         <div class="col-lg-8 col-md-10 mx-auto mb-4">
-          {{#news}}
+          <h2>Talks</h2>
+          {{#talks}}
           <span class="d-block">
             <span class="text-muted mr-1 font-italic">{{date}}</span> {{{title}}}
           </span> 
-          {{/news}}
+          {{/talks}}
+        </div>
+      </div>
+
+      <div class="row ">
+        <div class="col-lg-8 col-md-10 mx-auto mb-4">
+        <h2>Press mentions</h2>
+      </div>
+      </div>
+
+      <div class="row ">
+        <div class="col-lg-8 col-md-10 mx-auto mb-4">
+          {{#press}}
+          <div class="media mb-2">
+
+          <div class="media-left d-inline-block">
+            <a href="{{link}}" class="d-inline-block underline">
+              <img class="media-object mr-3" height="64" src="/resources/news/{{outlet_image}}" alt="Logo of {{outlet}}.">
+            </a>
+          </div>
+          <div class="media-body d-inline-block">
+            <span class="media-heading d-block"><span class="text-muted mr-1 font-italic">{{date}}</span> <b>{{{outlet}}}</b></span>
+            
+            <a href="{{link}}">{{outlet_title}}</a>
+          </div>
+        </div> 
+        {{/press}}
         </div>
       </div>
     </div>
