@@ -107,7 +107,7 @@ def find_index_posts(path, drafts=False):
                                     }
                                 )
 
-                    print(bib_files)
+                    #print(bib_files)
                     post_data["papers"] = bib_files
                     blog_posts.append(post_data)
                 post_data = {}
