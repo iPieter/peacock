@@ -3,7 +3,7 @@ Our [`biased-rulers` Python package](https://github.com/iPieter/biased-rulers) d
 There are two implementations of DisCo, the original metric as proposed by [Webster et al. (2021)](https://arxiv.org/pdf/2010.06032.pdf) and a simpler implementation by [Lauscher et al. (2021)](https://arxiv.org/pdf/2109.03646.pdf). I'll talk more about the differences later on, but the gist is that the statistical $\mathcal{X}^2$ test got replaced by two set operations. This simplifies the metric quite a lot and also avoids some issues with $\mathcal{X}^2$ tests for small samples.
 
 So before we dive into this metric, I want to highlight that although I would have made some choices differently, I still think that DisCo is a very cool metric, hence me spending all time on it. 
-This blog post is also slightly different from what I usually post on my website, but I think it can serve as a nice complementary resource that does a deep-dive into one metric, as opposed to our more general survey. And I don't have to polish a paper 😉
+This blog post is also slightly different from what I usually post on my website, but I think it can serve as a nice complementary resource that does a deep-dive into one metric, as opposed to our more general survey. And I don't have to polish it as much 😉
 
 So let's get started. First stop: which words do we use?
 
@@ -27,10 +27,12 @@ The original DisCo had two sources for lists of words that were gendered:
 
 Both datasets make sense to me, but testing aligned nouns (like the first list), does have the benefit that the differences between distributions can be more easily attributed to gender. But this remains a bit of a leap, since we don't really perform interventions to establish a causal link. Some idea for future work perhaps?
 
-# The original DisCo
+# The original DisCo metric
 The original DisCo implementation uses $\mathcal{X}^2$ tests to conclude if predictions are different. But what should be different? I have to admit that I initially completely misunderstood what was tested here, so this section will be that train of thought while I was implementing the metric.
 
 Let's back up a bit first. 
+
+The $\mathcal{X}^2$ test is used to 
 
 
 # DisCo without statistical tests

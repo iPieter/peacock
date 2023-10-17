@@ -56,36 +56,49 @@
     </header>
 
     <!-- Main Content -->
-    <div class="container" id="resume">
+    <div class="container" id="">
       <div class="row news">
         <div class="col-lg-8 col-md-10 mx-auto mb-4">
           <h2>Talks</h2>
           {{#talks}}
-          <span class="d-block">
-            <span class="text-muted mr-1 font-italic">{{date}}</span> {{{title}}}
-          </span> 
+          <div class="media mb-3">
+
+            <div class="media-left d-inline-block mt-1">
+              <a href="{{link}}" class="d-inline-block underline">
+                <img class="media-object mr-3" width="64" src="/resources/news/{{outlet_image}}" alt="Logo of {{outlet}}.">
+              </a>
+            </div>
+            <div class="media-body d-inline-block">
+              <span class="media-heading d-block"><span class="text-muted mr-1 font-italic">{{date}}</span> <b>{{{outlet}}}</b></span>
+              
+              {{{title}}} {{#pdf}}
+              <a class="btn btn-link mb-1 pl-1" href="{{pdf}}" role="button"
+                ><i class="fas fa-file-pdf"></i> slides
+              </a>
+              {{/pdf}} {{#url}}
+              <a class="btn btn-link" href="{{url}}" role="button"
+                ><i class="fas fa-link"></i> INFO
+              </a>
+              {{/url}} 
+            </div>
+          </div> 
           {{/talks}}
         </div>
       </div>
 
-      <div class="row ">
+      <div class="row news">
         <div class="col-lg-8 col-md-10 mx-auto mb-4">
-        <h2>Press mentions</h2>
-      </div>
-      </div>
-
-      <div class="row ">
-        <div class="col-lg-8 col-md-10 mx-auto mb-4">
+          <h2>Press mentions and interviews</h2>
           {{#press}}
-          <div class="media mb-2">
+          <div class="media mb-3">
 
-          <div class="media-left d-inline-block">
-            <a href="{{link}}" class="d-inline-block underline">
-              <img class="media-object mr-3" height="64" src="/resources/news/{{outlet_image}}" alt="Logo of {{outlet}}.">
-            </a>
-          </div>
+            <div class="media-left d-inline-block mt-1">
+              <a href="{{link}}" class="d-inline-block underline">
+                <img class="media-object mr-3" width="64" src="/resources/news/{{outlet_image}}" alt="Logo of {{outlet}}.">
+              </a>
+            </div>
           <div class="media-body d-inline-block">
-            <span class="media-heading d-block"><span class="text-muted mr-1 font-italic">{{date}}</span> <b>{{{outlet}}}</b></span>
+            <span class="d-block"><span class="text-muted mr-1 font-italic">{{date}}</span> <b>{{{outlet}}}</b></span>
             
             <a href="{{link}}">{{outlet_title}}</a>
           </div>

@@ -1,0 +1,25 @@
+{
+    "post_title": "ResumeTailor",
+    "post_subtitle": "Improving Resume Quality Through Co-Creative Tools",
+    "abstract": "Clear and well-written resumes can help jobseekers find better and better-suited jobs. However, many people struggle with writing their resumes, especially if they just entered the job market. Although many tools have been created to help write resumes, an analysis we conducted showed us that these tools focus mainly on layout and only give very limited content-related support. We present a co-creative resume building tool that provides tailored advice to jobseekers based on a comprehensive computational analysis of 444k resumes and the development of a Dutch language model, ResumeRobBERT, to provide contextual suggestions.",
+    "type": "md",
+    "post_tag": "paper",
+    "banner": true,
+    "theme": "dark",
+    "img": "logo.png",
+    "author": "Pieter Delobelle, Sonja Mei Wang, Bettina Berendt",
+    "date": "2023-06-28",
+    "background": "hsla(204, 28%, 86%, 1)",
+    "pdf": "https://ebooks.iospress.nl/volumearticle/63364",
+    "bibtex": "",
+    "absoluteresource": "",
+    "draft": false,
+    "code": "",
+    "featured": true,
+    "project": false,
+    "blog": false,
+    "related_work": [],
+    "video": ""
+
+  }
+  

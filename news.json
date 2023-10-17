@@ -1,5 +1,50 @@
 [
   {
+    "title": "I was interviewed about my research on fairness and RobBERT for De Groene Amsterdammer.",
+    "type": "press",
+    "date": "07/06/2023",
+    "outlet_image": "groene.png",
+    "outlet": "De Groene Amsterdammer",
+    "link": "https://www.groene.nl/artikel/dat-zijn-toch-gewoon-al-onze-artikelen",
+    "outlet_title": "Onderzoek: De bronnen van ChatGPT: ‘Dat zijn toch gewoon ál onze artikelen?’"
+  }, 
+  {
+    "title": "I got an internship position at Apple's MLR team this summer.",
+    "type": "news",
+    "date": "01/06/2023"
+  },  
+  {
+    "title": "I was interviewed for Scoop Magazine.",
+    "type": "press",
+    "date": "01/05/2023",
+    "outlet_image": "artevelde.png",
+    "outlet": "Scoop Magazine by Artevelde Journalistiek",
+    "link": "https://www.scribd.com/document/632706244/Scoop-23-Online-PDF#page=58",
+    "outlet_title": "AI: artifciële illustratoren?"
+  },  
+  {
+    "title": "I am doing a research visit to Bocconi in Milan.",
+    "type": "news",
+    "date": "01/05/2023"
+  }, 
+  {
+    "title": "Thomas Winters was interviewed in 'Knack' and mentioned RobBERT.",
+    "type": "press",
+    "date": "19/04/2023",
+    "outlet_image": "knack.png",
+    "outlet": "Knack",
+    "link": "https://www.knack.be/nieuws/technologie/ai-expert-ku-leuven-we-moeten-studenten-net-aanmoedigen-om-met-chatgpt-te-experimenteren/",
+    "outlet_title": "AI-expert: 'We moeten studenten aanmoedigen om met ChatGPT te experimenteren'"
+  },  
+  {
+    "title": "Generative AI: Artificial intelligence as a creative partner.",
+    "type": "talk",
+    "date": "24/04/2023",
+    "outlet_image": "thomas-more-antwerpen.png",
+    "outlet": "BAS, Thomas More Antwerpen",
+    "pdf": "resources/slides/prompt-engineering-2023-04-24.pdf"
+  },
+  {
     "title": "I was interviewed for the Flemish newspaper 'De Morgen'.",
     "type": "press",
     "date": "31/03/2023",
@@ -29,7 +74,9 @@
   {
     "title": "I talked about language models for <a href='https://sites.google.com/view/ai4hr-pe/homepage'>HR and PES in Ghent</a>.",
     "type": "talk",
-    "date": "10/02/2023"
+    "date": "10/02/2023",
+    "outlet_image": "fair.jpg",
+    "outlet": "HR and PES workshop"
   },
   {
     "title": "Our paper on <a href='how-far-can-it-go/'>biases in language models</a> got accepted at EACL '23.",
@@ -44,12 +91,26 @@
   {
     "title": "I gave <a href='https://people.cs.kuleuven.be/~jesse.davis/dtai2022-23.html'>a seminar</a> about language models and fairness in Leuven.",
     "type": "talk",
-    "date": "18/10/2022"
+    "date": "18/10/2022",
+    "outlet_image": "DTAI-logo.png",
+    "outlet": "DTAI Seminars"
   },
   {
-    "title": "I gave a talk about RobBERT at the <a href='https://www.meetup.com/nl-NL/data-science-leuven/events/288482920/'>Data Science Meetup in Leuven</a>.",
+    "title": "I gave a talk about RobBERT.",
     "type": "talk",
-    "date": "26/09/2022"
+    "date": "26/09/2022",
+    "outlet": "Data Science Meetup Leuven",
+    "outlet_image": "data-science.jpg"
+
+  },  
+  {
+    "title": "Fairness and Bias in Natural Language Processing",
+    "type": "talk",
+    "date": "16/03/2022",
+    "outlet": "VAIA",
+    "outlet_image": "vaia.png",
+    "url": "https://www.vaia.be/nl/opleidingen/fairness-and-bias-in-nlp"
+
   },
     {
     "title": "I'm at ECML-PKDD '22 with two papers 🥳",
@@ -74,7 +135,9 @@
   {
     "title": "I gave a talk at the <a href='https://www.meetup.com/Belgium-NLP-Meetup/events/285098644/'>15th Belgian NLP meetup</a> in Ghent.",
     "type": "talk",
-    "date": "18/05/2022"
+    "date": "18/05/2022",
+    "outlet": "NLP Meetup @ In The Pocket",
+    "outlet_image": "in-the-pocket.png"
   },
   {
     "title": "<a href='measuring-fairness-with-biased-rulers/'>Our survey of intrinsic fairness measures</a> got accepted at NAACL 2022.",
@@ -92,14 +155,18 @@
     "date": "20/03/2022"
   },
   {
-    "title": "I presented our work on RobBERT at <a href='https://bnaic2021.uni.lu'>BNAIC/Benelearn 2021</a>.",
+    "title": "I presented our work on RobBERT.",
     "type": "talk",
-    "date": "10/11/2021"
+    "date": "10/11/2021",
+    "outlet": "BNAIC/Benelearn 2021",
+    "outlet_image": "uni-logo.png"
   },
   {
-    "title": "I gave a talk at <a href='https://feast-ecmlpkdd.github.io'>FEAST @ ECML-PKDD 2021</a> about of our workshop on algorithmic tools in public employment services.",
+    "title": "I gave a talk about of our workshop on algorithmic tools in public employment services.",
     "type": "talk",
-    "date": "17/09/2021"
+    "date": "17/09/2021",
+    "outlet": "FEAST @ ECML-PKDD 2021",
+    "outlet_image": "ecml-pkdd-21.png"
   },
   {
     "title": "We released our paper on <a href='/attitudes-towards-covid-19-measures/'> attitudes towards corona measures</a>.",
@@ -107,9 +174,11 @@
     "date": "21/04/2021"
   },
   {
-    "title": "I gave a presentation on versioning at <a href='https://www.kuleuven.be/open-science/events/2021/OSD4PhD'>Open Science Discovery for PhD Students</a>.",
+    "title": "I gave a presentation on versioning.",
     "type": "talk",
-    "date": "25/03/2021"
+    "date": "25/03/2021",
+    "outlet": "Open Science Discovery for PhD Students",
+    "outlet_image": "kuleuven.png"
   },
   {
     "title": "We released the <a href='https://github.com/iPieter/what-the-mask-android'>Android version</a> of 'What the mask'.",
@@ -117,14 +186,18 @@
     "date": "17/02/2021"
   },
   {
-    "title": "I gave a presentation about RobBERT at <a href='https://techwolf.ai'>TechWolf</a>.",
+    "title": "I gave a presentation about RobBERT.",
     "type": "talk",
-    "date": "11/02/2021"
+    "date": "11/02/2021",
+    "outlet": "Techwolf",
+    "outlet_image": "techwolf.png"
   },
   {
-    "title": "I gave a presentation about RobBERT at <a href='https://ml6.eu'>ML6</a>.",
+    "title": "I gave a presentation about RobBERT.",
     "type": "talk",
-    "date": "09/02/2021"
+    "date": "09/02/2021",
+    "outlet": "ML6",
+    "outlet_image": "ml6.png"
   },
   {
     "title": "Our <a href='https://www.whatthemask.be'>COVID-19 mask policy application</a> was featured in <a href='https://www.hbvl.be/cnt/dmf20210201_95996090'>HBVL</a>.",

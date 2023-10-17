@@ -1,4 +1,4 @@
-In [part 1](updating-robbbert), I explained how we created a new tokenizer for RobBERT and how we prepared the data.
+In [part 1](/blog/2022/updating-robbbert), I explained how we created a new tokenizer for RobBERT and how we prepared the data.
 These were the first steps to update our language model to 2022. 
 Since that blogpost, we ran a training script for some time and we now have a model that we're quite proud of.
 Let's take a look!

@@ -1,7 +1,7 @@
 {
   "title": "Pieter Delobelle",
-  "subtitle": "Hi. I'm a PhD researcher on fairness and natural language processing at the <a href='https://dtai.cs.kuleuven.be'>DTAI lab</a> of the <a href='https://www.kuleuven.be/kuleuven/'>KU Leuven</a> under the supervision of <a href='https://wms.cs.kuleuven.be/people/lucderaedt/'>Luc De Raedt</a> and <a href='https://people.cs.kuleuven.be/~bettina.berendt/'>Bettina Berendt</a>.",
-  "contact": "You can find me on <a href='https://twitter.com/pieterdelobelle'>Twitter</a> or <a href='mailto:pieter.delobelle@cs.kuleuven.be'>send me an email</a>.",
+  "subtitle": "Hi. I'm a PhD researcher at <a href='https://www.kuleuven.be/kuleuven/'>KU Leuven</a> working on large language models, specifically Dutch resources (see <a href='robbert/'>RobBERT</a>), fairness in NLP and alignment problems with LLMs.",
+  "contact": "I am open to collaborations: just ping me on <a href='https://twitter.com/pieterdelobelle'>X/Twitter</a> or <a href='mailto:pieter.delobelle@kuleuven.be'>email me</a>.",
   "static_pages": [
     { "url": "index.html", "name": "Home" },
     { "url": "blog.html", "name": "Blog" },

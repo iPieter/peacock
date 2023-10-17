@@ -1,6 +1,6 @@
 {
     "post_title": "On the implementation of DisCo",
-    "abstract": "In this blog post, I'll go over some confusion I had and choices that were made when implementing the DisCo fairness metric.", 
+    "abstract": "In this blog post, I'll go over some confusion I had when replicating and choices that were made for my implementation of the DisCo metric.", 
     "post_subtitle": "Design choices of the fairness metric DisCo.",
     "type": "md",
     "post_tag": "blogpost",

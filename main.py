@@ -22,7 +22,7 @@ from pybtex.style.names.plain import NameStyle
 
 plain = NameStyle().format
 
-PORT = 8000
+PORT = 8001
 
 
 def find_index_posts(path, drafts=False):
@@ -186,6 +186,8 @@ def process_news(data):
         for item in data["news"]
         if item["type"] == "talk"
     ]
+
+    data["talks"].sort(key=lambda item: datetime.datetime.strptime(item["date"], "%B %d, %Y"), reverse=True)
 
     data["press"] = [
         item
