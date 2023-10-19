@@ -1,7 +1,8 @@
 {
   "title": "Pieter Delobelle",
-  "subtitle": "Hi. I'm a PhD researcher at <a href='https://www.kuleuven.be/kuleuven/'>KU Leuven</a> working on large language models, specifically Dutch resources (see <a href='robbert/'>RobBERT</a>), fairness in NLP and alignment problems with LLMs.",
-  "contact": "I am open to collaborations: just ping me on <a href='https://twitter.com/pieterdelobelle'>X/Twitter</a> or <a href='mailto:pieter.delobelle@kuleuven.be'>email me</a>.",
+  "subtitle": "Hi. I'm a PhD researcher at <a href='https://www.kuleuven.be/kuleuven/'>KU Leuven</a> focussing on alignment and fairness of large language models. I work on both <a href='research.html'>fundamental research</a> and <a href='blog.html'>applications of LLMs</a>, with a focus on <a href='robbert/'>Dutch</a>.",
+  "subtitle_old": "Hi. I'm a PhD researcher at <a href='https://www.kuleuven.be/kuleuven/'>KU Leuven</a> working on large language models, specifically Dutch resources (see <a href='robbert/'>RobBERT</a>), fairness in NLP and alignment problems with LLMs.",
+  "contact": "I am often asked for <a href='appearances.html'>talks</a> and open to collaborations: just contact me on <a href='https://twitter.com/pieterdelobelle'>X/Twitter</a> or <a href='mailto:pieter.delobelle@kuleuven.be'>email me</a>.",
   "static_pages": [
     { "url": "index.html", "name": "Home" },
     { "url": "blog.html", "name": "Blog" },
@@ -10,8 +11,8 @@
       "name": "Resources"
     },
     {
-      "url": "projects.html",
-      "name": "Projects"
+      "url": "research.html",
+      "name": "Research"
     },
     {
       "url": "appearances.html",

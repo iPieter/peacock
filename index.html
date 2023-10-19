@@ -83,57 +83,206 @@
             <div class="site-heading">
               <h1>{{title}}</h1>
               <span class="subheading">{{{subtitle}}}</span>
-              <span class="subheading">{{{contact}}}</p>
+              <span class="subheading">{{{contact}}}</span>
             </div>
           </div>
         </div>
       </div>
     </header>
 
+    
+
     <!-- Main Content -->
     <div class="container">
+
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto mb-0">
+          <h1>Lines of research</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mx-auto mb-0">
+          <div class="banner mt-0" style="background: #fdf9f8; width: 100%">
+            <h2
+              style="
+                background-image: linear-gradient(
+                  90deg,
+                  #b14429 0%,
+                  #c67431 35%,
+                  #da8938 45%
+                );
+                color: transparent;
+                background-clip: text;
+              "
+            >
+              Fair NLP
+            </h2>
+            <p class="ss-abstract">
+              My goal is to make NLP more equitable, mitigating biases and toxic
+              behaviour in language models, and promoting fairness in AI
+              systems. My work explores both intrinsic and extrinsic types of
+              bias to measure and understand fairness in large language models.
+            </p>
+            <a
+              class="btn btn-link ml-0 pl-0"
+              href="appearances.html"
+              role="button"
+              style="color: #b14429"
+              ><i class="fas fa-file"></i>
+              Survey on fairness measures
+            </a>
+            <a
+              class="btn btn-link ml-0 pl-0"
+              href="appearances.html"
+              role="button"
+              style="color: #b14429"
+              ><i class="fas fa-file"></i>
+              Intrinsic and extrinsic bias
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 mx-auto mb-0">
+          <div class="banner mt-0" style="background: #f8fdf8; width: 100%">
+            <h2
+              style="
+                background-image: linear-gradient(
+                  90deg,
+                  #29b129 0%,
+                  #31c642 35%,
+                  #38da3b 45%
+                );
+                color: transparent;
+                background-clip: text;
+              "
+            >
+              Efficient NLP
+            </h2>
+            <p class="ss-abstract">
+              Efficiency in NLP is a core focus of my research. I aim to develop
+              training methods that require less computational resources and
+              leverage smarter initialization techniques, particularly for low
+              and mid-resource languages.
+            </p>
+            <a
+              class="btn btn-link ml-0 pl-0"
+              href="appearances.html"
+              role="button"
+              style="color: #29b129"
+              ><i class="fas fa-file"></i>
+              FairDistillation
+            </a>
+            <a
+              class="btn btn-link ml-0 pl-0"
+              href="appearances.html"
+              role="button"
+              style="color: #29b129"
+              ><i class="fas fa-file"></i>
+              Tik-to-Tok
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 mx-auto mb-0">
+          <div class="banner mt-0" style="background: #f8f9fd; width: 100%">
+            <h2
+              style="
+                background-image: linear-gradient(
+                  90deg,
+                  #2948b1 0%,
+                  #3153c6 25%,
+                  #385fda 40%
+                );
+                color: transparent;
+                background-clip: text;
+              "
+            >
+              Dutch NLP
+            </h2>
+            <p class="ss-abstract">
+              My ambition is to create a fully conversational agent in my native
+              language, Dutch. This has led to the development of
+              state-of-the-art models like RobBERT and its various derivatives,
+              including distilled variants and an updated version, RobBERT-2023.
+            </p>
+            <a
+              class="btn btn-link ml-0 pl-0"
+              href="appearances.html"
+              role="button"
+              style="color: #2948b1"
+              ><i class="fas fa-file"></i>
+              RobBERT
+            </a>
+            <a
+            class="btn btn-link ml-0 pl-0"
+            href="appearances.html"
+            role="button"
+            style="color: #2948b1"
+            ><i class="fas fa-file"></i>
+            Dutch humour detection
+          </a>
+          <a
+            class="btn btn-link ml-0 pl-0"
+            href="appearances.html"
+            role="button"
+            style="color: #2948b1"
+            ><i class="fas fa-file"></i>
+            COVID measures on Twitter
+          </a>
+          </div>
+        </div>
+      </div>
+      
+
+
       <div class="row news">
-        <div class="col-lg-8 col-md-10 mx-auto mb-4">
+        <div class="col-lg-8 col-md-10 mx-auto mb-2 mt-4">
           <h1>News</h1>
           {{#news_recent}}
           <span class="d-block">
-            <span class="text-muted mr-1 font-italic">{{date}}</span> {{{title}}}
-          </span> 
+            <span class="text-muted mr-1 font-italic">{{date}}</span>
+            {{{title}}}
+          </span>
           {{/news_recent}}
-          <a class="btn btn-link ml-0 pl-0" href="appearances.html" role="button"
-                ><i class="fas fa-arrow-right"></i>
-                View older news
-              </a>
-            
+          <a
+            class="btn btn-link ml-0 pl-0"
+            href="appearances.html"
+            role="button"
+            ><i class="fas fa-arrow-right"></i>
+            View older news
+          </a>
         </div>
       </div>
-          <div class="row">
-            {{#featured_posts}}
-            {{^hidden}}
-            <div class="col-md-6 col-sm-12 px-5 mt-5">
-              <div class="post-preview">
+
+
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto mt-4 mb-1">
+          <h1>Recent research</h1>
+        </div>
+        {{#featured_posts}} {{^hidden}}
+        <div class="col-md-6 col-sm-12 px-5 mb-5">
+          <div class="post-preview">
             {{#banner}}
 
-        <div class="row">
-
-        <div class="banner mt-0" style="background: {{background}}; max-height: 200px;">
-            <img
-              src="{{url}}/{{img}}"
-              style="max-width: 100%; max-height: 160px;"
-            />
+            <div class="row">
+              <div
+                class="banner mt-0"
+                style="background: {{background}}; max-height: 200px;"
+              >
+                <img
+                  src="{{url}}/{{img}}"
+                  style="max-width: 100%; max-height: 160px"
+                />
+              </div>
             </div>
-          </div>
 
-            
-        {{/banner}}
+            {{/banner}}
             <a href="{{base}}/{{url}}/">
               <div class="d-inline-block ss-abstract">
-              <span class="text-uppercase post-tag post-tag-{{post_tag}}">{{post_tag}}</span> 
-              <span>Posted on {{date_formatted}}</span>
-            </div>
-              <h3 class="post-title">
-                {{post_title}}
-              </h3>
+                <span class="text-uppercase post-tag post-tag-{{post_tag}}"
+                  >{{post_tag}}</span
+                >
+                <span>Posted on {{date_formatted}}</span>
+              </div>
+              <h3 class="post-title">{{post_title}}</h3>
               {{#post_subtitle}}
               <h4>{{post_subtitle}}</h4>
               {{/post_subtitle}}
@@ -156,12 +305,8 @@
               <a class="btn btn-link" href="{{video}}" role="button"
                 ><i class="fab fa-youtube"></i> Video</a
               >
-              {{/video}}
-              {{#resource}}
-              <a
-                class="btn btn-link"
-                href="{{base}}{{resource}}"
-                role="button"
+              {{/video}} {{#resource}}
+              <a class="btn btn-link" href="{{base}}{{resource}}" role="button"
                 ><i class="fas fa-project-diagram"></i>Resource
               </a>
               {{/resource}} {{#absoluteresource}}
@@ -176,8 +321,16 @@
             </p>
           </div>
         </div>
-          {{/hidden}}
-          {{/featured_posts}}
+        {{/hidden}} {{/featured_posts}}
+        <div class="col-lg-12 col-md-12 mx-auto mb-4 text-center">
+          <a
+            class="btn btn-link ml-0 pl-0"
+            href="appearances.html"
+            role="button"
+            ><i class="fas fa-arrow-right"></i>
+            View more research
+          </a>
+        </div>
       </div>
     </div>
 
