@@ -1,55 +1,63 @@
 <footer>
   <div class="container">
+    <div class="row news">
+      <div class="col-lg-4 col-md-5 mx-auto">
+        <b>Site map</b>
+        {{#static_pages}}
+        <div class="d-block">
+          <a href="{{base}}/{{url}}">{{name}}</a>
+      </div>
+        {{/static_pages}}
+      </div>
+
+      <div class="col-lg-4 col-md-5 mx-auto">
+        <b>Contact</b>
+        <div class="d-block">
+          <a href="https://twitter.com/pieterdelobelle">
+            <span>
+              <i class="fab fa-twitter"></i>
+              pieterdelobelle
+            </span>
+          </a>
+        </div>
+        <div class="d-block">
+          <a href="https://github.com/iPieter">
+            <span>
+              <i class="fab fa-github"></i>
+              iPieter
+            </span>
+          </a>
+        </div>
+        <div class="d-block">
+          <a href="https://www.linkedin.com/in/pieter-delobelle">
+            <span>
+              <i class="fab fa-linkedin"></i>
+              pieter-delobelle
+            </span>
+          </a>
+        </div>
+        <div class="d-block">
+          <a href="{{base}}/rss.xml">
+            <span>
+              <i class="fas fa-rss-square"></i>
+              RSS feed
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <ul class="list-inline text-center">
-          <li class="list-inline-item">
-            <a href="{{base}}/rss.xml">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fas fa-rss-square fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="{{base}}/atom.xml">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fas fa-atom fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://twitter.com/pieterdelobelle">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://www.linkedin.com/in/pieter-delobelle">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://github.com/iPieter">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-        </ul>
-        <p class="copyright text-muted">
-          Last updated on {{last_updated}}
-        </p>
+      <div class="col-lg-8 col-md-10 mx-auto text-center">
+        <p class="copyright text-muted">Last updated on {{last_updated}}</p>
       </div>
     </div>
   </div>
 </footer>
 
-<script async defer data-domain="pieter.ai" src="https://plausible.ipieter.be/pls.js"></script>
+<script
+  async
+  defer
+  data-domain="pieter.ai"
+  src="https://plausible.ipieter.be/pls.js"
+></script>

@@ -228,7 +228,7 @@ def generate_feeds(config_data, output_path, drafts=False):
 def build_site(config_data, path, output_path, drafts=False):
     logging.info("Exporting site to folder {}/".format(output_path))
 
-    config_data["PHEASANT_VERSION"] = "0.5"
+    config_data["PHEASANT_VERSION"] = "0.6"
     config_data["last_updated"] = datetime.datetime.now().strftime("%B %d, %Y")
 
     # First render the nav bar and footer components
@@ -240,6 +240,7 @@ def build_site(config_data, path, output_path, drafts=False):
     # add the blog posts
     config_data["featured_posts"] = list(filter(lambda post: post["featured"], posts))
     config_data["project_posts"] = list(filter(lambda post: post["project"], posts))
+    config_data["research_posts"] = list(filter(lambda post: post["featured"], posts))
     config_data["blog_posts"] = list(filter(lambda post: "blog" in post and post["blog"], posts))
 
     for page in posts:

@@ -1,0 +1,25 @@
+{
+    "post_title": "Migrating from HuggingFace AdamW",
+    "abstract": "The AdamW implementation from HuggingFace is deprecated and can even lead to errors. This short blog post suggests a drop-in replacement.", 
+    "post_subtitle": "Drop-in replacement optimizer with learning schedule",
+    "type": "md",
+    "post_tag": "blogpost",
+    "banner": false,
+    "theme": "dark",
+    "img": "",
+    "author": "Pieter Delobelle",
+    "date": "2023-10-24",
+    "background": "",
+    "pdf": "",
+    "bibtex": "",
+    "absoluteresource": "",
+    "draft": false,
+    "code": "",
+    "featured": false,
+    "project": false,
+    "blog": true,
+    "related_work": [],
+    "video": ""
+
+  }
+  

@@ -1,0 +1,25 @@
+{
+    "post_title": "Tik-to-Tok",
+    "post_subtitle": "Translating language models one token at a time",
+    "abstract": "",
+    "type": "md",
+    "post_tag": "paper",
+    "banner": true,
+    "theme": "dark",
+    "img": "logo.png",
+    "author": "François Remy, Pieter Delobelle, Bettina Berendt, Kris Demuynck, Thomas Demeester",
+    "date": "2023-10-19",
+    "background": "hsla(204, 28%, 86%, 1)",
+    "pdf": "",
+    "bibtex": "",
+    "absoluteresource": "",
+    "draft": true,
+    "code": "",
+    "featured": true,
+    "project": false,
+    "blog": false,
+    "related_work": [],
+    "video": ""
+
+  }
+  

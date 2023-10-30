@@ -1,0 +1,25 @@
+{
+    "post_title": "Building a language learning app",
+    "abstract": "With the current state of transformer models for text and speech, I believe that there is an opportunity to make fully immersive language learning apps that can tailor their content to what the user wants to learn. In this series, I try to work out a demo using different NLP technologies.", 
+    "post_subtitle": "Day 1: planning",
+    "type": "md",
+    "post_tag": "blogpost",
+    "banner": false,
+    "theme": "dark",
+    "img": "",
+    "author": "Pieter Delobelle",
+    "date": "2023-10-30",
+    "background": "",
+    "pdf": "",
+    "bibtex": "",
+    "absoluteresource": "",
+    "draft": false,
+    "code": "",
+    "featured": false,
+    "project": false,
+    "blog": true,
+    "related_work": [],
+    "video": ""
+
+  }
+  
