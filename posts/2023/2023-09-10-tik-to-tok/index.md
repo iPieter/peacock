@@ -1,21 +1,77 @@
-The resume is one of the jobseekers' first chances of making a good impression on organisations. Recruiters usually spend less than a minute to screen an application, so if key information is missing, a candidate might not be invited to a job interview.
+In this blog post, we discuss the challenges of creating a Dutch language model and introduce a method to address these issues. While we were able to create a Dutch version, called RobBERT, by pre-training from scratch, this approach is not always feasible due to limited compute budget (mid-resource setting) or insufficient data (low-resource setting). English, on the other hand, has a wide range of high-quality models available. These English models are trained for longer durations and have more parameters, which is illustrated by the absence of a large Dutch model until now. 
 
-Many websites offer guides on how to write a resume, however, standards and expected formats differ across industries and countries. Jobseekers can learn about resume writing in courses offered by e.g. career center services at universities or Public Employment services, but while these courses offer valuable information, not all groups of jobseekers have access to these services. Consequently, they miss out on general advice on the structure and layout of resumes, but more importantly also on tailored advice, such as which sections of a resume are essential in a specific field or which skills could be added based on the job they are applying for. 
+We propose a method that leverages the existing work on English models. By utilizing the knowledge and techniques developed for English language models, we can overcome the limitations of creating large Dutch models. In the following sections, we delve into the details of language models, introduce the Tik-to-Tok method, present its benefits, showcase real-world examples, and discuss the results. In conclusion, Tik-to-Tok offers a promising approach for language translation, and we encourage readers to explore the research paper for further insights.
 
-Existing tools differ in functionality. For instance, on LinkedIn, the resume is generated automatically from the information the user input on their LinkedIn profile. EuroPass lets users input information and generates a resume based on a selected template. Novorésumé also lets users input their information and choose a template, and their tool gives additional information on the different sections. Unlike existing tools, our tool gives advice based on either the job title a user inputs or on a specific vacancy.
+## Language models
 
-We analysed the occurrence and order of section titles in a dataset of 444k resumes that were collected by VDAB, the Flemish public employment service in Belgium. A typical resume consists of different sections, such as work experience and education, which the jobseeker can order depending on their preference and which aspects they want to highlight. Some sections are also dependent on the sector the jobseeker aims for. The most common sections are work experience and education, which are in virtually all resumes. Some sections are not common at all, for instance, only 5 out of 444k resumes included a "personal objective" section. We also found that some jobseekers provided information which might harm their chances of being invited to job interviews, such as a section called "negative personality traits" with traits like "too focused on work". 
+Language models, particularly masked language models, are deep learning models that are trained on large amounts of text data to understand and generate human language. They utilize a technique called masking, where certain words in a sentence are randomly replaced with a special token. The model's objective is to predict the original masked words based on the surrounding context. By doing so, masked language models learn to capture the statistical properties of language, including word relationships, contextual meanings, and syntactic structures. This enables them to generate coherent and contextually accurate text. These models have significantly advanced natural language processing tasks, such as text classification, named entity recognition, and language generation.
 
-Our co-creative tool ResumeTailor uses two methods we developed to assist users when writing a resume. Firstly, we use an autoregressive model to generate example resumes or resume outlines based on the target job that a user provides. This model can help jobseekers that do not have a resume to start from, such as students who will enter the job market. Secondly, we create a domain-adapted language model to provide contextual suggestions when editing a resume, such as relevant, but missing skills.
+In this blog post, we’re gonna focus on masked language models (MLMs), but the general idea and architecture are similar for autoregressive language models like GPT. 
+
+Language models consist of different components: a tokenizer, an embeddings matrix, a stack of attention layers and finally some task-specific heads. The training of an MLM is done with a masked language modelling head, so to predict the correct tokens for masked positions. 
+
+the components we’re focusing on are at the beginning: the tokenizer and the embeddings matrix. These are what makes a language model unique to a language, and what makes it challenging to transfer models (or to distill them) to different architectures: the tokenizer is usually different.
+
+The most common tokenizer is BPE, which uses subwords to translate sentences into sequences of token ids. For example, the sentence “No, I am not a giraffe” gets transformed into the following sequence with the GPT-4 tokenizer:
+
+```jsx
+['No', ',', 'I', 'am', 'not', 'a', 'gir', 'affe', '.']
+```
+
+Sidenote, there is also some logic to handle the spaces. One approach is to add a space in front of the token (which we do and indicate with `_`), another one would be to show the merges (as BERT does with `##`). This gives us this sequence.
+
+```jsx
+['No', ',', '_I', '_am', '_not', '_a', '_gir', 'affe', '.']
+```
+
+That then gets converted to a sequence of ids:
+
+```jsx
+[2822, 11, 358, 1097, 539, 264, 41389, 38880, 13]
+```
+
+And every single one of these id’s corresponds with an embedding, which is just a sequence of numbers again.
+
+<figure>
+<div class="col-md-8 col-sm-10 col-10 mx-auto"> 
+    <img src="Untitled.png" width="100%" alt="Token embeddings."/>
+    </div>
+</figure>
+These embeddings are important. They are not yet contextualized (which is what the later layers do), but they give a meaning to each token. This matrix is also huge, it is 30% of all weights in base RobBERT. The other weights are spread over all attention layers (12 heads x 12 layers) and some other fully connected layers. So in total, this weight matrix is an important piece of every language model, doesn’t matter if it’s an MLM or transformer or autoregressive language model.
+
+The sad thing is that this matrix is tied to the tokenizer. Which means that we have a tokenizer that is not great (like we evaluated in our RobBERT paper) and not a lot of words have a unique token (like the tokens `_gir` + `affe`), we lose a lot of our weights space to storing redundant embeddings, giraffe could have been one token with one embedding after all.
+
+This is the problem we encounter when we want to transfer a language model from one language to another.
+
+The tokens do not match up and common words in one language always get cut up into smaller subwords. That’s not ideal, since it introduces lot’s of dead weights and we use way more tokens than needed, with shorter possible sequence lengths and slower inference as a consequence. If we want to reuse a language model, this is unavoidable. Or is it? 
+
+## Introducing Tik-to-Tok
+
+The idea of our Tik-to-Tok method is pretty simple. A token like `giraf` (in Dutch) should have the same embedding as the token `giraffe` (in English). Although this example is already a bit challenging—since it spans multiple tokens in a real tokenizer—the idea also holds for tokens like `Ik` (`I` in English). 
 
 
-![resume-writer.png](resume-writer.png)
+<figure>
+<div class="col-md-8 col-sm-10 col-10 mx-auto"> 
+    <img src="Untitled%201.png" width="100%" alt="Translating token embeddings."/>
+    </div>
+</figure>
+
+For any words in a parallel corpus that map to tokens one-to-one, this is quite easy to do. We just take that mapping. For other tokens, we have to be a bit smarter.
+
+We use our mapping of whole words to create a bilingual FastText embeddings. All the tokens in both languages get an embedding in a joint embedding space and we can simply query what the English `affe` from our giraffe example should be close to. We then pick the three closest tokens in the target language and that’s basically it: we have an embedding for our new token.
+
+## Results & conclusion
+
+This token translation is theoretically pretty simple and our experiments show that it works exceptionally well for two use-cases: 
+
+- For **low-resource** languages (like Frisian) it is often the only way to create a model. Our MLM model was trained with only 35 MB of data, but still was successful at the MLM task.
+- For **mid-resource** languages (like Dutch), it can create state-of-the-art models based on the efforts done for English or other high-resource languages. We showed this by creating a new model, called RobBERT-2023, that beat all existing Dutch models.
 
 
-We focus on the writing aspect and content of a resume. The layout and style choices (font, colors, ...) are beyond the scope of this paper. Instead, ResumeTailor helps users with the actual content of their resume.
+<figure>
+<div class="col-md-12 col-sm-12 col-12 mx-auto"> 
+    <img src="performance.png" width="100%" alt="Performance of RobBERT-2023 base and large on the DUMB benchmark."/>
+    </div>
+</figure>
 
-## Generating Resume Outlines 
-We first asked the user to provide their name and target job. We prompt GPT-3 to generate resume outlines and example resumes based on this information. We argue that personalised templates based on the user's input and target job are more helpful than pre-defined templates.
-
-## Contexual Suggesions with Language Models
-To provide the user with suggestions, we created a domain-adapted language model, which we call ResumeRobBERT, that we trained on the aforementioned dataset of 444k Dutch resumes from Flanders using the Dutch language model RobBERT as the base model. This model interacts with the user by giving suggestions based on the surrounding context of the user's cursor position, e.g. to suggest missing skills.
+Furthermore, because the method basically allows to initialize a language model with a different tokenizer, it could also pave the way for better domain-adapted language models. We haven’t tried this yet, but we are happy to help out if you have a use-case!

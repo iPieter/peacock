@@ -1,5 +1,27 @@
 [
   {
+    "title": "Guest lecture on LLMs for social media analysis.",
+    "type": "talk",
+    "date": "24/11/2023",
+    "outlet_image": "tu-berlin.png",
+    "outlet": "TU Berlin",
+    "pdf": "resources/slides/lecture-tu-2023-11-24.pdf"
+  },
+  {
+    "title": "I will defend my PhD in the beginning of December <a href='/phd-defence'><i class='fas fa-angle-double-right'></i></a>",
+    "type": "news",
+    "date": "20/11/2023"
+  },  
+  {
+    "title": "My work on RobBERT was mentioned in the Dataroots podcast.",
+    "type": "press",
+    "date": "19/11/2023",
+    "outlet_image": "dataroots.png",
+    "outlet": "Dataroots DataTopics Podcast",
+    "link": "https://podcasts.apple.com/be/podcast/datatopics/id1616447336?i=1000635395138",
+    "outlet_title": "Data quality, contracts and 100 year old hares"
+  },
+  {
     "title": "I was interviewed about my research on fairness and RobBERT for De Groene Amsterdammer.",
     "type": "press",
     "date": "07/06/2023",

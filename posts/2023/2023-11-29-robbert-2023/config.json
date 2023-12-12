@@ -1,0 +1,25 @@
+{
+    "post_title": "RobBERT-2023",
+    "post_subtitle": "Updated large and base Dutch BERT models",
+    "abstract": "With RobBERT-2023, we deliver a freshly pre-trained Dutch tokenizer using the latest version of the Dutch OSCAR corpus. This corpus incorporates new high-frequency terms, such as those related to the COVID-19 pandemic, cryptocurrencies, and the ongoing energy crisis, while mitigating the inclusion of previously over-represented terms from adult-oriented content. Unlike the prior versions of RobBERT, which relied on the training methodology of RoBERTa but required a fresh weight initialization, RobBERT-2023 is entirely initialized using the RoBERTa-large model.",
+    "type": "md",
+    "post_tag": "paper",
+    "banner": true,
+    "theme": "dark",
+    "img": "logo.png",
+    "author": "Pieter Delobelle, François Remy",
+    "date": "2023-11-29",
+    "background": "linear-gradient(45deg, #e3ffe7 0%, #d9e7ff 100%)",
+    "pdf": "",
+    "bibtex": "",
+    "absoluteresource": "https://huggingface.co/DTAI-KULeuven/robbert-2023-dutch-large",
+    "draft": false,
+    "code": "",
+    "featured": true,
+    "project": false,
+    "blog": false,
+    "related_work": [],
+    "video": ""
+
+  }
+  
