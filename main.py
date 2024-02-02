@@ -157,7 +157,7 @@ def build_post(path, post, destination_file, config_data):
             doc = pandoc.Document()
             doc.add_argument("katex")
             doc.add_argument("highlight-style=pygments")
-            doc.gfm = f.read().encode("utf-8")
+            doc.markdown_github = f.read().encode("utf-8")
             post_config["text"] = doc.html.decode()
             post_config["html"] = ""
     elif "index.html" in post["files"]:
@@ -414,7 +414,7 @@ if __name__ == "__main__":
             args.path, callback=main, args=args, loglevel=loglevel
         )
         observer = Observer()
-        observer.schedule(event_handler, args.path, recursive=True)
+        observer.schedule(event_handler, args.path + "/posts/", recursive=True)
         observer.start()
 
         serve_build(output_path)

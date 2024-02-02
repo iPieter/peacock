@@ -7,10 +7,6 @@
     { "url": "index.html", "name": "Home" },
     { "url": "blog.html", "name": "Blog" },
     {
-      "url": "data.html",
-      "name": "Resources"
-    },
-    {
       "url": "research.html",
       "name": "Research"
     },

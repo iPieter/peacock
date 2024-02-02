@@ -28,10 +28,10 @@ This research has been funded by the [Flanders AI Research Programme](https://ww
 
 <figure>
 <div class="row justify-content-center">
-<div class="col-sm-4"> 
-    <img src="../resources/news/flanders-ai.png" width="100%" alt="flanders.ai"/>
+<div class="col-sm-5"> 
+    <img src="../resources/news/flanders-ai.jpg" width="100%" alt="flanders.ai"/>
 </div>
-<div class="col-sm-3"> 
+<div class="col-sm-3 mt-4"> 
     <img src="../resources/news/fwo.png" width="100%" alt="fwo"/>
     </div>
 </div>
