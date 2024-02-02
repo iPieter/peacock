@@ -22,4 +22,17 @@ All in all, the results are really good. We score really high on the DUMB benchm
 So now we have a pretty good method to reuse language models, even when we want to introduce a new tokenizer. That’s important, since extending BPE tokenizers like we did in robbert-2022 was not exactly optimal, but language keeps changing enough that new tokens do need to be added. There are also some other issues with BPE, so it’s great to have a method to translate our RobBERT model if a better tokenizer comes along.
 
 # Acknowledgements
-Thanks to [Thomas Winters](https://thomaswinters.be) for creating the new 2023 logo!
+Thanks to [Thomas Winters](https://thomaswinters.be) for creating the new 2023 logo! 
+
+This research has been funded by the [Flanders AI Research Programme](https://www.flandersairesearch.be/en) and FWO.
+
+<figure>
+<div class="row justify-content-center">
+<div class="col-sm-4"> 
+    <img src="../resources/news/flanders-ai.png" width="100%" alt="flanders.ai"/>
+</div>
+<div class="col-sm-3"> 
+    <img src="../resources/news/fwo.png" width="100%" alt="fwo"/>
+    </div>
+</div>
+</figure>

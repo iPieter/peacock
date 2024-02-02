@@ -9,6 +9,14 @@
 @import "bootstrap-overrides.scss";
 @import "resume.scss";
 
+.smaller {
+  font-size: 15px;
+  font-weight: 400;
+  .wrong {
+    color: $red;
+  }
+}
+
 code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap:1.5em;}

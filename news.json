@@ -1,5 +1,10 @@
 [
   {
+    "title": "We released new Dutch BERT models, including a <a href='/robbert-2023'>large RobBERT-2023 model</a>",
+    "type": "news",
+    "date": "12/12/2023"
+  },
+  {
     "title": "Guest lecture on LLMs for social media analysis.",
     "type": "talk",
     "date": "24/11/2023",
@@ -8,7 +13,7 @@
     "pdf": "resources/slides/lecture-tu-2023-11-24.pdf"
   },
   {
-    "title": "I will defend my PhD in the beginning of December <a href='/phd-defence'><i class='fas fa-angle-double-right'></i></a>",
+    "title": "I successfully defended my PhD  on fairer foundation models <a href='/phd-defence'><i class='fas fa-angle-double-right'></i></a>",
     "type": "news",
     "date": "20/11/2023"
   },  

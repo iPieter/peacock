@@ -1,0 +1,25 @@
+{
+    "post_title": "Dutch Chat Toolkit",
+    "abstract": "A lot of NLP technologies are easy to use for beginners, but creating and deploying a chatbot is still a bit tricky. Let's make a Python CLI toolkit to quickly create a chatbot with a web-based user interface.", 
+    "post_subtitle": "Creating retrieval-augmented chatbots",
+    "type": "md",
+    "post_tag": "blogpost",
+    "banner": true,
+    "theme": "dark",
+    "img": "logo-dutch-rag.png",
+    "author": "Pieter Delobelle",
+    "date": "2023-12-27",
+    "background": "linear-gradient(70deg, hsla(139, 70%, 75%, 1) 0%, hsla(63, 90%, 76%, 1) 100%)",
+    "pdf": "",
+    "bibtex": "",
+    "absoluteresource": "",
+    "draft": false,
+    "code": "https://github.com/iPieter/dutch-chat-toolkit",
+    "featured": true,
+    "project": false,
+    "blog": true,
+    "related_work": [],
+    "video": ""
+
+  }
+  

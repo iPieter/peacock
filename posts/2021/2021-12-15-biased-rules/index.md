@@ -7,7 +7,7 @@ Otherwise, why would we measure that?
 ## Intrinsic measures
 Our survey started when we noticed that there exist many different metrics to evaluate bias in language models, like BERT.
 This makes it difficult to compare results and how effective fairness interventions are, so we decided to get started on a survey.
-For a complete list, we refer to [our survey](http://arxiv.org/abs/2104.09947), but for a more intuitive coarse overview: keep reading.
+For a complete list, we refer to [our survey](https://arxiv.org/abs/2112.07447), but for a more intuitive coarse overview: keep reading.
 
 Most intrinsic metrics are based on some stereotypical association, like "[_He is a doctor_](https://huggingface.co/bert-base-uncased?text=%5BMASK%5D+is+a+doctor.)" or "[_She is a nurse._](https://huggingface.co/bert-base-uncased?text=%5BMASK%5D+is+a+nurse.)". 
 There are tested using templates with one or more slots.

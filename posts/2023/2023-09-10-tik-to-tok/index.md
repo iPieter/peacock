@@ -52,7 +52,7 @@ The idea of our Tik-to-Tok method is pretty simple. A token like `giraf` (in Dut
 
 <figure>
 <div class="col-md-8 col-sm-10 col-10 mx-auto"> 
-    <img src="Untitled%201.png" width="100%" alt="Translating token embeddings."/>
+    <img src="untitled-1.png" width="100%" alt="Translating token embeddings."/>
     </div>
 </figure>
 
